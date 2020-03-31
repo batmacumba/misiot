@@ -1,0 +1,2 @@
+* gem install mqtt: NÃO RODOU
+* gem install paho-mqtt
