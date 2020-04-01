@@ -19,52 +19,52 @@ done
 x=1
 while [ $x -le 10 ]
 do
-  ruby multiple_write_read_1.rb --n=50 >> resultados/06_resultado_multiple_write_read_1_50
+  ruby multiple_write_read_1.rb --n=20 >> resultados/06_resultado_multiple_write_read_1_20
   x=$(( $x + 1 ))
 done
 
 x=1
 while [ $x -le 10 ]
 do
-  ruby multiple_write_read_1.rb --n=100 >> resultados/07_resultado_multiple_write_read_1_100
+  ruby multiple_write_read_1.rb --n=30 >> resultados/07_resultado_multiple_write_read_1_30
   x=$(( $x + 1 ))
 done
 
-x=1
-while [ $x -le 10 ]
-do
-  ruby multiple_write_read_1.rb --n=200 >> resultados/08_resultado_multiple_write_read_1_200
-  x=$(( $x + 1 ))
-done
+# x=1
+# while [ $x -le 10 ]
+# do
+#   ruby multiple_write_read_1.rb --n=200 >> resultados/08_resultado_multiple_write_read_1_200
+#   x=$(( $x + 1 ))
+# done
 
 echo "teste multiple_write_read_1 concluído!"
 
-x=1
-while [ $x -le 10 ]
-do
-  ruby multiple_write_read_string.rb --n=10 >> resultados/09_resultado_multiple_write_read_string_10
-  x=$(( $x + 1 ))
-done
+# x=1
+# while [ $x -le 10 ]
+# do
+#   ruby multiple_write_read_string.rb --n=10 >> resultados/09_resultado_multiple_write_read_string_10
+#   x=$(( $x + 1 ))
+# done
 
-x=1
-while [ $x -le 10 ]
-do
-  ruby multiple_write_read_string.rb --n=50 >> resultados/10_resultado_multiple_write_read_string_50
-  x=$(( $x + 1 ))
-done
+# x=1
+# while [ $x -le 10 ]
+# do
+#   ruby multiple_write_read_string.rb --n=50 >> resultados/10_resultado_multiple_write_read_string_50
+#   x=$(( $x + 1 ))
+# done
 
-x=1
-while [ $x -le 10 ]
-do
-  ruby multiple_write_read_string.rb --n=100 >> resultados/11_resultado_multiple_write_read_string_100
-  x=$(( $x + 1 ))
-done
+# x=1
+# while [ $x -le 10 ]
+# do
+#   ruby multiple_write_read_string.rb --n=100 >> resultados/11_resultado_multiple_write_read_string_100
+#   x=$(( $x + 1 ))
+# done
 
-x=1
-while [ $x -le 10 ]
-do
-  ruby multiple_write_read_string.rb --n=200 >> resultados/12_resultado_multiple_write_read_string_200
-  x=$(( $x + 1 ))
-done
+# x=1
+# while [ $x -le 10 ]
+# do
+#   ruby multiple_write_read_string.rb --n=200 >> resultados/12_resultado_multiple_write_read_string_200
+#   x=$(( $x + 1 ))
+# done
 
-echo "teste multiple_write_read_string concluído!"
+# echo "teste multiple_write_read_string concluído!"
