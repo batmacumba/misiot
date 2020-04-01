@@ -26,7 +26,7 @@ start_time = Time.now
 publisher.publish("/mqtt/teste", "1", false, 1)
 
 while message_counter < n do
-	sleep 0.001
+	nil
 end
 
 elapsed_time = ((Time.now - start_time) * 1000).round(3)

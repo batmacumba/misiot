@@ -29,7 +29,7 @@ while ack_counter < 1000 do
 	# Publlish a message on the topic "/paho/ruby/test" with "retain == false" and "qos == 1"
 	client.publish("/mqtt/teste", string, false, 1)
 	while waiting_puback do
-	  sleep 0.001
+	  nil
 	end
 end
 
