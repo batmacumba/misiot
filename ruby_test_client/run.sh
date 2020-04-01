@@ -1,4 +1,4 @@
-rm resultados/*
+mkdir resultados
 
 ruby write_1.rb > resultados/01_resultado_write_1
 echo "teste write_1 concluído!"
