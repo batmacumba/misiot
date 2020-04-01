@@ -10,18 +10,16 @@ starting = 0
 ending = 0
 message_counter = 0
 
-
-pub_client = PahoMqtt::Client.new
-sub_client = PahoMqtt::Client.new
+client = PahoMqtt::Client.new
 
 # Callback para o cliente que escuta
 
-sub_client.on_message do |message|
-	elapsed = Time.now - starting
-	puts "#{message.topic}: #{message.payload}"
-	puts "elapsed time: #{elapsed}"
-	message_counter += 1
-end
+# client.on_message do |message|
+# 	elapsed = Time.now - starting
+# 	puts "#{message.topic}: #{message.payload}"
+# 	puts "elapsed time: #{elapsed}"
+# 	message_counter += 1
+# end
 
 # ### Register a callback on suback to assert the subcription
 # waiting_suback = true
@@ -30,12 +28,13 @@ end
 #   puts "Subscribed"
 # end
 
-# ### Register a callback for puback event when receiving a puback
-# waiting_puback = true
-# client.on_puback do
-#   waiting_puback = false
-#   puts "Message Acknowledged"
-# end
+### Register a callback for puback event when receiving a puback
+waiting_puback = true
+client.on_puback do
+  elapsed = Time.now - starting
+  waiting_puback = false
+  puts "Message Acknowledged"
+end
 
 ### Connect to the eclipse test server on port 1883 (Unencrypted mode)
 client.connect('127.0.0.1', 1883)
