@@ -6,8 +6,8 @@ ruby write_string.rb > resultados/02_resultado_write_string
 echo "teste write_string concluído!"
 ruby write_read_1.rb > resultados/03_resultado_write_read_1
 echo "teste write_read_1 concluído!"
-ruby write_read_string.rb > resultados/04_resultado_write_read_string
-echo "teste write_read_string concluído!"
+# ruby write_read_string.rb > resultados/04_resultado_write_read_string
+# echo "teste write_read_string concluído!"
 
 x=1
 while [ $x -le  10 ]
@@ -23,12 +23,12 @@ do
   x=$(( $x + 1 ))
 done
 
-x=1
-while [ $x -le 10 ]
-do
-  ruby multiple_write_read_1.rb --n=30 >> resultados/07_resultado_multiple_write_read_1_30
-  x=$(( $x + 1 ))
-done
+# x=1
+# while [ $x -le 10 ]
+# do
+#   ruby multiple_write_read_1.rb --n=30 >> resultados/07_resultado_multiple_write_read_1_30
+#   x=$(( $x + 1 ))
+# done
 
 # x=1
 # while [ $x -le 10 ]
