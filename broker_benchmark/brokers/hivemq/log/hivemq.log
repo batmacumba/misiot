@@ -1,0 +1,257 @@
+2020-04-13 16:59:21,691 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 16:59:21,696 INFO  - HiveMQ version: 2020.2
+2020-04-13 16:59:21,696 INFO  - HiveMQ home directory: /Users/batmacumba/Downloads/hivemq-ce-2020.2
+2020-04-13 16:59:21,835 INFO  - Log Configuration was overridden by /Users/batmacumba/Downloads/hivemq-ce-2020.2/conf/logback.xml
+2020-04-13 16:59:22,234 INFO  - This HiveMQ ID is gDGoM
+2020-04-13 16:59:37,579 INFO  - Starting HiveMQ extension system.
+2020-04-13 16:59:37,681 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 16:59:37,686 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 16:59:37,697 INFO  - Starting TCP listener on address 0.0.0.0 and port 1883
+2020-04-13 16:59:37,767 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1883
+2020-04-13 16:59:37,767 INFO  - Started HiveMQ in 16096ms
+2020-04-13 17:00:02,478 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 17:00:04,528 INFO  - Shutting down extension system
+2020-04-13 17:00:04,532 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-13 17:00:12,486 INFO  - Still shutting down HiveMQ. Waiting for remaining tasks to be executed. Do not shutdown HiveMQ.
+2020-04-13 17:14:24,371 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 17:14:24,377 INFO  - HiveMQ version: 2020.2
+2020-04-13 17:14:24,377 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 17:14:24,488 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 17:14:24,886 INFO  - This HiveMQ ID is 2V82C
+2020-04-13 17:14:35,734 INFO  - Starting HiveMQ extension system.
+2020-04-13 17:14:35,812 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 17:14:35,817 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 17:14:35,825 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 17:14:35,932 ERROR - Not able to create SSL server context
+com.hivemq.security.exception.SslException: Cannot find KeyStore at path /conf/hivemq.jks
+	at com.hivemq.security.ssl.SslUtil.createKeyManagerFactory(SslUtil.java:89)
+	at com.hivemq.security.ssl.SslUtil.getKeyManagerFactory(SslUtil.java:121)
+	at com.hivemq.security.ssl.SslContextFactoryImpl.createSslContext(SslContextFactoryImpl.java:41)
+	at com.hivemq.security.ssl.SslFactory.verifySslAtBootstrap(SslFactory.java:115)
+	at com.hivemq.bootstrap.netty.ChannelInitializerFactoryImpl.createTlsTcpInitializer(ChannelInitializerFactoryImpl.java:92)
+	at com.hivemq.bootstrap.netty.ChannelInitializerFactoryImpl.getChannelInitializer(ChannelInitializerFactoryImpl.java:67)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.createServerBootstrap(HiveMQNettyBootstrap.java:224)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.tlsTcpListeners(HiveMQNettyBootstrap.java:126)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.bootstrapServer(HiveMQNettyBootstrap.java:86)
+	at com.hivemq.HiveMQServer.start(HiveMQServer.java:82)
+	at com.hivemq.HiveMQServer.main(HiveMQServer.java:175)
+2020-04-13 17:14:35,934 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 17:14:37,985 INFO  - Shutting down extension system
+2020-04-13 17:14:37,995 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-13 17:14:45,940 INFO  - Still shutting down HiveMQ. Waiting for remaining tasks to be executed. Do not shutdown HiveMQ.
+2020-04-13 17:17:51,083 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 17:17:51,088 INFO  - HiveMQ version: 2020.2
+2020-04-13 17:17:51,088 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 17:17:51,213 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 17:17:51,672 INFO  - This HiveMQ ID is 6dEzb
+2020-04-13 17:18:06,244 INFO  - Starting HiveMQ extension system.
+2020-04-13 17:18:06,349 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 17:18:06,357 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 17:18:06,366 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 17:18:07,853 ERROR - Not able to create SSL server context
+com.hivemq.security.exception.SslException: Not able to recover key from KeyStore, please check your private-key-password and your keyStorePassword
+	at com.hivemq.security.ssl.SslUtil.createKeyManagerFactory(SslUtil.java:87)
+	at com.hivemq.security.ssl.SslUtil.getKeyManagerFactory(SslUtil.java:121)
+	at com.hivemq.security.ssl.SslContextFactoryImpl.createSslContext(SslContextFactoryImpl.java:41)
+	at com.hivemq.security.ssl.SslFactory.verifySslAtBootstrap(SslFactory.java:115)
+	at com.hivemq.bootstrap.netty.ChannelInitializerFactoryImpl.createTlsTcpInitializer(ChannelInitializerFactoryImpl.java:92)
+	at com.hivemq.bootstrap.netty.ChannelInitializerFactoryImpl.getChannelInitializer(ChannelInitializerFactoryImpl.java:67)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.createServerBootstrap(HiveMQNettyBootstrap.java:224)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.tlsTcpListeners(HiveMQNettyBootstrap.java:126)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.bootstrapServer(HiveMQNettyBootstrap.java:86)
+	at com.hivemq.HiveMQServer.start(HiveMQServer.java:82)
+	at com.hivemq.HiveMQServer.main(HiveMQServer.java:175)
+Caused by: java.security.UnrecoverableKeyException: Get Key failed: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineGetKey(PKCS12KeyStore.java:457)
+	at java.base/sun.security.util.KeyStoreDelegator.engineGetKey(KeyStoreDelegator.java:90)
+	at java.base/java.security.KeyStore.getKey(KeyStore.java:1050)
+	at java.base/sun.security.ssl.SunX509KeyManagerImpl.<init>(SunX509KeyManagerImpl.java:141)
+	at java.base/sun.security.ssl.KeyManagerFactoryImpl$SunX509.engineInit(KeyManagerFactoryImpl.java:64)
+	at java.base/javax.net.ssl.KeyManagerFactory.init(KeyManagerFactory.java:274)
+	at com.hivemq.security.ssl.SslUtil.createKeyManagerFactory(SslUtil.java:83)
+	... 10 common frames omitted
+Caused by: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/com.sun.crypto.provider.CipherCore.unpad(CipherCore.java:977)
+	at java.base/com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:1058)
+	at java.base/com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:855)
+	at java.base/com.sun.crypto.provider.PKCS12PBECipherCore.implDoFinal(PKCS12PBECipherCore.java:408)
+	at java.base/com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndDESede.engineDoFinal(PKCS12PBECipherCore.java:440)
+	at java.base/javax.crypto.Cipher.doFinal(Cipher.java:2207)
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.lambda$engineGetKey$0(PKCS12KeyStore.java:401)
+	at java.base/sun.security.pkcs12.PKCS12KeyStore$RetryWithZero.run(PKCS12KeyStore.java:298)
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineGetKey(PKCS12KeyStore.java:395)
+	... 16 common frames omitted
+2020-04-13 17:18:07,857 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 17:18:09,902 INFO  - Shutting down extension system
+2020-04-13 17:18:09,905 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-13 17:18:17,859 INFO  - Still shutting down HiveMQ. Waiting for remaining tasks to be executed. Do not shutdown HiveMQ.
+2020-04-13 17:19:48,046 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 17:19:48,051 INFO  - HiveMQ version: 2020.2
+2020-04-13 17:19:48,052 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 17:19:48,172 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 17:19:48,566 INFO  - This HiveMQ ID is vXv05
+2020-04-13 17:20:01,760 INFO  - Starting HiveMQ extension system.
+2020-04-13 17:20:01,852 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 17:20:01,855 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 17:20:01,877 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 17:20:03,293 ERROR - Not able to create SSL server context
+com.hivemq.security.exception.SslException: Not able to recover key from KeyStore, please check your private-key-password and your keyStorePassword
+	at com.hivemq.security.ssl.SslUtil.createKeyManagerFactory(SslUtil.java:87)
+	at com.hivemq.security.ssl.SslUtil.getKeyManagerFactory(SslUtil.java:121)
+	at com.hivemq.security.ssl.SslContextFactoryImpl.createSslContext(SslContextFactoryImpl.java:41)
+	at com.hivemq.security.ssl.SslFactory.verifySslAtBootstrap(SslFactory.java:115)
+	at com.hivemq.bootstrap.netty.ChannelInitializerFactoryImpl.createTlsTcpInitializer(ChannelInitializerFactoryImpl.java:92)
+	at com.hivemq.bootstrap.netty.ChannelInitializerFactoryImpl.getChannelInitializer(ChannelInitializerFactoryImpl.java:67)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.createServerBootstrap(HiveMQNettyBootstrap.java:224)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.tlsTcpListeners(HiveMQNettyBootstrap.java:126)
+	at com.hivemq.bootstrap.HiveMQNettyBootstrap.bootstrapServer(HiveMQNettyBootstrap.java:86)
+	at com.hivemq.HiveMQServer.start(HiveMQServer.java:82)
+	at com.hivemq.HiveMQServer.main(HiveMQServer.java:175)
+Caused by: java.security.UnrecoverableKeyException: Get Key failed: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineGetKey(PKCS12KeyStore.java:457)
+	at java.base/sun.security.util.KeyStoreDelegator.engineGetKey(KeyStoreDelegator.java:90)
+	at java.base/java.security.KeyStore.getKey(KeyStore.java:1050)
+	at java.base/sun.security.ssl.SunX509KeyManagerImpl.<init>(SunX509KeyManagerImpl.java:141)
+	at java.base/sun.security.ssl.KeyManagerFactoryImpl$SunX509.engineInit(KeyManagerFactoryImpl.java:64)
+	at java.base/javax.net.ssl.KeyManagerFactory.init(KeyManagerFactory.java:274)
+	at com.hivemq.security.ssl.SslUtil.createKeyManagerFactory(SslUtil.java:83)
+	... 10 common frames omitted
+Caused by: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	at java.base/com.sun.crypto.provider.CipherCore.unpad(CipherCore.java:977)
+	at java.base/com.sun.crypto.provider.CipherCore.fillOutputBuffer(CipherCore.java:1058)
+	at java.base/com.sun.crypto.provider.CipherCore.doFinal(CipherCore.java:855)
+	at java.base/com.sun.crypto.provider.PKCS12PBECipherCore.implDoFinal(PKCS12PBECipherCore.java:408)
+	at java.base/com.sun.crypto.provider.PKCS12PBECipherCore$PBEWithSHA1AndDESede.engineDoFinal(PKCS12PBECipherCore.java:440)
+	at java.base/javax.crypto.Cipher.doFinal(Cipher.java:2207)
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.lambda$engineGetKey$0(PKCS12KeyStore.java:401)
+	at java.base/sun.security.pkcs12.PKCS12KeyStore$RetryWithZero.run(PKCS12KeyStore.java:298)
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineGetKey(PKCS12KeyStore.java:395)
+	... 16 common frames omitted
+2020-04-13 17:20:03,299 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 17:20:05,339 INFO  - Shutting down extension system
+2020-04-13 17:20:05,345 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-13 17:20:13,302 INFO  - Still shutting down HiveMQ. Waiting for remaining tasks to be executed. Do not shutdown HiveMQ.
+2020-04-13 17:25:41,316 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 17:25:41,321 INFO  - HiveMQ version: 2020.2
+2020-04-13 17:25:41,321 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 17:25:41,443 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 17:25:41,839 INFO  - This HiveMQ ID is YIkp3
+2020-04-13 17:25:55,980 INFO  - Starting HiveMQ extension system.
+2020-04-13 17:25:56,073 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 17:25:56,076 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 17:25:56,097 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 17:25:57,847 INFO  - Enabled protocols for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLSv1.2, TLSv1.1, TLSv1]
+2020-04-13 17:25:57,848 INFO  - Enabled cipher suites for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2020-04-13 17:25:57,850 INFO  - Starting TLS TCP listener on address 0.0.0.0 and port 8885
+2020-04-13 17:25:57,860 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1885
+2020-04-13 17:25:57,860 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
+2020-04-13 17:25:57,861 INFO  - Started HiveMQ in 16559ms
+2020-04-13 17:26:08,225 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 17:26:10,280 INFO  - Shutting down extension system
+2020-04-13 17:26:10,284 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-13 17:26:18,234 INFO  - Still shutting down HiveMQ. Waiting for remaining tasks to be executed. Do not shutdown HiveMQ.
+2020-04-13 17:26:37,189 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 17:26:37,199 INFO  - HiveMQ version: 2020.2
+2020-04-13 17:26:37,199 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 17:26:37,406 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 17:26:38,232 INFO  - This HiveMQ ID is QzRP5
+2020-04-13 17:26:54,530 INFO  - Starting HiveMQ extension system.
+2020-04-13 17:26:54,607 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 17:26:54,612 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 17:26:54,632 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 17:26:56,380 INFO  - Enabled protocols for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLSv1.2, TLSv1.1, TLSv1]
+2020-04-13 17:26:56,381 INFO  - Enabled cipher suites for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2020-04-13 17:26:56,383 INFO  - Starting TLS TCP listener on address 0.0.0.0 and port 8885
+2020-04-13 17:26:56,398 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1885
+2020-04-13 17:26:56,398 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
+2020-04-13 17:26:56,398 INFO  - Started HiveMQ in 19253ms
+2020-04-13 17:27:29,780 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 17:27:31,866 INFO  - Shutting down extension system
+2020-04-13 17:27:31,943 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-13 17:27:39,797 INFO  - Still shutting down HiveMQ. Waiting for remaining tasks to be executed. Do not shutdown HiveMQ.
+2020-04-13 18:38:28,737 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 18:38:28,742 INFO  - HiveMQ version: 2020.2
+2020-04-13 18:38:28,742 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 18:38:28,890 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 18:38:29,376 INFO  - This HiveMQ ID is SdcX6
+2020-04-13 18:38:41,731 INFO  - Starting HiveMQ extension system.
+2020-04-13 18:38:41,929 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 18:38:41,944 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 18:38:41,969 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 18:38:43,633 INFO  - Enabled protocols for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLSv1.2, TLSv1.1, TLSv1]
+2020-04-13 18:38:43,634 INFO  - Enabled cipher suites for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2020-04-13 18:38:43,640 INFO  - Starting TLS TCP listener on address 0.0.0.0 and port 8885
+2020-04-13 18:38:43,656 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1885
+2020-04-13 18:38:43,659 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
+2020-04-13 18:38:43,661 INFO  - Started HiveMQ in 14938ms
+2020-04-13 18:39:02,357 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 18:55:00,442 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 18:55:00,447 INFO  - HiveMQ version: 2020.2
+2020-04-13 18:55:00,447 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 18:55:00,586 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 18:55:00,979 INFO  - This HiveMQ ID is cR1Hh
+2020-04-13 18:55:06,902 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-13 18:56:52,924 INFO  - Starting HiveMQ Community Edition Server
+2020-04-13 18:56:52,931 INFO  - HiveMQ version: 2020.2
+2020-04-13 18:56:52,931 INFO  - HiveMQ home directory: /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq
+2020-04-13 18:56:53,383 INFO  - Log Configuration was overridden by /Users/batmacumba/bcc/ic/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-13 18:56:53,868 INFO  - This HiveMQ ID is MADCj
+2020-04-13 18:57:08,206 INFO  - Starting HiveMQ extension system.
+2020-04-13 18:57:08,338 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-13 18:57:08,345 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-13 18:57:08,366 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-13 18:57:10,041 INFO  - Enabled protocols for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLSv1.2, TLSv1.1, TLSv1]
+2020-04-13 18:57:10,042 INFO  - Enabled cipher suites for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2020-04-13 18:57:10,044 INFO  - Starting TLS TCP listener on address 0.0.0.0 and port 8885
+2020-04-13 18:57:10,066 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1885
+2020-04-13 18:57:10,073 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
+2020-04-13 18:57:10,074 INFO  - Started HiveMQ in 17166ms
+2020-04-13 19:13:20,674 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
