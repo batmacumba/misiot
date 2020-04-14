@@ -255,3 +255,61 @@ Caused by: javax.crypto.BadPaddingException: Given final block not properly padd
 2020-04-13 18:57:10,073 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
 2020-04-13 18:57:10,074 INFO  - Started HiveMQ in 17166ms
 2020-04-13 19:13:20,674 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-14 16:34:25,391 INFO  - Starting HiveMQ Community Edition Server
+2020-04-14 16:34:25,396 INFO  - HiveMQ version: 2020.2
+2020-04-14 16:34:25,396 INFO  - HiveMQ home directory: /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq
+2020-04-14 16:34:25,517 INFO  - Log Configuration was overridden by /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-14 16:34:25,827 INFO  - This HiveMQ ID is oCiP3
+2020-04-14 16:37:31,873 INFO  - Starting HiveMQ Community Edition Server
+2020-04-14 16:37:31,877 INFO  - HiveMQ version: 2020.1
+2020-04-14 16:37:31,877 INFO  - HiveMQ home directory: /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq
+2020-04-14 16:37:31,972 INFO  - Log Configuration was overridden by /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-14 16:37:32,263 INFO  - This HiveMQ ID is mrvRd
+2020-04-14 16:37:49,214 INFO  - Starting HiveMQ Community Edition Server
+2020-04-14 16:37:49,217 INFO  - HiveMQ version: 2019.1
+2020-04-14 16:37:49,218 INFO  - HiveMQ home directory: /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq
+2020-04-14 16:37:49,313 INFO  - Log Configuration was overridden by /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-14 16:37:49,601 INFO  - This HiveMQ ID is 3wrqW
+2020-04-14 16:37:53,732 INFO  - Starting HiveMQ extension system.
+2020-04-14 16:37:53,785 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-14 16:37:53,788 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-14 16:37:53,791 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-14 16:37:54,621 INFO  - Enabled protocols for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLSv1.2, TLSv1.1, TLSv1]
+2020-04-14 16:37:54,621 INFO  - Enabled cipher suites for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2020-04-14 16:37:54,622 INFO  - Starting TLS TCP listener on address 0.0.0.0 and port 8885
+2020-04-14 16:37:54,626 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1885
+2020-04-14 16:37:54,626 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
+2020-04-14 16:37:54,626 INFO  - Started HiveMQ in 5424ms
+2020-04-14 16:38:05,026 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-14 16:38:07,255 INFO  - Shutting down extension system
+2020-04-14 16:38:07,263 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.
+2020-04-14 16:40:03,225 INFO  - Starting HiveMQ Community Edition Server
+2020-04-14 16:40:03,228 INFO  - HiveMQ version: 2019.1
+2020-04-14 16:40:03,229 INFO  - HiveMQ home directory: /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq
+2020-04-14 16:40:03,317 INFO  - Log Configuration was overridden by /Users/batmacumba/Desktop/mqtt/broker_benchmark/brokers/hivemq/conf/logback.xml
+2020-04-14 16:40:03,586 INFO  - This HiveMQ ID is Nnjy1
+2020-04-14 16:40:06,612 INFO  - Starting HiveMQ extension system.
+2020-04-14 16:40:06,658 WARN  - 
+################################################################################################################
+# This HiveMQ deployment is not secure! You are lacking Authentication and Authorization.                      #
+# Right now any MQTT client can connect to the broker with a full set of permissions.                          #
+# For production usage, add an appropriate security extension and remove the hivemq-allow-all extension.       #
+# You can download security extensions from the HiveMQ Marketplace (https://www.hivemq.com/extensions/).       #
+################################################################################################################
+2020-04-14 16:40:06,660 INFO  - Extension "Allow All Extension" version 1.0.0 started successfully.
+2020-04-14 16:40:06,663 INFO  - Starting TCP listener on address 0.0.0.0 and port 1885
+2020-04-14 16:40:07,275 INFO  - Enabled protocols for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLSv1.2, TLSv1.1, TLSv1]
+2020-04-14 16:40:07,276 INFO  - Enabled cipher suites for TCP Listener with TLS at address 0.0.0.0 and port 8885: [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA]
+2020-04-14 16:40:07,276 INFO  - Starting TLS TCP listener on address 0.0.0.0 and port 8885
+2020-04-14 16:40:07,281 INFO  - Started TCP Listener on address 0.0.0.0 and on port 1885
+2020-04-14 16:40:07,282 INFO  - Started TCP Listener with TLS on address 0.0.0.0 and on port 8885
+2020-04-14 16:40:07,282 INFO  - Started HiveMQ in 4065ms
+2020-04-14 17:07:39,373 INFO  - Shutting down HiveMQ. Please wait, this could take a while...
+2020-04-14 17:07:41,593 INFO  - Shutting down extension system
+2020-04-14 17:07:41,597 INFO  - Extension "Allow All Extension" version 1.0.0 stopped successfully.

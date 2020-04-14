@@ -12041,3 +12041,4 @@
 2020-04-13 19:13:11,327 - Client ID: paho_rubyxm4JB912HdOdU68C session has expired at 2020-04-13 22:11:36. All persistent data for this client has been removed.
 2020-04-13 19:13:11,327 - Client ID: paho_rubyyH9a6rjme2txSSEf session has expired at 2020-04-13 22:06:41. All persistent data for this client has been removed.
 2020-04-13 19:13:11,327 - Client ID: paho_rubyzddfNBZelpHj8E4G session has expired at 2020-04-13 22:11:31. All persistent data for this client has been removed.
+2020-04-14 16:59:55,104 - Client ID: UNKNOWN, IP: 192.168.15.10 disconnected ungracefully.
