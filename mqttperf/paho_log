@@ -1,0 +1,46 @@
+D, [2020-04-14T16:57:37.641952 #67981] DEBUG -- : Attempt to connect to host: localhost...
+W, [2020-04-14T16:57:37.644502 #67981]  WARN -- : Could not open a socket with localhost on port 1883.
+W, [2020-04-14T16:57:42.644751 #67981]  WARN -- : Connection failed. Couldn't recieve a Connack packet from: localhost.
+D, [2020-04-14T16:57:58.115280 #68164] DEBUG -- : Attempt to connect to host: localhost...
+D, [2020-04-14T16:57:58.118438 #68164] DEBUG -- : Connection accepted
+D, [2020-04-14T16:57:58.118510 #68164] DEBUG -- : No previous session found by server, starting a new one.
+I, [2020-04-14T16:57:58.124193 #68164]  INFO -- : New packet PahoMqtt::Packet::Suback received.
+I, [2020-04-14T16:57:58.129479 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrec received.
+I, [2020-04-14T16:57:58.129704 #68164]  INFO -- : New packet PahoMqtt::Packet::Puback received.
+I, [2020-04-14T16:57:58.129892 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.130232 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.130574 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrec received.
+I, [2020-04-14T16:57:58.130725 #68164]  INFO -- : New packet PahoMqtt::Packet::Puback received.
+I, [2020-04-14T16:57:58.130854 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.131033 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.131282 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrec received.
+I, [2020-04-14T16:57:58.131456 #68164]  INFO -- : New packet PahoMqtt::Packet::Puback received.
+I, [2020-04-14T16:57:58.131548 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.131770 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.136935 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubcomp received.
+I, [2020-04-14T16:57:58.137171 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.137391 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubcomp received.
+I, [2020-04-14T16:57:58.137609 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.137864 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubcomp received.
+I, [2020-04-14T16:57:58.138095 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:57:58.143826 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrel received.
+I, [2020-04-14T16:58:03.131766 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrec received.
+I, [2020-04-14T16:58:03.132062 #68164]  INFO -- : New packet PahoMqtt::Packet::Puback received.
+I, [2020-04-14T16:58:03.132279 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:58:03.132644 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:58:03.133258 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrec received.
+I, [2020-04-14T16:58:03.133826 #68164]  INFO -- : New packet PahoMqtt::Packet::Puback received.
+I, [2020-04-14T16:58:03.134078 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:58:03.134621 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:58:03.139306 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubcomp received.
+I, [2020-04-14T16:58:03.139921 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:58:03.140415 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubcomp received.
+I, [2020-04-14T16:58:03.140687 #68164]  INFO -- : New packet PahoMqtt::Packet::Publish received.
+I, [2020-04-14T16:58:03.145894 #68164]  INFO -- : New packet PahoMqtt::Packet::Pubrel received.
+I, [2020-04-14T16:58:08.137691 #68164]  INFO -- : New packet PahoMqtt::Packet::Unsuback received.
+D, [2020-04-14T16:58:13.138614 #68164] DEBUG -- : Checking if server is still alive...
+I, [2020-04-14T16:58:13.141201 #68164]  INFO -- : New packet PahoMqtt::Packet::Pingresp received.
+D, [2020-04-14T16:58:18.132327 #68164] DEBUG -- : Disconnecting from localhost.
+D, [2020-04-14T16:58:45.621909 #68200] DEBUG -- : Attempt to connect to host: 192.168.15.34...
+W, [2020-04-14T16:58:45.919342 #68200]  WARN -- : Could not open a socket with 192.168.15.34 on port 1883.
+W, [2020-04-14T16:58:50.919670 #68200]  WARN -- : Connection failed. Couldn't recieve a Connack packet from: 192.168.15.34.

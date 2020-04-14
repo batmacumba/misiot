@@ -44,7 +44,7 @@ class Client
 
 		# Publish a message and wait for puback
 		if @mode == "r" || @mode == "w"
-			@start_time = Time.now() if @mode == 'w'
+			@start_time = Time.now()
 			@client.publish(@topic, random_string, false, 1)
 
 			while @waiting_puback do
@@ -72,7 +72,6 @@ class Client
 
 		# Register a callback for puback event
 		@client.on_puback do
-			@start_time = Time.now() if @mode == "r"
 			finish() if @mode == "w"
 			@waiting_puback = false
 

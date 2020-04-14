@@ -1,5 +1,4 @@
 
-rm -rf resultados
 mkdir resultados
 mkdir resultados/mosquitto
 mkdir resultados/aedes
