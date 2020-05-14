@@ -1,0 +1,3 @@
+#!/bin/sh
+ansible-playbook setup-swarm.yml
+ansible-playbook deploy-swarm-stack.yml

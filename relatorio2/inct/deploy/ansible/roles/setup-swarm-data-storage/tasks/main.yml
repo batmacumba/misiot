@@ -1,0 +1,20 @@
+---
+- name: Create swarm deployment data directory
+  file:
+    state: directory
+    path: "{{ swarm_deployments_path }}/data"
+- name: Create service data directory
+  file:
+    state: directory
+    path: "{{ swarm_deployments_path }}/data/{{ item }}"
+  loop:
+    - postgres
+    - mongodb
+- name: Create data scripts directory
+  file:
+    state: directory
+    path: "{{ swarm_deployments_path }}/data/scripts"
+- name: Copy postgres init script
+  template:
+    src: init_postgres.sql.j2
+    dest: "{{ swarm_deployments_path }}/data/scripts/init_postgres.sql"

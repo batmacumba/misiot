@@ -1,0 +1,8 @@
+------------------------------------------------------------
+Number of Clients:		10
+Benchmark mode:    		Spread
+Spread time min:  		46.648 ms
+Spread time max:  		64.877 ms
+Spread time mean: 		57.776 ms
+Spread time std:  		5.737 ms
+------------------------------------------------------------

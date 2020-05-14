@@ -1,0 +1,32 @@
+all:
+  children:
+    gateway:
+      hosts:
+        gateway-machine:
+          ansible_host: 18.231.34.246
+          ansible_user: admin
+          ansible_ssh_private_key_file: ~/.ssh/id_rsa
+    swarm-manager:
+      hosts:
+        swarm-manager-machine:
+          ansible_host: 18.231.34.246
+          ansible_user: admin
+          ansible_ssh_private_key_file: ~/.ssh/id_rsa
+          swarm_node_name: manager
+      vars:
+        swarm_labels:
+          - swarm_node_name: manager
+            gateway: "true"
+            data: "true"
+            common: "false"
+    swarm-workers:
+      hosts:
+    swarm-data-workers:
+      hosts:
+        gateway-machine:
+  vars:
+    kong: 18.231.34.246
+    rabbitmq: 18.231.34.246
+    mongo: 18.231.34.246
+    postgres_host: 18.231.34.246
+    swarm_manager_ip: 18.231.34.246
