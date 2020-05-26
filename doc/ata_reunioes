@@ -169,6 +169,36 @@ experimento acima
 	+ flexibilidade para executar o próprio MQTT ou só usar um servidor existente
 
 
+# Feedback Daniel:
+
+- video inct: https://drive.google.com/drive/folders/1cBtYMgO6sjYywHQnFwzrNJf0g72k_v2B 
+- formalizar mais as propostas
+- frase dizendo como faz, figura, comparação tabela prós e contras
+- colocar cada um um documento semelhante ao relatorio
+- frase explicando o que faz cada uma
+- fecha com uma tabela de pros e contras
+
+- depois de fechar o relatorio, pensar em um cenario de justificativa para desenvolver a integração MQTT/API
+- procurar no google cenários: comprar dispositivo mqtt (até 5x $40 - mqtt/lora/wifi)
+--------------------------------------------------------------------------------
+
+# Workshop INCT
+Cenário 1: Qualidade do Ar
+- sensores de qualidade do ar nos ônibus
+- fazem o upload para o INCT quando chegam na garagem
+- usam a infraestrutura do INCT para a leitura dos dados
+
+Cenário 2: Ruído
+- sensores de áudio, humidade e temperatura em totens na cidade
+- enviado ao INCT através de 3G ou WiFi
+- usam a infraestrutura do INCT para a leitura dos dados
+- mapa de ruídos: barulhometro.com.br
+
+Cenário 3: Desastres Naturais
+- pluviômetro, sensor de humidade
+- enviado ao INCT através de LoRa
+- precisam dos dados anteriores para saber quando os dados atuais serão preocupantes e sinalizam um desastre
+
 
 
 
