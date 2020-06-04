@@ -48,7 +48,6 @@
 * ferramenta benchmark mqtt ruby
 * INTERNET NO CRUSP
 
-
 --------------------------------------------------------------------------------
 
 #### 16/04/2020:
@@ -242,6 +241,12 @@ experimento acima
 * cuidado com race condition
 * **apresentar proposta da lógica de adaptação do MQTT na reunião do grupo de sistemas - terça 14h - convocar ainda participação do pessoal da pragma code**
 
+-------------
 
+#### 04/06/2020
+
+* apresentar proposta
+* decidir sobre apresentação da proposta no lab de sistemas e/ou poliana
+* decidir sobre B.Rotondaro cooperação no projeto
 
 

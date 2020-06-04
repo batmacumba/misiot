@@ -1,4 +1,17 @@
-# "API" para integração do MQTT no INCT
+## Possíveis problemas
+
+1. Identificadores repetidos;
+2. Capabilities não cadastradas no sistema;
+3. Compatibilidade com TTN;
+4. Condições de corrida na escrita dos dados pode causar inconsistência entre o banco de dados do servidor MQTT e da plataforma;
+
+## Benefícios
+
+1. Simplifica muito o processo de cadastro de resources e capabilities na plataforma;
+2. Diminui a quantidade de processamento e uso de energia dos dispositivos embarcados;
+3. Simplifica o envio de _streams_ de dados;
+
+## API do InterSCity
 
 #### Resource Adaptor
 * /adaptor/resources: 
@@ -37,4 +50,5 @@
 #### Resource Discovery
 * /discovery/resources:
 
-# Condições de corrida na escrita dos dados
+
+
