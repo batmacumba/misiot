@@ -244,9 +244,26 @@ experimento acima
 -------------
 
 #### 04/06/2020
-
 * apresentar proposta
 * decidir sobre apresentação da proposta no lab de sistemas e/ou poliana
 * decidir sobre B.Rotondaro cooperação no projeto
+
+#### Feedback Daniel
+* redundância de servidor MQTT?
+* uuid como identificador: verificar se é possível no sonoff?
+* verificar o que acontece quando não existem subscribers em um tópico
+* flexibilidade vs funcionalidade
+* cenários simples e depois vamos dificultando
+* considerar que não existirão capabilities não cadastradas
+* tentar criar cenário com condição de corrida no futuro
+* entregar primeiro com Mosquitto e no futuro colocar o TTN
+
+##### Apresentação grupo de sistemas - terça 23/06
+* apresentar método de integração: Cliente MQTT, RabbitMQ
+* apresentar também "API" MQTT
+* cenários integração MQTT INCT
+* SLIDES 18/06
+* APRESENTAÇÃO 23/06
+
 
 
