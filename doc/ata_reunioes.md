@@ -265,5 +265,39 @@ experimento acima
 * SLIDES 18/06
 * APRESENTAÇÃO 23/06
 
+-----------
+#### 16/06/2020 - Reunião MISIOT
+* não nos preocupamos com como ligar ao inct
+* implementamos sensor -> mqtt
+* o que acontece com as capabilities de atuador? podemos forward todos os atuadores pro servidor MQTT - vai ser necessário mexer em outros arquivos
+
+# Reunião
+* como ter um dado protegido no inct
+* reunião com o pessoal do pragma 
+* webinar teve um pessoal usando mqtt no inct - grupo de um Fabio
+* mostrar na apresentacao algo sobre UUID
+^^^^^^^^^^^^
+CLARIFICAR COM O DANIEL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
