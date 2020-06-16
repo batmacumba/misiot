@@ -52,6 +52,14 @@ var updated_subscription = {
   }
 };
 
+var new_data = {
+  "data": [
+    {
+      "temperatura": 10,
+      "timestamp": "2017-06-14T17:52:25.428Z"
+    }
+]};
+
 /* NOVO RESOURCE */
 // axios.post('http://18.231.34.246:8000/catalog/resources', resource)
 //   .then(function (response) {
@@ -79,11 +87,20 @@ var updated_subscription = {
   //   console.log(error);
   // });
 
-/* SEND ACTUATOR COMMAND */
-  axios.post('http://18.231.34.246:8000/actuator/commands', actuator)
+/* PUT DATA */
+  axios.post('http://34.95.144.147:8000/adaptor/resources/652cb918-c660-48d2-8ae6-a907f3b7ffe1/data/temperatura', new_data)
   .then(function (response) {
     console.log(response.data);
   })
   .catch(function (error) {
     console.log(error);
   });
+
+/* SEND ACTUATOR COMMAND */
+  // axios.post('http://18.231.34.246:8000/actuator/commands', actuator)
+  // .then(function (response) {
+  //   console.log(response.data);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
