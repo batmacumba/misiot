@@ -271,7 +271,8 @@ experimento acima
 * implementamos sensor -> mqtt
 * o que acontece com as capabilities de atuador? podemos forward todos os atuadores pro servidor MQTT - vai ser necessário mexer em outros arquivos
 
-# Reunião
+### Reunião
+
 * como ter um dado protegido no inct
 * reunião com o pessoal do pragma 
 * webinar teve um pessoal usando mqtt no inct - grupo de um Fabio
@@ -279,7 +280,13 @@ experimento acima
 ^^^^^^^^^^^^
 CLARIFICAR COM O DANIEL
 
+---------
 
+### 18/06/2020
+
+* preciso explicar resources e capabilities?
+* trabalho da UFG muito parecido - DB
+* tempo da apresentação
 
 
 
