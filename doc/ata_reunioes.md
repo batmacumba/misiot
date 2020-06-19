@@ -286,7 +286,20 @@ CLARIFICAR COM O DANIEL
 
 * preciso explicar resources e capabilities?
 * trabalho da UFG muito parecido - DB
-* tempo da apresentação
+* tempo da apresentação - max 15min, ideal 10min
+
+
+
+#### Feedback
+
+* protocolo aberto - falar dos brokers testados antes dos cenários
+* falar da escolha do mosquito - fazer tabela sobre cada um: licença, data da versão, linguagem, ranking por performance, criptografia
+* falar sobre resources e capabilities - slide 2
+* mostrar URL com UUID
+* figura dispositivos IoT
+* mqtt mais leve que amqp e copa
+* mandar slides antes da terça
+* como pausar relógio?
 
 
 
