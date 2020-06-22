@@ -277,14 +277,12 @@ experimento acima
 * reunião com o pessoal do pragma 
 * webinar teve um pessoal usando mqtt no inct - grupo de um Fabio
 * mostrar na apresentacao algo sobre UUID
-^^^^^^^^^^^^
-CLARIFICAR COM O DANIEL
 
 ---------
 
 ### 18/06/2020
 
-* preciso explicar resources e capabilities?
+* preciso explicar resources e capabilities? sim
 * trabalho da UFG muito parecido - DB
 * tempo da apresentação - max 15min, ideal 10min
 
@@ -300,6 +298,16 @@ CLARIFICAR COM O DANIEL
 * mqtt mais leve que amqp e copa
 * mandar slides antes da terça
 * como pausar relógio?
+
+---------
+
+### 21/06/2020 - Término dos slides
+
+- [ ] SVG mais nítido
+- [ ] Relatório 1 - performance Mosquitto
+- [ ] Explicar resources e capabilities
+- [ ] Terminar implementação - direcionar script pro playground
+- [ ] Terminar slide - o que já foi feito
 
 
 
