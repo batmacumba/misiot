@@ -301,13 +301,13 @@ experimento acima
 
 ---------
 
-### 21/06/2020 - Término dos slides
+### 21/06/2020 - Checklist Apresentação LabSIS
 
-- [ ] SVG mais nítido
-- [ ] Relatório 1 - performance Mosquitto
-- [ ] Explicar resources e capabilities
+- [x] SVG mais nítidoC
+- [x] Relatório 1 - performance Mosquitto
+- [x] Explicar resources e capabilities
 - [ ] Terminar implementação - direcionar script pro playground
-- [ ] Terminar slide - o que já foi feito
+- [x] Terminar slide - o que já foi feito
 
 
 
