@@ -306,12 +306,45 @@ experimento acima
 - [x] SVG mais nítidoC
 - [x] Relatório 1 - performance Mosquitto
 - [x] Explicar resources e capabilities
-- [ ] Terminar implementação - direcionar script pro playground
+- [x] Terminar implementação - direcionar script pro playground
 - [x] Terminar slide - o que já foi feito
 
+-------
 
+### 25/06/2020
 
+* **cuidado para não duplicar dados quando houver mais de uma instância do client MQTT funcionando na plataforma!!**
 
+#### Reunião Diego e Higor:
+
+* higor acha melhor só modificar o resource-adaptor para manter os testes funcionando - também acha possível que uma só instância do RA possa falar mqtt e rest
+* diego concorda em não criar microserviço separado
+* escrever gem e encapsular nos serviços - separar comunicação externa de comunicação interna
+* kong gateway - não redireciona MQTT, só HTTP - kong fecha todas as portas?
+  1. implementar MQTT no : https://github.com/Kong/kong/issues/1219
+  2. rabbitmq não passa pelo kong
+
+* portas da plataforma fechadas pra internet
+* SSL na plataforma: kongapi gateway ssl
+* autenticação: 
+* somente modo ABP - chave fixa: ao criar o resource eu passo a chave AppSessionKey
+* 1. Crio uma chave API
+     * INCT só me dá acesso aos meus resources
+     * Chave de grupo?
+  2. Cada resource criado, pode aceitar uma chave AppSession
+     * chave recurso, chave aplicação?
+     * protegido ou não
+  3. Cada atualização do servidor MQTT, adaptador checa se há chave LoRaWAN e descriptografa, guardando
+  4. Ativar SSL/TLS
+
+**SEPARAR PROPOSTA INTEGRAR MQTT, INTEGRAR LORAWAN - MUITO DIFERENTE**
+
+* como mexer no resource-adaptor: adicionar o campo da chave ABP
+* não é possível criar RabbitMQ separado - servidor MQTT está no TTN
+
+https://trello.com/b/dwRIH5My/misiot
+https://gitlab.com/batmacumba/interscity-platform
+https://docs.google.com/document/d/1r8t_uGXFqMn68BNbc_VFRX4DIZDkEJyRWBkCu31AYr4/edit
 
 
 
