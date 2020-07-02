@@ -348,6 +348,16 @@ https://docs.google.com/document/d/1r8t_uGXFqMn68BNbc_VFRX4DIZDkEJyRWBkCu31AYr4/
 
 
 
+--------
+
+### 02/07/2020
+
+* Poliana vai buscar os dados no TTN ou talvez no gateway, com os dados ainda criptografados. O que fazemos? Adaptamos ao TTN ou esperamos ela definir o formato?
+
+https://www.thethingsnetwork.org/forum/t/gateway-data-retrieval-over-mqtt/21424/3
+
+https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gateways
+
 
 
 
