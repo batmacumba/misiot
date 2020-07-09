@@ -348,12 +348,23 @@ https://docs.google.com/document/d/1r8t_uGXFqMn68BNbc_VFRX4DIZDkEJyRWBkCu31AYr4/
 
 
 
+--------
+
+### 02/07/2020
+
+* Poliana vai buscar os dados no TTN ou talvez no gateway, com os dados ainda criptografados. O que fazemos? Adaptamos ao TTN ou esperamos ela definir o formato?
+
+https://www.thethingsnetwork.org/forum/t/gateway-data-retrieval-over-mqtt/21424/3
+
+https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gateways
 
 
 
+#### Feedback:
 
-
-
+* ir até o final de cada modelo (MQTT, TTN)
+* sondar no grupo da cripto e do imesec - precisamos de um aluno de graduação para trabalhar com criptografia
+* continuar no trajeto anterior - rabbitmqtt, cliente mqtt, ttn
 
 
 
