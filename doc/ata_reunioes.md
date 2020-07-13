@@ -364,7 +364,37 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 * ir até o final de cada modelo (MQTT, TTN)
 * sondar no grupo da cripto e do imesec - precisamos de um aluno de graduação para trabalhar com criptografia
-* continuar no trajeto anterior - rabbitmqtt, cliente mqtt, ttn
+* continuar no trajeto anterior - rabbitmqtt, cliente mqtt, ttnv
+
+------
+
+### 10/07/2020
+
+* sondagem: ninguém
+* rabbitmq ativado - lidando com as entranhas do inct
+
+##### Dificuldades Desenvolvimento
+
+* primeiro slide próx apresentacao: problemas desenvolvimento da plataforma
+
+##### Feedback
+
+* prova de conceito: data collector monitora o rabbitmq broker direto
+* rodar os testes de broker no rabbitmq
+* medir overhead
+
+##### Férias:
+
+* 1a versao: reproduzir experimentos rabbitmq
+* 2a: prova de conceito mqtt - data_collector (medir o tempo para pegar via API REST)
+* 3a versao: criar adaptador genérico (mesmo teste de tempo)
+* depois das férias: gemfile cliente mqtt
+
+#### 
+
+
+
+
 
 
 
