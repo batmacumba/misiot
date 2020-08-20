@@ -390,7 +390,17 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * 3a versao: criar adaptador genérico (mesmo teste de tempo)
 * depois das férias: gemfile cliente mqtt
 
-#### 
+---
+### 14/08/2020
+
+* empresas
+* monitoria
+
+* 2a: medir mqtt vs API - 
+* relatorio qualitativo sobre cada método de adaptação
+* deixar ambientes bem documentados
+* cripto: Rafaela Ferreira Nunes
+
 
 
 
