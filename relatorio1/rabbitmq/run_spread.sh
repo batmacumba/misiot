@@ -1,5 +1,5 @@
 IP_Address=$1
-prefix="${IP_Address:0:3}"
+prefix="local"
 
 mkdir resultados_${prefix}
 mkdir resultados_${prefix}/rabbitmq
