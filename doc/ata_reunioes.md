@@ -390,7 +390,11 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * 3a versao: criar adaptador genérico (mesmo teste de tempo)
 * depois das férias: gemfile cliente mqtt
 
-#### 
+-------
+
+### 14/07/2020
+
+* Monitoria 216
 
 
 
