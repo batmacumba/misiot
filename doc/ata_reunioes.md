@@ -393,6 +393,8 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 ---
 ### 14/08/2020
 
+* empresas
+* monitoria
 * 2a: medir mqtt vs API - 
 * relatorio qualitativo sobre cada método de adaptação
 * deixar ambientes bem documentados
@@ -426,9 +428,13 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 #### Fazer HTTP-HTTP: máximo número de clientes é o máximo número de ônibus de SP
 
+---
 
+### 24/08/2020
 
-
-
-
-
+* Approach UNIFESP:
+  * Criptografar de ponta a ponta a comunicação IoT: servidor de rede LoRaWAN pode estar comprometido
+  * INCT tem que ter uma chave pública/privada
+  * Sensor tem que ter uma chave pública/privada
+  * Criptografar para além da criptografia existente no LoRaWAN
+* Testes HTTP vs MQTT tem que ser similar
