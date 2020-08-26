@@ -390,20 +390,24 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * 3a versao: criar adaptador genérico (mesmo teste de tempo)
 * depois das férias: gemfile cliente mqtt
 
--------
+---
+### 14/08/2020
 
-### 14/07/2020
+* empresas
+* monitoria
+* 2a: medir mqtt vs API - 
+* relatorio qualitativo sobre cada método de adaptação
+* deixar ambientes bem documentados
+* cripto: Rafaela Ferreira Nunes
 
-* Monitoria 216
+---
 
+### 24/08/2020
 
-
-
-
-
-
-
-
-
-
+* Approach UNIFESP:
+  * Criptografar de ponta a ponta a comunicação IoT: servidor de rede LoRaWAN pode estar comprometido
+  * INCT tem que ter uma chave pública/privada
+  * Sensor tem que ter uma chave pública/privada
+  * Criptografar para além da criptografia existente no LoRaWAN
+* Testes HTTP vs MQTT tem que ser similar
 
