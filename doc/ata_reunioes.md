@@ -393,19 +393,38 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 ---
 ### 14/08/2020
 
-* empresas
-* monitoria
-
 * 2a: medir mqtt vs API - 
 * relatorio qualitativo sobre cada método de adaptação
 * deixar ambientes bem documentados
 * cripto: Rafaela Ferreira Nunes
 
+---
 
+### 21/08/2020
 
+* TODO: repetir experimento em máquinas maiores ou menores
+* comprovar que nada em paralelo estava ocupando o processamento: 
+  * revisar a saída do PS
+  * olhar a fila de processos agendados pelo AT e cron
+  * provar que SO não subiu outros processos
+* TODO: refazer testes do 1o relatório na nuvem sem outros processos
+  * Relatar como estava a rede no momento
+  * Iperf antes e depois
 
+* Locate
 
+* 2o teste: MQTT-MQTT, MQTT-API, API-API
+* importante também o processo, não só o resultado final
 
+* Simular cenário cidades inteligentes nos testes?
+  * Quantos ônibus rodam ao mesmo tempo?
+
+* TESTES SÃO SÓ PARA JUSTIFICAR AS ESCOLHAS NA PESQUISA
+* Emulab/planetlab: rede de experimentação
+* seção de trabalhos futuros
+* Cenário realista: número de clientes
+
+#### Fazer HTTP-HTTP: máximo número de clientes é o máximo número de ônibus de SP
 
 
 
