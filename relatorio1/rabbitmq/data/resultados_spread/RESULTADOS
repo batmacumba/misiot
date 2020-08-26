@@ -1,0 +1,48 @@
+local rabbitmq 05_plain_spread_10 mean
+mean:   6.7048
+stdev:  0.3522411853142375
+local rabbitmq 06_plain_spread_50 mean
+mean:   23.228650000000002
+stdev:  1.3791094103766655
+local rabbitmq 07_plain_spread_100 mean
+mean:   53.72115
+stdev:  4.528854186157209
+local rabbitmq  08_plain_spread_200 mean
+mean:   102.43005
+stdev:  6.721247373853035
+local rabbitmq 13_ssl_spread_10 mean
+mean:   7.0612
+stdev:  0.6183717669050417
+local rabbitmq 14_ssl_spread_50 mean
+mean:   24.6348
+stdev:  2.210982696497312
+local rabbitmq 15_ssl_spread_100 mean
+mean:   51.67955
+stdev:  4.895589760450887
+local rabbitmq 16_ssl_spread_200 mean
+mean:   106.035
+stdev:  11.311262975692111
+remote rabbitmq 05_plain_spread_10 mean
+mean:   17.8711
+stdev:  1.9921302245533414
+remote rabbitmq 06_plain_spread_50 mean
+mean:   36.2444
+stdev:  6.96826802765674
+remote rabbitmq 07_plain_spread_100 mean
+mean:   59.0558
+stdev:  6.441860041944407
+remote rabbitmq  08_plain_spread_200 mean
+mean:   117.1156
+stdev:  13.870543336984243
+remote rabbitmq 13_ssl_spread_10 mean
+mean:   20.444300000000002
+stdev:  7.092326892308929
+remote rabbitmq 14_ssl_spread_50 mean
+mean:   34.09145
+stdev:  4.266419359985978
+remote rabbitmq 15_ssl_spread_100 mean
+mean:   56.43525
+stdev:  6.251277417877337
+remote rabbitmq 16_ssl_spread_200 mean
+mean:   106.3239
+stdev:  5.518525841486829
