@@ -438,3 +438,48 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
   * Sensor tem que ter uma chave pública/privada
   * Criptografar para além da criptografia existente no LoRaWAN
 * Testes HTTP vs MQTT tem que ser similar
+
+---
+
+### 26/08/2020
+
+* Dificuldades HACKING:
+  * Instalar libpq-dev
+  * kong-database não sobe:
+    * POSTGRES_HOST_AUTH_METHOD=trust
+  * data-collector: erro no active_record
+    * config/application.rb: require "active_record/railtie"
+  * data-collector: criar $USER no psql
+    * criar role $USER
+  * resource-adaptor: ./bin/setup:4:in `<main>': undefined local variable or method `_dirE__'
+    * fix /bin/setup: ++\__dir__
+  * Test:
+    * Falta instruções de como executar o teste:
+      * bundle install && bundle exec rspec
+  * HACKING diz que precisa de RabbitMQ mas kong já sobe uma instância do RabbiMQT
+    * Postgres não sobe no Kong
+    * Mongo não sobe no kong 
+  * É preciso subir kong-api-gateway antes mas isso não é mencionado no HACKING.md
+  * Rodar o ./bin/setup do resource-adaptor fora do container faz com que a database development não seja criada no PGSQL que está dentro do container
+    * Rodar o ./bin/setup dentro
+  * Rodar o ./bin/setup dentro ou fora?
+  * ESTUDAR: Rails
+
+---
+
+### Higor:
+
+* ./scripts/development de cada serviço: é pra usar?
+* onde colocar o cliente MQTT
+* overview dos folders de cada serviço
+* config/initializers
+
+---
+
+### 27/08/2020
+
+* ambiente de dev configurado
+* começo da bridge mqtt
+* estudo do rails
+* reunião Higor
+* rever plano testes HTTP/MQTT
