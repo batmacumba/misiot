@@ -483,3 +483,84 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * estudo do rails
 * reunião Higor
 * rever plano testes HTTP/MQTT
+
+#### Daniel:
+
+* **documento com fixes do HACKING.md**
+* plano testes:
+  * comparar MQTT com HTTP para mostrar custo do desempenho
+  * HTTP baseline
+  * Ok não usar SSL
+  * Objetivo não é otimização, mas comparação
+  * pegar tamanho do pacote MQTT - comparar com tamanho do pacote HTTP
+  * ambiente de testes - iperf: medir latência e banda
+  * teste de fluxo de dados:
+    * cliente:
+      * uso de bateria
+      * uso do enlace
+    * servidor:
+      * uso do cpu
+    * fazer teste depois
+  * fazer testes atuais e depois pensar no fluxo de dados
+  * não comparar tempo do HTTP com MQTT - só referência
+  * teste de fluxo de dados: custo, uso da rede
+  * **descobrir número máximo de ônibus**
+
+---
+
+### 01/09/2020
+
+* email Diego: diegoamc@protonmail.ch - cópia Daniel
+* proposta MAC0215
+
+---
+
+### 21/09/2020
+
+* frota de ônibus: 14.000
+* mais de uma forma de implementar
+  * levar pra Pragma uma proposta
+
+---
+
+### 22/09/2020
+
+* ambiente de desenvolvimento dá trabalho -- email pragma
+* dificuldades para receber uma subscription
+* plano de testes *walkthrough*
+  * tamanho das mensagens
+  * latência
+  * banda e tempo consumido para se conectar, mandar msg, e desconectar
+  * 14k mensagens: banda consumida, tempo
+    * uso de CPU
+* modos de adaptação do MQTT
+  * não há outros modos por enquanto
+
+---
+
+### 09/10/2020
+
+* confusão instruções HACKING e deploy:
+  * acertei o deploy
+  * subi todos os serviços
+  * email pro diego pedindo pra falar na lista
+* subscription
+  * Mandar atualizações pros atuadores
+  * reverter um commit
+  * subir o serviço sidekiq
+  * pronto pra testes
+
+---
+
+* tamanho das mensagens: pequeno, médio, grande
+  * dezenas, centenas, milhares MBytes
+* 1o: mandar mensagem temperatura - 10 mensagens consecutivas
+* 2o: 100 mensagens
+* 3o: 1000 mensagens
+
+* latência: média e desvio padrao
+* MQTT: mandar valor + timestamp
+
+* **localhost**
+* gráfico barra - cenários
+* terça diego permissao lista
