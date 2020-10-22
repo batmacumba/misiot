@@ -3,9 +3,9 @@ const axios = require('axios');
 
 var resource = {
   "data": {
-    "description": "Quarto",
+    "description": "Um semáforo na cidade",
     "capabilities": [
-      "temperature"
+      "semaphore"
     ],
     "status": "active",
     "lat": -23.559616,
@@ -33,18 +33,18 @@ var resource_adaptado = {
 };
 
 var capability = {
-  "name": "temperature",
+  "name": "temperatura",
   "description": "Measure the temperature of the environment",
   "capability_type": "sensor"
 };
 
 var updated_resource = {
   "data": {
-    "description": "Teste de capabilities updated",
+    "description": "Um ônibus em SP",
     "capabilities": [
-      "illuminate"
+      "temperatura"
     ],
-    "status": "inactive",
+    "status": "active",
     "lat": -23.559616,
     "lon": -46.731386
   }
@@ -52,20 +52,20 @@ var updated_resource = {
 
 var subscription = {
   "subscription": {
-    "uuid": "0e76dc01-5a85-4e3d-98a0-867505c10b3d",
+    "uuid": "c61385b3-a9d6-4fb5-83c7-7712ac7d3d88",
     "capabilities": [
-      "termostato"
+      "semaphore"
     ],
-    "url": "http://10.144.0.1"
+    "url": "http://127.0.0.1:8877"
   }
 };
 
 var actuator = {
   "data": [
     {
-      "uuid": "0e76dc01-5a85-4e3d-98a0-867505c10b3d",
+      "uuid": "c61385b3-a9d6-4fb5-83c7-7712ac7d3d88",
       "capabilities": {
-        "termostato": "67"
+        "semaphore": "green"
       }
     }
   ]
@@ -80,22 +80,22 @@ var updated_subscription = {
 var new_data = {
   "data": [
     {
-      "temperatura": 10,
-      "timestamp": "2017-06-14T17:52:25.428Z"
+      "temperatura": 99,
+      "timestamp": "2020-06-14T17:52:25.428Z"
     }
 ]};
 
 /* NOVA CAPABILITY */
-axios.post('http://10.144.0.6:8000/catalog/capabilities', capability)
-  .then(function (response) {
-    console.log(response.data);
-  })
-  .catch(function (error) {
-    console.log(error);
-  });
+// axios.post('http://127.0.0.1:3000/capabilities', capability)
+//   .then(function (response) {
+//     console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     console.log(error);
+//   });
   
 /* NOVO RESOURCE */
-// axios.post('http://10.144.0.6:8000/catalog/resources', resource_adaptado)
+// axios.post('http://127.0.0.1:3003/resources', resource)
 //   .then(function (response) {
 //     console.log(response.data);
 //   })
@@ -105,8 +105,8 @@ axios.post('http://10.144.0.6:8000/catalog/capabilities', capability)
 
 
 
-// /* NOVA SUBSCRIPTION */
-// axios.post('http://18.231.34.246:8000/adaptor/subscriptions', subscription)
+/* NOVA SUBSCRIPTION */
+// axios.post('http://127.0.0.1:3002/subscriptions', subscription)
 //   .then(function (response) {
 //     console.log(response.data);
 //   })
@@ -115,7 +115,7 @@ axios.post('http://10.144.0.6:8000/catalog/capabilities', capability)
 //   });
 
 /* UPDATE RESOURCE */
-  // axios.put('http://18.231.34.246:8000/catalog/resources/c5be3854-9834-48df-b0c3-8fb6c4b6e54c', updated_resource)
+  // axios.put('http://127.0.0.1:3000/resources/143ef9c1-0422-4d59-b7fb-02b1b84827c6', updated_resource)
   // .then(function (response) {
   //   console.log(response.data);
   // })
@@ -124,20 +124,20 @@ axios.post('http://10.144.0.6:8000/catalog/capabilities', capability)
   // });
 
 /* PUT DATA */
-/*
- * axios.post('http://34.95.144.147:8000/adaptor/resources/652cb918-c660-48d2-8ae6-a907f3b7ffe1/data/temperatura', new_data)
+
+ // axios.post('http://127.0.0.1:3002/resources/30b95320-5893-411c-96a6-535ae1bfde92/data/temperature', new_data)
+ //  .then(function (response) {
+ //    console.log(response.data);
+ //  })
+ //  .catch(function (error) {
+ //    console.log(error);
+ //  });
+
+/* SEND ACTUATOR COMMAND */
+  axios.post('http://127.0.0.1:3000/commands', actuator)
   .then(function (response) {
     console.log(response.data);
   })
   .catch(function (error) {
     console.log(error);
-  });*/
-
-/* SEND ACTUATOR COMMAND */
-  // axios.post('http://18.231.34.246:8000/actuator/commands', actuator)
-  // .then(function (response) {
-  //   console.log(response.data);
-  // })
-  // .catch(function (error) {
-  //   console.log(error);
-  // });
+  });
