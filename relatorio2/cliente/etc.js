@@ -1,11 +1,23 @@
 const util = require('util');
 const axios = require('axios');
 
-var resource = {
+var resource_actuator = {
   "data": {
-    "description": "Resource de teste",
+    "description": "Resource de teste - atuador",
     "capabilities": [
       "illuminate"
+    ],
+    "status": "active",
+    "lat": -23.559616,
+    "lon": -46.731386
+  }
+};
+
+var resource_sensor = {
+  "data": {
+    "description": "Resource de teste - sensor",
+    "capabilities": [
+      "temperature"
     ],
     "status": "active",
     "lat": -23.559616,
@@ -102,13 +114,13 @@ var new_data = {
 //   });
   
 /* NOVO RESOURCE */
-// axios.post('http://127.0.0.1:3003/resources', resource)
-//   .then(function (response) {
-//     console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
+axios.post('http://127.0.0.1:3003/resources', resource_sensor)
+  .then(function (response) {
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 
 
 
@@ -132,19 +144,19 @@ var new_data = {
 
 /* PUT DATA */
 
- // axios.post('http://127.0.0.1:3002/resources/449b59e0-e93d-46f7-b4bd-54905c478761/data/teste', new_data)
- //  .then(function (response) {
- //    console.log(response.data);
- //  })
- //  .catch(function (error) {
- //    console.log(error);
- //  });
-
-/* SEND ACTUATOR COMMAND */
-  axios.post('http://127.0.0.1:3000/commands', actuator)
+ axios.post('http://127.0.0.1:3002/resources/449b59e0-e93d-46f7-b4bd-54905c478761/data/teste', new_data)
   .then(function (response) {
     console.log(response.data);
   })
   .catch(function (error) {
     console.log(error);
   });
+
+/* SEND ACTUATOR COMMAND */
+  // axios.post('http://127.0.0.1:3000/commands', actuator)
+  // .then(function (response) {
+  //   console.log(response.data);
+  // })
+  // .catch(function (error) {
+  //   console.log(error);
+  // });
