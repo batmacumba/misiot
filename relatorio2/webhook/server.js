@@ -12,4 +12,8 @@ app.post( '/', ( req, res ) => {
     res.sendStatus( 200 );
 } );
 
+<<<<<<< HEAD
 app.listen( 8877, () => console.log( 'Node.js server started on port 8877.' ) );
+=======
+app.listen( 5000, () => console.log( 'Node.js server started on port 5000.' ) );
+>>>>>>> 756c5d6dfa987e8f613f571086dc961c54eb8830
