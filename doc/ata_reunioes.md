@@ -564,3 +564,11 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * **localhost**
 * gráfico barra - cenários
 * terça diego permissao lista
+
+---
+
+### 23/10/2020
+
+* "API" MQTT
+  * JSON
+  * timestamp na hierarquia dos topicos
