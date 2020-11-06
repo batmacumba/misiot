@@ -38,6 +38,12 @@ response = HTTParty.post('http://127.0.0.1:3002/subscriptions',
 			  }
 			}.to_json)
 
+# Handling da resposta
+if response.code != 201
+	puts "Não foi possível criar uma nova subscription"
+	return
+end
+
 # Criação do Webhook
 server = TCPServer.new 5678
 waiting_for_command = false
@@ -47,7 +53,15 @@ start_time = 0
 t = Thread.new {
 	while session = server.accept
 	  elapsed_time = ((Time.now - start_time) * 1000).round(3)
-	  session.close
+	  	body = "Ok"
+		head = "HTTP/1.1 200\r\n" \
+		"Date: #{Time.now.httpdate}\r\n" \
+		"Content-Length: #{body.length.to_s}\r\n" 
+
+		session.write head
+		session.write "\r\n"
+		session.write body
+		session.close
 	  waiting_for_command = false
 	end
 }
@@ -72,7 +86,6 @@ N.times {
 		nil
 	end
 	print("#{elapsed_time}\n")
-	sleep(2)
 }
 
 t.join
