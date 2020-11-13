@@ -572,3 +572,36 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * "API" MQTT
   * JSON
   * timestamp na hierarquia dos topicos
+  
+ * * 
+
+---
+
+### 05/11/2020
+
+- [x] Teste 1: tamanho das mensagens
+- [ ] Teste 2: atuador - latência
+
+* Ferramentas para monitorar uso do computador?
+
+  
+
+  #### Feedback
+
+  * mqtt com payload raw
+  * mqtt com payload json
+  * o uso do mqtt aliviou o uso de CPU da plataforma ou piorou?
+    * mqtt terceiriza o trabalho de procurar subscriptions pro servidor mqtt
+  * onde fica o gargalo de transmissão?
+
+  
+
+  
+
+  
+
+  * Aplicações do "mundo real"
+    * [https://gitlab.com/smart-city-platform/smart_parking_api](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fgitlab.com%2Fsmart-city-platform%2Fsmart_parking_api)
+    * [https://gitlab.com/smart-city-platform/smart_parking_maps](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fgitlab.com%2Fsmart-city-platform%2Fsmart_parking_maps)
+  * Artigo de desempenho
+    * https://interscity.org/assets/design_evaluation_scalable_platform_-_FGCS_2018.pdf
