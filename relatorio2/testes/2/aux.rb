@@ -13,4 +13,5 @@ while session = server.accept
 	session.write "\r\n"
 	session.write body
 	session.close
+	print("Responde #{Time.now}")
 end

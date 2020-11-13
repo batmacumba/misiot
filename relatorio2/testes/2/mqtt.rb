@@ -24,25 +24,24 @@ if response.code != 201
 end
 uuid = JSON.parse(response.body)['data']['uuid']
 
-# Abre o cliente MQTT
-client = PahoMqtt::Client.new()
-client.connect('127.0.0.1', 1883)
+# Variáveis globais
+elapsed_time = Array.new(1000, 0)
+start_time = Array.new(1000, 0)
+i = 0
+waiting_for_reply = false
+
+# Cliente MQTT que receberá os comandos da plataforma
+client = PahoMqtt::Client.new
+client.connect('127.0.0.1', 1883, client.keep_alive, true, client.blocking)
 client.subscribe(['commands/' + uuid, 2])
-while @waiting_suback do
-	sleep 0.001
-end
-
-start_time = 0
-elapsed_time = 0
-waiting_for_command = false
-
 client.on_message do |message|
-	elapsed_time = ((Time.now - start_time) * 1000).round(3)
-	waiting_for_command = false
+	waiting_for_reply = false
 end
 
-# Envio das N mensagens
+
+# Envio dos comandos à plataforma
 N.times {
+	start_time[i] = Time.now()
 	HTTParty.post('http://127.0.0.1:3000/commands', 
 		:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
 		:body => {
@@ -55,11 +54,11 @@ N.times {
 				    }
 				  ]
 				}.to_json)
-	start_time = Time.now()
-	waiting_for_command = true
-	while waiting_for_command
+	waiting_for_reply = true
+	while waiting_for_reply
 		nil
 	end
-	print("#{elapsed_time}\n")
+	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
+	print("#{elapsed_time[i]}\n")
+	i += 1
 }
-
