@@ -1,5 +1,6 @@
 require 'httparty'
 require 'paho-mqtt'
+require 'descriptive_statistics'
 
 N = 1000
 mutex = Mutex.new
@@ -64,7 +65,23 @@ N.times {
 			cond_var.wait(mutex)
 		end
 	end
-	
-	print("#{elapsed_time[i]}\n")
 	i += 1
 }
+
+# Escrita dos dados gerados
+f = File.open("mqtt/DATA", "w")
+for time in elapsed_time
+	f.write("#{time}\n") 
+end
+
+f = File.open("mqtt/STATS", "w")
+str = ""
+str += "------------------------------------------------------------\n"
+str += "min:  \t\t#{elapsed_time.min()} ms\n"
+str += "max:  \t\t#{elapsed_time.max()} ms\n"
+str += "mean: \t\t#{elapsed_time.mean().round(3)} ms\n"
+str += "std:  \t\t#{elapsed_time.standard_deviation().round(3)} ms\n"
+str += "------------------------------------------------------------\n"
+
+f.write(str)
+print(str)
