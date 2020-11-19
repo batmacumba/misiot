@@ -3,22 +3,8 @@ require 'socket'
 
 N = 1000
 
-# # Criação da capability "time"
-# response = HTTParty.post('http://127.0.0.1:3003/capabilities/', 
-# 	:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
-# 	:body => {
-# 				"name": "start_time",
-# 				"description": "Holds a timestamp for the test",
-# 				"capability_type": "sensor"
-# 			 }.to_json)
-
-# # Handling da resposta
-# if response.code != 201
-# 	puts "Não foi possível criar um novo resource"
-# 	return
-# end
-# uuid = JSON.parse(response.body)['data']['uuid']
-
+mutex = Mutex.new
+cond_var = ConditionVariable.new
 
 # Criação de um novo resource
 response = HTTParty.post('http://127.0.0.1:3003/resources/', 
@@ -72,16 +58,19 @@ i = 0
 t1 = Thread.new {
 	server = TCPServer.new 5678
 	while session = server.accept
-	  	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
-	  	body = "Ok"
-		head = "HTTP/1.1 200\r\n" \
-		"Date: #{Time.now.httpdate}\r\n" \
-		"Content-Length: #{body.length.to_s}\r\n" 
+		mutex.synchronize do
+		  	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
+		  	body = "Ok"
+			head = "HTTP/1.1 200\r\n" \
+			"Date: #{Time.now.httpdate}\r\n" \
+			"Content-Length: #{body.length.to_s}\r\n" 
 
-		session.write head
-		session.write "\r\n"
-		session.write body
-		session.close
+			session.write head
+			session.write "\r\n"
+			session.write body
+			session.close
+			cond_var.signal
+		end
 	end
 }
 
@@ -101,8 +90,10 @@ t2 = Thread.new {
 					    }
 					  ]
 					}.to_json)
-		while elapsed_time[i] == 0
-			nil
+		mutex.synchronize do
+			while elapsed_time[i] == 0
+				cond_var.wait(mutex)
+			end
 		end
 		print("#{elapsed_time[i]}\n")
 		i += 1

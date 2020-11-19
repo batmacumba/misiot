@@ -2,6 +2,9 @@ require 'httparty'
 require 'paho-mqtt'
 
 N = 1000
+mutex = Mutex.new
+cond_var = ConditionVariable.new
+
 # Criação de um novo resource
 response = HTTParty.post('http://127.0.0.1:3003/resources/', 
 	:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
@@ -28,14 +31,16 @@ uuid = JSON.parse(response.body)['data']['uuid']
 elapsed_time = Array.new(1000, 0)
 start_time = Array.new(1000, 0)
 i = 0
-waiting_for_reply = false
 
 # Cliente MQTT que receberá os comandos da plataforma
 client = PahoMqtt::Client.new
 client.connect('127.0.0.1', 1883, client.keep_alive, true, client.blocking)
 client.subscribe(['commands/' + uuid, 2])
 client.on_message do |message|
-	waiting_for_reply = false
+	mutex.synchronize do
+		elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
+    	cond_var.signal
+	end
 end
 
 
@@ -54,11 +59,12 @@ N.times {
 				    }
 				  ]
 				}.to_json)
-	waiting_for_reply = true
-	while waiting_for_reply
-		nil
+	mutex.synchronize do
+		while elapsed_time[i] == 0
+			cond_var.wait(mutex)
+		end
 	end
-	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
+	
 	print("#{elapsed_time[i]}\n")
 	i += 1
 }
