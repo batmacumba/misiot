@@ -580,7 +580,8 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 ### 05/11/2020
 
 - [x] Teste 1: tamanho das mensagens
-- [ ] Teste 2: atuador - latência
+- [x] Teste 2: atuador - latência
+- [x] Teste 3: sensor  
 
 * Ferramentas para monitorar uso do computador?
 
@@ -605,3 +606,30 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
     * [https://gitlab.com/smart-city-platform/smart_parking_maps](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fgitlab.com%2Fsmart-city-platform%2Fsmart_parking_maps)
   * Artigo de desempenho
     * https://interscity.org/assets/design_evaluation_scalable_platform_-_FGCS_2018.pdf
+
+---
+
+### 13/11/2020
+
+* finalizado teste 2
+* MQTT muito lentos
+  * refatorando a parte da plataforma que faz isso
+
+---
+
+### 20/11/2020
+
+* consertado bug teste 2
+* em progresso teste 3&4
+* 3: valores insignificantes
+* 4: stream de dados
+* relatorio final - RELATORIO PARCIAL PRO CNPQ
+  * primeiros testes
+  * segundo testes
+  * apresentação no grupo
+  * deixar claro quantas horas
+  * comparação entre o realizado e o planejado - NO FINAL
+  * reuniões com a equipe do MISIoT - buscar as datas
+* 19/12 - Daniel sai férias
+* 216: correção dos EPS!
+* Janeiro: trabalhar meio-período no projeto
