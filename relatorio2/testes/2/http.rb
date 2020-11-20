@@ -1,7 +1,12 @@
 require 'httparty'
 require 'socket'
+require 'descriptive_statistics'
 
 N = 1000
+
+mutex = Mutex.new
+cond_var = ConditionVariable.new
+
 # Criação de um novo resource
 response = HTTParty.post('http://127.0.0.1:3003/resources/', 
 	:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
@@ -44,48 +49,76 @@ if response.code != 201
 	return
 end
 
-# Criação do Webhook
-server = TCPServer.new 5678
-waiting_for_command = false
-elapsed_time = 0
-start_time = 0
 
-t = Thread.new {
+# Variáveis globais
+elapsed_time = Array.new(1000, 0)
+start_time = Array.new(1000, 0)
+i = 0
+
+# Thread com o webhook que receberá os comandos da plataforma
+t1 = Thread.new {
+	server = TCPServer.new 5678
 	while session = server.accept
-	  elapsed_time = ((Time.now - start_time) * 1000).round(3)
-	  	body = "Ok"
-		head = "HTTP/1.1 200\r\n" \
-		"Date: #{Time.now.httpdate}\r\n" \
-		"Content-Length: #{body.length.to_s}\r\n" 
+		mutex.synchronize do
+		  	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
+		  	body = "Ok"
+			head = "HTTP/1.1 200\r\n" \
+			"Date: #{Time.now.httpdate}\r\n" \
+			"Content-Length: #{body.length.to_s}\r\n" 
 
-		session.write head
-		session.write "\r\n"
-		session.write body
-		session.close
-	  waiting_for_command = false
+			session.write head
+			session.write "\r\n"
+			session.write body
+			session.close
+			cond_var.signal
+		end
+		break if i == 999
 	end
 }
 
-# Envio das N mensagens
-N.times {
-	HTTParty.post('http://127.0.0.1:3000/commands', 
-		:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
-		:body => {
-				  "data": [
-				    {
-				      "uuid": "#{uuid}",
-				      "capabilities": {
-				        "illuminate": "on"
-				      }
-				    }
-				  ]
-				}.to_json)
-	start_time = Time.now()
-	waiting_for_command = true
-	while waiting_for_command
-		nil
-	end
-	print("#{elapsed_time}\n")
+# Thread que enviará os comandos à plataforma
+t2 = Thread.new {
+	N.times {
+		start_time[i] = Time.now()
+		HTTParty.post('http://127.0.0.1:3000/commands', 
+			:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
+			:body => {
+					  "data": [
+					    {
+					      "uuid": "#{uuid}",
+					      "capabilities": {
+					        "illuminate": "on"
+					      }
+					    }
+					  ]
+					}.to_json)
+		mutex.synchronize do
+			while elapsed_time[i] == 0
+				cond_var.wait(mutex)
+			end
+		end
+		i += 1
+	}
 }
 
-t.join
+
+t1.join
+t2.join
+
+# Escrita dos dados gerados
+f = File.open("http/DATA", "w")
+for time in elapsed_time
+	f.write("#{time}\n") 
+end
+
+f = File.open("http/STATS", "w")
+str = ""
+str += "------------------------------------------------------------\n"
+str += "min:  \t\t#{elapsed_time.min()} ms\n"
+str += "max:  \t\t#{elapsed_time.max()} ms\n"
+str += "mean: \t\t#{elapsed_time.mean().round(3)} ms\n"
+str += "std:  \t\t#{elapsed_time.standard_deviation().round(3)} ms\n"
+str += "------------------------------------------------------------\n"
+
+f.write(str)
+print(str)
