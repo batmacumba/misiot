@@ -1,10 +1,8 @@
 require 'httparty'
-require 'paho-mqtt'
+require 'socket'
 require 'descriptive_statistics'
 
-N = 5
-mutex = Mutex.new
-cond_var = ConditionVariable.new
+N = 1000
 
 # Criação de um novo resource
 response = HTTParty.post('http://127.0.0.1:3003/resources/', 
@@ -27,56 +25,39 @@ if response.code != 201
 	return
 end
 uuid = JSON.parse(response.body)['data']['uuid']
-puts uuid
+
 # Variáveis globais
-elapsed_time = Array.new(N, 0)
-start_time = Array.new(N, 0)
+elapsed_time = Array.new(1000, 0)
+start_time = Array.new(1000, 0)
 i = 0
 
-message = " {
-			\"data\": {
-				\"environment_monitoring\": [
-					{
-						\"temperature\": 10,
-						\"timestamp\": \"2017-06-14T17:52:25.428Z\"
-					}
-				]
-				}
-			}"
-
-client = PahoMqtt::Client.new
-# Envio dos valores à plataforma
-waiting_puback = true
-client.on_puback do
-	mutex.synchronize do
-		waiting_puback = false
-    	cond_var.signal
-	end
-end
-
-
+# Thread que enviará os valores à plataforma
 N.times {
 	start_time[i] = Time.now()
-    client.connect("127.0.0.1", 1883)
-    waiting_puback = true
-	client.publish('resources/' + uuid, message, false, 1)
-	mutex.synchronize do
-		while waiting_puback
-			cond_var.wait(mutex)
-		end
-	end
-	client.disconnect()
+	HTTParty.post('http://127.0.0.1:3002/resources/' + uuid + '/data', 
+		:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
+		:body => {
+				  "data": {
+				    "environment_monitoring": [
+				      {
+				        "temperature": 10,
+				        "timestamp": "2017-06-14T17:52:25.428Z"
+				      }
+				    ]
+				  }
+				}.to_json)
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
 }
 
+
 # Escrita dos dados gerados
-f = File.open("mqtt/DATA", "w")
+f = File.open("http/DATA", "w")
 for time in elapsed_time
 	f.write("#{time}\n") 
 end
 
-f = File.open("mqtt/STATS", "w")
+f = File.open("http/STATS", "w")
 str = ""
 str += "------------------------------------------------------------\n"
 str += "min:  \t\t#{elapsed_time.min()} ms\n"
