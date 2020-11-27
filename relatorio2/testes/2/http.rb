@@ -72,6 +72,7 @@ t1 = Thread.new {
 			session.close
 			cond_var.signal
 		end
+		
 		break if i == 999
 	end
 }
