@@ -35,7 +35,7 @@ i = 0
 
 # Cliente MQTT que receberá os comandos da plataforma
 client = PahoMqtt::Client.new
-client.connect('127.0.0.1', 1883, client.keep_alive, true, client.blocking)
+client.connect('127.0.0.1', 1883, client.keep_alive, true, false)
 client.subscribe(['commands/' + uuid, 2])
 client.on_message do |message|
 	mutex.synchronize do
