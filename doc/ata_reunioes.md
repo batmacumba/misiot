@@ -633,3 +633,22 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * 19/12 - Daniel sai férias
 * 216: correção dos EPS!
 * Janeiro: trabalhar meio-período no projeto
+
+---
+
+### 4/12/2020
+
+* teste 4:
+  * procurar fluxograma
+    * Tatiane tem?
+    * mandar email
+* Workshop de SBRC
+  * explicar mudanças
+* Workshop de iniciação científica - RNP SBRC - Terça
+
+* Testes 2 e 3: listar ps antes de começar o teste e depois de terminar os testes
+  * Parar Cron e ATD
+* BTG
+* Monitoria Redes 2021
+* Enviar relatório final de 215 pra aprovação
+* http://sbrc2020.sbc.org.br/?lang=en
