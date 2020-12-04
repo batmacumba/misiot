@@ -27,10 +27,11 @@ if response.code != 201
 	return
 end
 uuid = JSON.parse(response.body)['data']['uuid']
+puts uuid
 
 # Variáveis globais
-elapsed_time = Array.new(1000, 0)
-start_time = Array.new(1000, 0)
+elapsed_time = Array.new(N, 0)
+start_time = Array.new(N, 0)
 i = 0
 
 # Cliente MQTT que receberá os comandos da plataforma
@@ -44,22 +45,23 @@ client.on_message do |message|
 	end
 end
 
+message = 	{
+			  "data": [
+			    {
+			      "uuid": "#{uuid}",
+			      "capabilities": {
+			        "illuminate": "on"
+			      }
+			    }
+			  ]
+			}.to_json
 
 # Envio dos comandos à plataforma
 N.times {
-	start_time[i] = Time.now()
 	HTTParty.post('http://127.0.0.1:3000/commands', 
 		:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
-		:body => {
-				  "data": [
-				    {
-				      "uuid": "#{uuid}",
-				      "capabilities": {
-				        "illuminate": "on"
-				      }
-				    }
-				  ]
-				}.to_json)
+		:body => message)
+	start_time[i] = Time.now()
 	mutex.synchronize do
 		while elapsed_time[i] == 0
 			cond_var.wait(mutex)

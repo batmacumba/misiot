@@ -2,9 +2,8 @@ require 'httparty'
 require 'paho-mqtt'
 require 'descriptive_statistics'
 
-N = 5
-mutex = Mutex.new
-cond_var = ConditionVariable.new
+N = 1
+N_observacoes = 17280 # simula uma observação a cada 5s durante um dia
 
 # Criação de um novo resource
 response = HTTParty.post('http://127.0.0.1:3003/resources/', 
@@ -45,29 +44,17 @@ message = " {
 			}"
 
 client = PahoMqtt::Client.new
-# Envio dos valores à plataforma
-waiting_puback = true
-client.on_puback do
-	mutex.synchronize do
-		waiting_puback = false
-    	cond_var.signal
-	end
-end
-
 
 N.times {
 	start_time[i] = Time.now()
-    client.connect("127.0.0.1", 1883)
-    waiting_puback = true
-	client.publish('resources/' + uuid, message, false, 1)
-	mutex.synchronize do
-		while waiting_puback
-			cond_var.wait(mutex)
-		end
-	end
-	client.disconnect()
+	N_observacoes.times {
+		client.connect("127.0.0.1", 1883)
+		client.publish('resources/' + uuid, message, false, 1)
+		client.disconnect()
+	}
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
+	print("Ensaio #{i}\n")
 }
 
 # Escrita dos dados gerados

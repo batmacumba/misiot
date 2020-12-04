@@ -28,7 +28,7 @@ if response.code != 201
 	return
 end
 uuid = JSON.parse(response.body)['data']['uuid']
-
+puts uuid
 
 # Criação de uma nova subscription
 response = HTTParty.post('http://127.0.0.1:3002/subscriptions', 
@@ -51,8 +51,8 @@ end
 
 
 # Variáveis globais
-elapsed_time = Array.new(1000, 0)
-start_time = Array.new(1000, 0)
+elapsed_time = Array.new(N, 0)
+start_time = Array.new(N, 0)
 i = 0
 
 # Thread com o webhook que receberá os comandos da plataforma
@@ -77,22 +77,23 @@ t1 = Thread.new {
 	end
 }
 
+message = 	{
+			  "data": [
+			    {
+			      "uuid": "#{uuid}",
+			      "capabilities": {
+			        "illuminate": "on"
+			      }
+			    }
+			  ]
+			}.to_json
 # Thread que enviará os comandos à plataforma
 t2 = Thread.new {
 	N.times {
-		start_time[i] = Time.now()
 		HTTParty.post('http://127.0.0.1:3000/commands', 
 			:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
-			:body => {
-					  "data": [
-					    {
-					      "uuid": "#{uuid}",
-					      "capabilities": {
-					        "illuminate": "on"
-					      }
-					    }
-					  ]
-					}.to_json)
+			:body => message)
+		start_time[i] = Time.now()
 		mutex.synchronize do
 			while elapsed_time[i] == 0
 				cond_var.wait(mutex)
