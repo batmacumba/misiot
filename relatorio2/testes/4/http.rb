@@ -2,7 +2,7 @@ require 'httparty'
 require 'socket'
 require 'descriptive_statistics'
 
-N = 5
+N = 2
 N_observacoes = 17280 # simula uma observação a cada 5s durante um dia
 
 # Criação de um novo resource
@@ -52,7 +52,7 @@ N.times {
 	}
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
-	print("Ensaio #{i}\n")
+	# print("Ensaio #{i}\n")
 }
 
 
