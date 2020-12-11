@@ -1,0 +1,8 @@
+------------------------------------------------------------
+Number of Clients:		1000
+Benchmark mode:    		Write
+Write time min:  		4.289 ms
+Write time max:  		16.862 ms
+Write time mean: 		4.415 ms
+Write time std:  		0.414 ms
+------------------------------------------------------------

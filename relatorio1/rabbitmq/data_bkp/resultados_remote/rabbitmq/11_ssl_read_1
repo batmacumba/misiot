@@ -1,0 +1,8 @@
+------------------------------------------------------------
+Number of Clients:		1000
+Benchmark mode:    		Read
+Read time min:  		14.615 ms
+Read time max:  		263.983 ms
+Read time mean: 		21.421 ms
+Read time std:  		22.202 ms
+------------------------------------------------------------
