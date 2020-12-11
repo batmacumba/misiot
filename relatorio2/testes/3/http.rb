@@ -2,7 +2,7 @@ require 'httparty'
 require 'socket'
 require 'descriptive_statistics'
 
-N = 1
+N = 5
 N_observacoes = 17280 # simula uma observação a cada 5s durante um dia
 
 # Criação de um novo resource
