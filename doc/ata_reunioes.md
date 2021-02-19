@@ -652,3 +652,21 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * Monitoria Redes 2021
 * Enviar relatório final de 215 pra aprovação
 * http://sbrc2020.sbc.org.br/?lang=en
+
+---
+
+### 09/12/2020
+
+* Relatório
+  * Seções
+    * Introdução: repetir último relatório
+    * Implementação
+    * Descrição dos testes
+      * Descrição
+      * Ambiente
+    * Resultados
+    * Conclusão
+  * Mencionar questão do *JSON* ou não?
+  * Como incluir lista do PS
+* Monitoria 352: se inscrever pelo IME também?
+* TCC
