@@ -670,3 +670,56 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
   * Como incluir lista do PS
 * Monitoria 352: se inscrever pelo IME também?
 * TCC
+
+---
+
+### 05/03/2020
+
+* Antecipar os pedidos de compra 
+* Pesquisar LoRaMesh
+  * Dá pra fazer no TCC?
+  * AODV
+  * https://lup.lub.lu.se/student-papers/search/publication/8918664
+  * Olhar protocolos de rede ad-hoc LoRaWAN
+  * Tolerância a falhas em LoRa
+  * Escrever relatório pra reunião
+  * Prazo: 1 mês
+  * TCP: tolerância falha
+
+---
+
+### 12/03/2020
+
+* Relatório: https://www.overleaf.com/9592531562rbhgztmsfpdt
+
+* uso de cpu e memória: colocar cada na mesma página
+
+* escala igual http vs mqtt
+* em cada seção escrever um pouco antes dos gráficos e chamar atenção pra escala diferente: "note que as escalas não são iguais e é possível perceber tal coisa..."
+* componentes diferentes no começo da seção
+  * "nas primeiras 3 seções destaco os componentes que tiveram diferença, as últimas 3 seções não tiveram diferença"
+* componentes iguais no final
+* o que tiver certeza explica, o que não tiver certeza diz que está investigando, e quando o resultado for diferente ressaltar
+* explicar possível bottleneck no http
+* a gente achou que ia ser, e no final foi diferente?
+* último paragrafo: pelas nossas investigações o motivo 
+* conclusão: resumir os parágrafos da seção anterior
+  * na minha opinião vale a pena usar mqtt ou não?
+  * na parte de programação, valeu a pena? quanto tempo levou? pegar horas de mac0215. o resultado valeu a pena, poderia comprar uma máquina melhor?
+* apêndice
+* na descrição de experimentos: colocar lista com elementos
+  * Sistema Operacional
+  * Link da biblioteca
+* mencionar Docker
+  * colocar figura do esquema
+* levar pra reunião do grupo a questão do gargalo?
+* Erlang vs Ruby? Ruby pode usar mais que um núcleo?
+* olhar se tem como melhorar a performance no servidor web do Ruby?
+* monitorar se os PIDs tem processo filho
+* falar sobre como fez a gravação do psrecord na seção 3.5
+* explicar 200% -> 100% do mqtt
+
+---
+
+* buscar com a Poliana como foi a compra dos equipamentos
+* receber planilha com os equipamentos
