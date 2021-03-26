@@ -1,6 +1,7 @@
 require 'httparty'
 require 'socket'
 require 'descriptive_statistics'
+require "active_support/all"
 
 N = 5
 N_observacoes = 17280 # simula uma observação a cada 5s durante um dia
@@ -42,9 +43,10 @@ message = {
 		    ]
 		  }
 		}.to_json
+
 # Thread que enviará os valores à plataforma
 N.times {
-	start_time[i] = Time.now()
+	start_time[i] = Time.now
 	N_observacoes.times {
 		HTTParty.post('http://127.0.0.1:3002/resources/' + uuid + '/data', 
 			:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
@@ -52,7 +54,6 @@ N.times {
 	}
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
-	print("Ensaio #{i}\n")
 }
 
 

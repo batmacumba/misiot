@@ -2,7 +2,8 @@ require 'httparty'
 require 'paho-mqtt'
 require 'descriptive_statistics'
 
-N = 1000
+N = 3000
+
 mutex = Mutex.new
 cond_var = ConditionVariable.new
 
@@ -36,7 +37,7 @@ i = 0
 
 # Cliente MQTT que receberá os comandos da plataforma
 client = PahoMqtt::Client.new
-client.connect('127.0.0.1', 1883, client.keep_alive, true, false)
+client.connect('127.0.0.1', 1883)
 client.subscribe(['commands/' + uuid, 2])
 client.on_message do |message|
 	mutex.synchronize do
@@ -58,17 +59,19 @@ message = 	{
 
 # Envio dos comandos à plataforma
 N.times {
-	HTTParty.post('http://127.0.0.1:3000/commands', 
-		:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
-		:body => message)
-	start_time[i] = Time.now()
 	mutex.synchronize do
+		HTTParty.post('http://127.0.0.1:3000/commands', 
+			:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
+			:body => message)
+		start_time[i] = Time.now
 		while elapsed_time[i] == 0
 			cond_var.wait(mutex)
 		end
 	end
 	i += 1
 }
+
+client.disconnect
 
 # Escrita dos dados gerados
 f = File.open("mqtt/DATA", "w")

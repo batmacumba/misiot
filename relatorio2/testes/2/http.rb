@@ -2,7 +2,7 @@ require 'httparty'
 require 'socket'
 require 'descriptive_statistics'
 
-N = 1000
+N = 3000
 
 mutex = Mutex.new
 cond_var = ConditionVariable.new
@@ -73,7 +73,7 @@ t1 = Thread.new {
 			cond_var.signal
 		end
 		
-		break if i == 999
+		break if i == N - 1
 	end
 }
 
@@ -90,11 +90,11 @@ message = 	{
 # Thread que enviará os comandos à plataforma
 t2 = Thread.new {
 	N.times {
-		HTTParty.post('http://127.0.0.1:3000/commands', 
-			:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
-			:body => message)
-		start_time[i] = Time.now()
 		mutex.synchronize do
+			HTTParty.post('http://127.0.0.1:3000/commands', 
+				:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
+				:body => message)
+			start_time[i] = Time.now
 			while elapsed_time[i] == 0
 				cond_var.wait(mutex)
 			end

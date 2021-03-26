@@ -1,6 +1,7 @@
 require 'httparty'
 require 'paho-mqtt'
 require 'descriptive_statistics'
+require "active_support/all"
 
 N = 2
 N_observacoes = 17280 # simula uma observação a cada 5s durante um dia

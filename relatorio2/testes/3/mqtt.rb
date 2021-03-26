@@ -1,6 +1,7 @@
 require 'httparty'
 require 'paho-mqtt'
 require 'descriptive_statistics'
+require "active_support/all"
 
 N = 5
 N_observacoes = 17280 # simula uma observação a cada 5s durante um dia
@@ -32,29 +33,39 @@ elapsed_time = Array.new(N, 0)
 start_time = Array.new(N, 0)
 i = 0
 
-message = " {
-			\"data\": {
-				\"environment_monitoring\": [
-					{
-						\"temperature\": 10,
-						\"timestamp\": \"2017-06-14T17:52:25.428Z\"
-					}
-				]
-				}
-			}"
+# message = " {
+# 			\"data\": {
+# 				\"environment_monitoring\": [
+# 					{
+# 						\"temperature\": 10,
+# 						\"timestamp\": \"2017-06-14T17:52:25.428Z\"
+# 					}
+# 				]
+# 				}
+# 			}"
+
+message = {
+		  "data": {
+		    "environment_monitoring": [
+		      {
+		        "temperature": 10,
+		        "timestamp": "2017-06-14T17:52:25.428Z"
+		      }
+		    ]
+		  }
+		}.to_json
 
 client = PahoMqtt::Client.new
 
 N.times {
-	start_time[i] = Time.now()
+	start_time[i] = Time.now
 	N_observacoes.times {
 		client.connect("127.0.0.1", 1883)
 		client.publish('resources/' + uuid, message, false, 1)
-		client.disconnect()
+		client.disconnect
 	}
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
-	print("Ensaio #{i}\n")
 }
 
 # Escrita dos dados gerados

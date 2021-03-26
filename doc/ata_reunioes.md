@@ -691,10 +691,9 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 ### 12/03/2020
 
 * Relatório: https://www.overleaf.com/9592531562rbhgztmsfpdt
-
 * uso de cpu e memória: colocar cada na mesma página
-
 * escala igual http vs mqtt
+  * **não é possível, avisar no texto**
 * em cada seção escrever um pouco antes dos gráficos e chamar atenção pra escala diferente: "note que as escalas não são iguais e é possível perceber tal coisa..."
 * componentes diferentes no começo da seção
   * "nas primeiras 3 seções destaco os componentes que tiveram diferença, as últimas 3 seções não tiveram diferença"
@@ -723,3 +722,9 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 * buscar com a Poliana como foi a compra dos equipamentos
 * receber planilha com os equipamentos
+
+---
+
+### 20/03/2021
+
+* mostrar ZeroTier pros alunos de MAC0352
