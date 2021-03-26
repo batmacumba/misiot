@@ -53,24 +53,4 @@ N.times {
 	}
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
-	# print("Ensaio #{i}\n")
 }
-
-
-# Escrita dos dados gerados
-# f = File.open("http/DATA", "w")
-# for time in elapsed_time
-# 	f.write("#{time}\n") 
-# end
-
-# f = File.open("http/STATS", "w")
-# str = ""
-# str += "------------------------------------------------------------\n"
-# str += "min:  \t\t#{elapsed_time.min()} ms\n"
-# str += "max:  \t\t#{elapsed_time.max()} ms\n"
-# str += "mean: \t\t#{elapsed_time.mean().round(3)} ms\n"
-# str += "std:  \t\t#{elapsed_time.standard_deviation().round(3)} ms\n"
-# str += "------------------------------------------------------------\n"
-
-# f.write(str)
-# print(str)

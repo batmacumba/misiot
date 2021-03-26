@@ -33,16 +33,16 @@ elapsed_time = Array.new(N, 0)
 start_time = Array.new(N, 0)
 i = 0
 
-message = " {
-			\"data\": {
-				\"environment_monitoring\": [
-					{
-						\"temperature\": 10,
-						\"timestamp\": \"2017-06-14T17:52:25.428Z\"
-					}
-				]
-				}
-			}"
+message = {
+		  "data": {
+		    "environment_monitoring": [
+		      {
+		        "temperature": 10,
+		        "timestamp": "2017-06-14T17:52:25.428Z"
+		      }
+		    ]
+		  }
+		}.to_json
 
 client = PahoMqtt::Client.new
 
@@ -55,23 +55,4 @@ N.times {
 	}
 	elapsed_time[i] = ((Time.now - start_time[i]) * 1000).round(3)
 	i += 1
-	# print("Ensaio #{i}\n")
 }
-
-# Escrita dos dados gerados
-# f = File.open("mqtt/DATA", "w")
-# for time in elapsed_time
-# 	f.write("#{time}\n") 
-# end
-
-# f = File.open("mqtt/STATS", "w")
-# str = ""
-# str += "------------------------------------------------------------\n"
-# str += "min:  \t\t#{elapsed_time.min()} ms\n"
-# str += "max:  \t\t#{elapsed_time.max()} ms\n"
-# str += "mean: \t\t#{elapsed_time.mean().round(3)} ms\n"
-# str += "std:  \t\t#{elapsed_time.standard_deviation().round(3)} ms\n"
-# str += "------------------------------------------------------------\n"
-
-# f.write(str)
-# print(str)
