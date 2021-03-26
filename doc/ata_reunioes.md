@@ -694,9 +694,9 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * uso de cpu e memória: colocar cada na mesma página
 * escala igual http vs mqtt
   * **não é possível, avisar no texto**
-* em cada seção escrever um pouco antes dos gráficos e chamar atenção pra escala diferente: "note que as escalas não são iguais e é possível perceber tal coisa..."
+* **em cada seção escrever um pouco antes dos gráficos e chamar atenção pra escala diferente: "note que as escalas não são iguais e é possível perceber tal coisa..."**
 * componentes diferentes no começo da seção
-  * "nas primeiras 3 seções destaco os componentes que tiveram diferença, as últimas 3 seções não tiveram diferença"
+  * **"nas primeiras 3 seções destaco os componentes que tiveram diferença, as últimas 3 seções não tiveram diferença"**
 * componentes iguais no final
 * o que tiver certeza explica, o que não tiver certeza diz que está investigando, e quando o resultado for diferente ressaltar
 * explicar possível bottleneck no http

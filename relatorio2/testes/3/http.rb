@@ -3,7 +3,7 @@ require 'socket'
 require 'descriptive_statistics'
 require "active_support/all"
 
-N = 5
+N = 100
 N_observacoes = 17280 # simula uma observação a cada 5s durante um dia
 
 # Criação de um novo resource
