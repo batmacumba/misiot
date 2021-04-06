@@ -728,3 +728,23 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 ### 20/03/2021
 
 * mostrar ZeroTier pros alunos de MAC0352
+
+---
+
+### 26/03/2021
+
+* colocar texto da seção de CPU/mem pras subseções;
+  * colocar texto inicial no final
+* tirar valores negativos de porcentagem dos gráficos de CPU e mem
+* figura com componentes do interscity, os que foram modificados em cor diferente
+* descrever o que faz cada componente que foi modificado
+* linkar performance evaluation MQTT vs HTTP smart city?
+
+---
+
+### 09/04/2020
+
+* RELATORIO
+* SLIDES
+* COMPRA POLIANA
+* MONITORIA 352
