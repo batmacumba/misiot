@@ -746,5 +746,41 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 * RELATORIO
 * SLIDES
-* COMPRA POLIANA
-* MONITORIA 352
+* **COMPRA POLIANA**
+* **MONITORIA 352**
+
+#### Slides
+
+* **INCT** não é InterSCity
+* Tirar no slide 10 os textos dos microserviços
+* tempo para envio?
+* Diagrama de cada teste antes dos resultados
+* **ESCALA DOS GRAFICOS DE CPU E MEM PODE SER IGUAL**?
+  * se não der usar slides diferentes
+  * fazer slide pro RabbitMQ HTTP sozinho pra dar **zoom**
+* DESEMPENHO NAO PARECIDO ENTRE HTTP E MQTT
+  * métricas temporais
+  * SLIDES DA CONCLUSAO
+* Falar sobre vantagem qualitativa do MQTT: "uma percepção que eu tive durante o trabalho"
+* Chamar pessoal da pragma pro dia 20?
+
+#### Relatório
+
+* colocar link pro repositório
+
+#### Monitoria 352
+
+* **apresentação edisciplinas**
+* **dar uma olhada nos enunciados e ver se vale a pena fazer um vídeo explicativo de algo**
+  * preparar material adicional se necessário
+* EP0: Wireshark
+  * **passar enunciado da Poli**
+* EP1: MQTT
+* EP2: Jogo da Velha 2D
+* EP3: SDN - Mininet
+* EP4: Vulnerabilidade - mandar vídeo
+  * média da nota de cada um
+* REC (9 de agosto)
+  * **selecionar exercicios do livro do kurose**
+  * um de cada camada ATREF
+
