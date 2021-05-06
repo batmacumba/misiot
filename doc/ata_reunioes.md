@@ -751,8 +751,8 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 #### Slides
 
-* **INCT** não é InterSCity
-* Tirar no slide 10 os textos dos microserviços
+* ~~**INCT** não é InterSCity~~
+* ~~Tirar no slide 10 os textos dos microserviços~~
 * tempo para envio?
 * Diagrama de cada teste antes dos resultados
 * **ESCALA DOS GRAFICOS DE CPU E MEM PODE SER IGUAL**?
@@ -783,4 +783,41 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * REC (9 de agosto)
   * **selecionar exercicios do livro do kurose**
   * um de cada camada ATREF
+
+---
+
+### TCC
+
+* tema e supervisor até o fim do mes
+* cronograma
+* TCC: demonstrar que aprenderam computação
+* tcc pode ser passo preliminar pra mestrado
+  * publicar em eventos cientificos
+
+---
+
+### FEEDBACK APRESENTAÇÃO
+
+* planejar melhor os cenários?
+  * indicar o ambiente de experimentação
+* vazão da rede no loopback
+* cluster de servidor MQTT
+* workload pra testar
+* variar tamanho da mensagem e tamanho do lote
+* cenário de sensor
+  * fazer teste com envio de 1 mensagem
+
+---
+
+### 23/04/2021
+
+* refazer teste 2 - relatório
+* roda o wireshark em paralelo e ver o tempo de transferencia
+  * checar se teste 2 
+* fazer testes com threads
+
+* **pegar melhores artigos workshop IC** -- 1 mês
+  * **1 de JUNHO!**
+* ler dois artigos do workshop
+* 
 
