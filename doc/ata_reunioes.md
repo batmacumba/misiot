@@ -831,3 +831,34 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
   * template SBC
   * Mudanças
 
+---
+
+### 21/05/2021
+
+#### Organograma
+
+* INCT
+  * InterSCity
+    * MISIoT
+* Divulgação externa do projeto
+  * SBRC (simpósio da SBC)
+    * Workshop de trabalhos de graduação e IC: divulgar o que foi feito dentro do InterSCity/MISIoT (https://www.sbrc2021.facom.ufu.br/pt-br/chamadas/iv-workshop-de-trabalhos-de-graduacao-e-iniciacao-cientifica-wtg)
+    * **Máximo 8 páginas**
+  * Se não for aceito SBRC, divulgamos para outros lugares
+
+#### Artigo
+
+* trabalhos relacionados?
+  * deixa por último
+  * UFMT (Diego comentou em um email)
+* falar sobre a proxima etapa de segurança em "Próximos passos"
+* agradecimentos tem que ter
+* análise dos resultados
+* evitar escrever um artigo de engenharia de software, focar na parte de redes
+* justificar brevemente a arquitetura
+* simplificar resultados
+* **seção de discussão dos resultados**!! muito bem visto
+  * nem toda API HTTP é boa?
+  * falar na introdução: qual é a contribuição que o trabalho propõe? ajudar a justificar a escolha MQTT ou HTTP
+* **mandar mensagem pra Poliana pedindo a documentação do projeto**
+

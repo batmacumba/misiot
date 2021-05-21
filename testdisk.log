@@ -1,0 +1,26 @@
+
+
+Thu Apr 22 16:55:42 2021
+Command line: TestDisk
+
+TestDisk 7.0, Data Recovery Utility, April 2015
+Christophe GRENIER <grenier@cgsecurity.org>
+http://www.cgsecurity.org
+OS: Linux, kernel 5.4.0-53-generic (#59~18.04.1-Ubuntu SMP Wed Oct 21 12:14:56 UTC 2020) x86_64
+Compiler: GCC 7.2
+ext2fs lib: 1.44.1, ntfs lib: libntfs-3g, reiserfs lib: none, ewf lib: none, curses lib: ncurses 6.0
+/dev/sda: LBA, HPA, LBA48, DCO support
+/dev/sda: size       468862128 sectors
+/dev/sda: user_max   468862128 sectors
+/dev/sda: native_max 468862128 sectors
+/dev/sdb: LBA, HPA, LBA48, DCO support
+/dev/sdb: size       976773168 sectors
+/dev/sdb: user_max   976773168 sectors
+/dev/sdb: native_max 976773168 sectors
+Warning: can't get size for Disk /dev/mapper/control - 0 B - 0 sectors, sector size=512
+Hard disk list
+Disk /dev/sda - 240 GB / 223 GiB - CHS 29185 255 63, sector size=512 - Maxtor Z1 SSD 240GB, S/N:7PX035CG, FW:STKSF010
+Disk /dev/sdb - 500 GB / 465 GiB - CHS 60801 255 63, sector size=512 - Hitachi HTS725050A9A362, S/N:100706PCG420VLJK8MGC, FW:PC4ACB1E
+
+
+TestDisk exited normally.
