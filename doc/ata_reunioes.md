@@ -15,7 +15,6 @@
 	* Raspberry sensores (temp/luz)
 	* Le os sensores e envia em um tópico
 	* Modificar a plataforma pra receber MQTT
-	
 --------------------------------------------------------------------------------
 
 #### 27/03/2020:
@@ -820,4 +819,15 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
   * **1 de JUNHO!**
 * ler dois artigos do workshop
 * 
+
+---
+
+### 07/05/2021
+
+* pegar template do **SBC** de latex
+* ler dois artigos 
+* 2 semanas == PRAZO
+* transformar relatorio no artigo
+  * template SBC
+  * Mudanças
 
