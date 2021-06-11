@@ -862,3 +862,10 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
   * falar na introdução: qual é a contribuição que o trabalho propõe? ajudar a justificar a escolha MQTT ou HTTP
 * **mandar mensagem pra Poliana pedindo a documentação do projeto**
 
+---
+
+### 11/06/2021
+
+* refazer teste 3 (sensor) com pthread em C
+  * http 
+  * mqtt

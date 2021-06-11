@@ -6,7 +6,7 @@ payload =
 {
     "data": [
         {
-            "temperature": 99,
+            "temperature": 10,
             "timestamp": "2017-06-14T17:52:25.428Z"
         }
     ]
