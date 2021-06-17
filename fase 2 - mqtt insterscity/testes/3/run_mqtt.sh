@@ -1,4 +1,4 @@
-ruby mqtt.rb &
-TEST=$!
-sleep 5 && ps aux --sort=-pcpu > ps/MQTT
-wait $TEST
+ruby mqtt.rb 10
+ruby mqtt.rb 50
+ruby mqtt.rb 100
+ruby mqtt.rb 200

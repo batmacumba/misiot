@@ -3,11 +3,10 @@ require 'paho-mqtt'
 require 'descriptive_statistics'
 require "active_support/all"
 
-N_valores = 100
-N_threads = 100
-N_ensaios = 100
+N_VALORES = 100
+N_ENSAIOS = 30
 
-def MQTT_Sensor()
+def register_new_resource()
 	# Criação de um novo resource
 	response = HTTParty.post('http://127.0.0.1:3003/resources/', 
 		:headers => {'cache-control': 'no-cache','content-type': 'application/json'}, 
@@ -29,64 +28,80 @@ def MQTT_Sensor()
 		return
 	end
 	uuid = JSON.parse(response.body)['data']['uuid']
-	
-	message = {
-			  "data": {
-			    "environment_monitoring": [
-			      {
-			        "temperature": 10,
-			        "timestamp": "2017-06-14T17:52:25.428Z"
-			      }
-			    ]
-			  }
-			}.to_json
+	return uuid
+end
 
+def send_all_values(uuid, message)
 	# Envio dos valores
 	client = PahoMqtt::Client.new
 	client.connect("127.0.0.1", 1883, 0, false, false)
-	N_valores.times {
+	N_VALORES.times {
 		client.publish('resources/' + uuid, message, false, 1)
 	}
 	# client.disconnect
 end
 
-# Variáveis globais
-elapsed_time = Array.new(N_ensaios, 0)
-start_time = Array.new(N_ensaios, 0)
-i = 0
+def main()
+	# Variáveis globais
+	elapsed_time = Array.new(N_ENSAIOS, 0)
+	start_time = Array.new(N_ENSAIOS, 0)
+	message = {
+				  "data": {
+				    "environment_monitoring": [
+				      {
+				        "temperature": 10,
+				        "timestamp": "2017-06-14T17:52:25.428Z"
+				      }
+				    ]
+				  }
+				}.to_json
 
-N_ensaios.times {
-	begin
-		start_time[i] = Time.now
+	# Criação dos novos resources
+	uuids = []
+	N_THREADS.times {
+	    uuids << register_new_resource()
+	}
 
-		threads = []
-		N_threads.times {
-		    threads << Thread.new { MQTT_Sensor() }
-		}
-		threads.each { |thr| thr.join }
+	# Envio dos valores
+	N_ENSAIOS.times do |ens_i| 
+		begin
+			threads = []
 
-		elapsed_time[i] = (Time.now - start_time[i]).round(3)
-		i += 1
-	rescue
-		retry
+			start_time[ens_i] = Time.now
+			N_THREADS.times do |thr_i|
+			    threads << Thread.new { send_all_values(uuids[thr_i], message) }
+			end
+			threads.each { |thr| thr.join }
+			elapsed_time[ens_i] = (Time.now - start_time[ens_i]).round(3)
+		rescue
+			retry
+		end
 	end
-}
 
 
-total_valores = N_valores * N_threads
-# Escrita dos dados gerados
-f = File.open("mqtt/DATA", "w")
-for time in elapsed_time
-	f.write("#{(total_valores / time).round(2)}\n") 
+	total_valores = N_VALORES * N_THREADS
+	# Escrita dos dados gerados
+	f = File.open("mqtt/" + N_THREADS.to_s + "/DATA", "w")
+	for time in elapsed_time
+		f.write("#{(total_valores / time).round(2)}\n") 
+	end
+
+	f = File.open("mqtt/" + N_THREADS.to_s + "/STATS", "w")
+	str = ""
+	str += "------------------------------------------------------------\n"
+	str += "min:  \t\t#{(total_valores / elapsed_time.max()).round(2)} msg/s\n"
+	str += "max:  \t\t#{(total_valores / elapsed_time.min()).round(2)} msg/s\n"
+	str += "mean: \t\t#{(total_valores / elapsed_time.mean()).round(2)} msg/s\n"
+	str += "------------------------------------------------------------\n"
+
+	f.write(str)
+	print(str)
 end
 
-f = File.open("mqtt/STATS", "w")
-str = ""
-str += "------------------------------------------------------------\n"
-str += "min:  \t\t#{(total_valores / elapsed_time.max()).round(2)} msg/s\n"
-str += "max:  \t\t#{(total_valores / elapsed_time.min()).round(2)} msg/s\n"
-str += "mean: \t\t#{(total_valores / elapsed_time.mean()).round(2)} msg/s\n"
-str += "------------------------------------------------------------\n"
+if ARGV.length < 1
+  puts "Too few arguments"
+  exit
+end
+N_THREADS = ARGV[0].to_i
 
-f.write(str)
-print(str)
+main()

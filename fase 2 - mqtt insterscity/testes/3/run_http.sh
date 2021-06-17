@@ -1,4 +1,4 @@
-ruby http.rb &
-TEST=$!
-sleep 5 && ps aux --sort=-pcpu > ps/HTTP
-wait $TEST
+ruby http.rb 10
+ruby http.rb 50
+ruby http.rb 100
+ruby http.rb 200
