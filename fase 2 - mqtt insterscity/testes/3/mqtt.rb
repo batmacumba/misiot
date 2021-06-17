@@ -4,7 +4,7 @@ require 'descriptive_statistics'
 require "active_support/all"
 
 N_VALORES = 100
-N_ENSAIOS = 30
+N_ENSAIOS = 1
 
 def register_new_resource()
 	# Criação de um novo resource
@@ -34,9 +34,9 @@ end
 def send_all_values(uuid, message)
 	# Envio dos valores
 	client = PahoMqtt::Client.new
-	client.connect("127.0.0.1", 1883, 0, false, false)
+	client.connect("127.0.0.1", 1883)
 	N_VALORES.times {
-		client.publish('resources/' + uuid, message, false, 1)
+		client.publish('resources/' + uuid, message)
 	}
 	# client.disconnect
 end
@@ -61,6 +61,7 @@ def main()
 	N_THREADS.times {
 	    uuids << register_new_resource()
 	}
+	puts uuids
 
 	# Envio dos valores
 	N_ENSAIOS.times do |ens_i| 

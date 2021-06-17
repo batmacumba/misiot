@@ -4,7 +4,7 @@ require 'descriptive_statistics'
 require "active_support/all"
 
 N_VALORES = 100
-N_ENSAIOS = 30
+N_ENSAIOS = 1
 
 def register_new_resource()
 	# Criação de um novo resource
@@ -60,6 +60,7 @@ def main()
 	N_THREADS.times {
 	    uuids << register_new_resource()
 	}
+	puts uuids
 
 	# Envio dos valores
 	N_ENSAIOS.times do |ens_i| 
