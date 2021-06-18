@@ -1,10 +1,11 @@
 require 'httparty'
-require 'paho-mqtt'
+require 'rubygems'
+require 'mqtt'
 require 'descriptive_statistics'
 require "active_support/all"
 
 N_VALORES = 100
-N_ENSAIOS = 1
+N_ENSAIOS = 30
 
 def register_new_resource()
 	# Criação de um novo resource
@@ -33,12 +34,11 @@ end
 
 def send_all_values(uuid, message)
 	# Envio dos valores
-	client = PahoMqtt::Client.new
-	client.connect("127.0.0.1", 1883)
-	N_VALORES.times {
-		client.publish('resources/' + uuid, message)
-	}
-	# client.disconnect
+	MQTT::Client.connect('localhost') do |c|
+		N_VALORES.times {
+			c.publish('resources/' + uuid, message)
+		}
+	end
 end
 
 def main()

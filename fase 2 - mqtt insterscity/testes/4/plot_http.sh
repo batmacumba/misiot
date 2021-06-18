@@ -9,7 +9,7 @@ SIDEKIQ=$(pm2 -m ls | grep "+\-\-\- resource-adaptor-sidekiq" -A 3 | grep pid | 
 CATALOGUER=$(pm2 -m ls | grep "+\-\-\- resource-cataloguer" -A 3 | grep pid | grep -oP '\d+$')
 DISCOVERER=$(pm2 -m ls | grep "+\-\-\- resource-discoverer" -A 3 | grep pid | grep -oP '\d+$')
 
-ruby http.rb &
+ruby http.rb 40 &
 P0=$!   
 psrecord $RABBITMQ --interval $INTERVAL --duration $DURATION --plot http/RABBITMQ.png --include-children &
 P1=$!

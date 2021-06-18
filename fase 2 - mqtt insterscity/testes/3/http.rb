@@ -4,7 +4,7 @@ require 'descriptive_statistics'
 require "active_support/all"
 
 N_VALORES = 100
-N_ENSAIOS = 1
+N_ENSAIOS = 30
 
 def register_new_resource()
 	# Criação de um novo resource

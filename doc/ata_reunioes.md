@@ -866,6 +866,24 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 ### 11/06/2021
 
-* refazer teste 3 (sensor) com pthread em C
-  * http 
-  * mqtt
+* alunos pediram aula do dia 10
+* teste de vazão, quantas threads e quantas vezes repito o ensaio?
+  * imaginar ambiente real
+    * buscar ambiente e laboratório real e buscar número de sensores, citar laboratório
+    * bater com experimentos parecidos ambiente de IoT, ambiente de experimentação
+      * pode mencionar
+    * **phd comics**
+    * **mencionar que a CPU ficou com consumo baixo e que não é o gargalo**
+* deixar claro que estamos analisando do ponto de vista do sensor
+  * é muito mais importante o quão ruim é pro cliente 
+  * importante do ponto de vista do cliente - uso da bateria
+* mencionar quantos outlier embaixo do MQTT
+* **tem que variar o número de threads**
+  * primeiro boxplot de 10, 50, 100, 200, 500, 1000 -- encontrar projetos exp iot
+  * **procurar o limite e o gargalo do sistema** - justificar até que ponto
+* **porque faz no localhost?**
+* trabalho futuro
+  * refazer os experimentos com dispositivos reais no ambiente de smart cities e comparar com o resultado simulado
+* **mostrar resultado e já analisar**
+* tudo que não der tempo pra fazer coloca como trabalhos futuros
+

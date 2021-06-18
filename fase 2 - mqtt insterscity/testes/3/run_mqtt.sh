@@ -1,4 +1,7 @@
 ruby mqtt.rb 10
-ruby mqtt.rb 50
-ruby mqtt.rb 100
-ruby mqtt.rb 200
+sleep 60
+ruby mqtt.rb 20
+sleep 60
+ruby mqtt.rb 40
+sleep 60
+ruby mqtt.rb 80

@@ -1,4 +1,7 @@
 ruby http.rb 10
-ruby http.rb 50
-ruby http.rb 100
-ruby http.rb 200
+sleep 60
+ruby http.rb 20
+sleep 60
+ruby http.rb 40
+sleep 60
+ruby http.rb 80
