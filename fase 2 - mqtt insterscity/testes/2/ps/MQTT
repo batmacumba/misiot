@@ -1,337 +1,339 @@
 USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-batmacu+  3950 42.7  0.7 1997680 125568 ?      Sl   19:19   4:36 puma 3.12.1 (tcp://0.0.0.0:3000) [actuator-controller]
-batmacu+  4282 34.3  0.7 1555636 121128 ?      Sl   19:19   3:40 sidekiq 5.2.7 resource-adaptor [0 of 5 busy]
-batmacu+  4077 24.4  0.6 1433912 107812 ?      Sl   19:19   2:38 puma 3.12.1 (tcp://0.0.0.0:3002) [resource-adaptor]
-batmacu+  9747 16.4  0.1 318924 25464 pts/1    Sl+  19:30   0:00 ruby mqtt.rb
-root       301  8.4  0.0 109784 15784 ?        S    16:37  14:40 @sbin/plymouthd --mode=boot --attach-to-session --pid-file=/run/plymouth/pid
-root      8598  8.1  0.4 5956700 79948 ?       Sl   19:22   0:41 /usr/lib/erlang/erts-8.0.5/bin/beam.smp -W w -A 128 -P 1048576 -t 5000000 -stbt db -K true -B i -- -root /usr/lib/erlang -progname erl -- -home /var/lib/rabbitmq -- -pa /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/ebin -noshell -noinput -s rabbit boot -sname rabbit@047a75b119e0 -boot start_sasl -config /etc/rabbitmq/rabbitmq -kernel inet_default_connect_options [{nodelay,true}] -sasl errlog_type error -sasl sasl_error_logger tty -rabbit error_logger tty -rabbit sasl_error_logger tty -rabbit enabled_plugins_file "/etc/rabbitmq/enabled_plugins" -rabbit plugins_dir "/usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/plugins" -rabbit plugins_expand_dir "/var/lib/rabbitmq/mnesia/rabbit@047a75b119e0-plugins-expand" -os_mon start_cpu_sup false -os_mon start_disksup false -os_mon start_memsup false -mnesia dir "/var/lib/rabbitmq/mnesia/rabbit@047a75b119e0" -kernel inet_dist_listen_min 25672 -kernel inet_dist_listen_max 25672
-zerotie+  7293  6.0  1.4 1157228 239076 ?      Ssl  19:22   0:31 mongod
-batmacu+  3621  4.8  0.3 621740 53728 pts/2    Sl+  19:18   0:34 node /usr/bin/pm2 log 9
-batmacu+  6745  2.9  1.9 1657328 320176 ?      Sl   16:40   5:03 gala
-batmacu+  2154  2.6  0.3 897444 64072 ?        Ssl  16:38   4:37 PM2 v4.5.0: God Daemon (/home/batmacumba/.pm
-root      7149  2.3  0.0 699988  3648 ?        Sl   19:22   0:12 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 27017 -container-ip 172.18.0.4 -container-port 27017
-root      1480  2.0  0.6 488276 98844 tty7     Ssl+ 16:37   3:30 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
-batmacu+  7377  1.4  1.1 1965452 195268 ?      Sl   16:41   2:23 /opt/sublime_text/sublime_text
-root      7192  1.2  0.0 773720  2656 ?        Sl   19:22   0:06 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 6379 -container-ip 172.18.0.5 -container-port 6379
-root      7824  1.2  0.0 626512  3760 ?        Sl   19:22   0:06 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5672 -container-ip 172.18.0.7 -container-port 5672
-zerotie+  7324  0.9  0.0  62016 13288 ?        Ssl  19:22   0:04 redis-server *:6379
-root      7847  0.9  0.0 699988  2704 ?        Sl   19:22   0:04 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 1883 -container-ip 172.18.0.7 -container-port 1883
-root      1554  0.7  0.0      0     0 ?        S    16:38   1:21 [irq/33-nvidia]
-root      1556  0.7  0.0      0     0 ?        S    16:38   1:12 [nv_queue]
-batmacu+  7308  0.6  0.2 694396 44984 ?        Sl   16:41   1:08 io.elementary.terminal
-batmacu+  4105  0.3  0.5 1851060 98000 ?       Sl   19:19   0:02 puma 3.12.1 (tcp://0.0.0.0:3003) [resource-cataloguer]
-batmacu+  4138  0.3  0.4 1221468 70992 ?       Sl   19:19   0:02 puma 3.12.1 (tcp://0.0.0.0:3004) [resource-discoverer]
-batmacu+  8893  0.3  0.5 1189072 97804 ?       Sl   19:22   0:01 puma 3.12.1 (tcp://0.0.0.0:3001) [data-collector]
-zerotie+  9016  0.3  0.0 276536 13068 ?        Ss   19:22   0:01 postgres: batmacumba resource_adaptor_development [local] idle
-zerotie+  9018  0.3  0.0 276516 12448 ?        Ss   19:22   0:01 postgres: batmacumba resource_adaptor_development [local] idle
-root      1573  0.2  0.6 2012852 100508 ?      Ssl  16:38   0:22 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
-batmacu+  7052  0.2  0.1 725172 28564 ?        Sl   19:21   0:01 docker-compose up
-zerotie+  1566  0.1  0.0 367816 13116 ?        Ssl  16:38   0:16 /usr/sbin/zerotier-one
-batmacu+  6765  0.1  0.4 3282248 72980 ?       Sl   16:40   0:11 wingpanel
-root         1  0.0  0.0 225816  9484 ?        Ss   16:37   0:06 /sbin/init splash
-root         2  0.0  0.0      0     0 ?        S    16:37   0:00 [kthreadd]
-root         3  0.0  0.0      0     0 ?        I<   16:37   0:00 [rcu_gp]
-root         4  0.0  0.0      0     0 ?        I<   16:37   0:00 [rcu_par_gp]
-root         6  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/0:0H-kb]
-root         9  0.0  0.0      0     0 ?        I<   16:37   0:00 [mm_percpu_wq]
-root        10  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/0]
-root        11  0.0  0.0      0     0 ?        I    16:37   0:09 [rcu_sched]
-root        12  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/0]
-root        13  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/0]
-root        14  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/0]
-root        15  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/1]
-root        16  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/1]
-root        17  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/1]
-root        18  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/1]
-root        20  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/1:0H-kb]
-root        21  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/2]
-root        22  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/2]
-root        23  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/2]
-root        24  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/2]
-root        26  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/2:0H-kb]
-root        27  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/3]
-root        28  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/3]
-root        29  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/3]
-root        30  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/3]
-root        32  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/3:0H-kb]
-root        33  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/4]
-root        34  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/4]
-root        35  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/4]
-root        36  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/4]
-root        38  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/4:0H-kb]
-root        39  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/5]
-root        40  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/5]
-root        41  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/5]
-root        42  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/5]
-root        44  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/5:0H-kb]
-root        45  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/6]
-root        46  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/6]
-root        47  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/6]
-root        48  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/6]
-root        50  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/6:0H-kb]
-root        51  0.0  0.0      0     0 ?        S    16:37   0:00 [cpuhp/7]
-root        52  0.0  0.0      0     0 ?        S    16:37   0:00 [idle_inject/7]
-root        53  0.0  0.0      0     0 ?        S    16:37   0:00 [migration/7]
-root        54  0.0  0.0      0     0 ?        S    16:37   0:00 [ksoftirqd/7]
-root        56  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/7:0H-kb]
-root        57  0.0  0.0      0     0 ?        S    16:37   0:00 [kdevtmpfs]
-root        58  0.0  0.0      0     0 ?        I<   16:37   0:00 [netns]
-root        59  0.0  0.0      0     0 ?        S    16:37   0:00 [rcu_tasks_kthre]
-root        60  0.0  0.0      0     0 ?        S    16:37   0:00 [kauditd]
-root        63  0.0  0.0      0     0 ?        S    16:37   0:00 [khungtaskd]
-root        64  0.0  0.0      0     0 ?        S    16:37   0:00 [oom_reaper]
-root        65  0.0  0.0      0     0 ?        I<   16:37   0:00 [writeback]
-root        66  0.0  0.0      0     0 ?        S    16:37   0:00 [kcompactd0]
-root        67  0.0  0.0      0     0 ?        SN   16:37   0:00 [ksmd]
-root        68  0.0  0.0      0     0 ?        SN   16:37   0:00 [khugepaged]
-root       116  0.0  0.0      0     0 ?        I<   16:37   0:00 [kintegrityd]
-root       117  0.0  0.0      0     0 ?        I<   16:37   0:00 [kblockd]
-root       118  0.0  0.0      0     0 ?        I<   16:37   0:00 [blkcg_punt_bio]
-root       120  0.0  0.0      0     0 ?        I<   16:37   0:00 [tpm_dev_wq]
-root       121  0.0  0.0      0     0 ?        I<   16:37   0:00 [ata_sff]
-root       122  0.0  0.0      0     0 ?        I<   16:37   0:00 [md]
-root       123  0.0  0.0      0     0 ?        I<   16:37   0:00 [edac-poller]
-root       124  0.0  0.0      0     0 ?        I<   16:37   0:00 [devfreq_wq]
-root       125  0.0  0.0      0     0 ?        S    16:37   0:00 [watchdogd]
-root       130  0.0  0.0      0     0 ?        S    16:37   0:00 [kswapd0]
-root       131  0.0  0.0      0     0 ?        S    16:37   0:00 [ecryptfs-kthrea]
-root       133  0.0  0.0      0     0 ?        I<   16:37   0:00 [kthrotld]
-root       134  0.0  0.0      0     0 ?        I<   16:37   0:00 [acpi_thermal_pm]
-root       135  0.0  0.0      0     0 ?        S    16:37   0:00 [scsi_eh_0]
-root       136  0.0  0.0      0     0 ?        I<   16:37   0:00 [scsi_tmf_0]
-root       137  0.0  0.0      0     0 ?        S    16:37   0:00 [scsi_eh_1]
-root       138  0.0  0.0      0     0 ?        I<   16:37   0:00 [scsi_tmf_1]
-root       140  0.0  0.0      0     0 ?        S    16:37   0:00 [scsi_eh_2]
-root       141  0.0  0.0      0     0 ?        I<   16:37   0:00 [scsi_tmf_2]
-root       142  0.0  0.0      0     0 ?        S    16:37   0:00 [scsi_eh_3]
-root       143  0.0  0.0      0     0 ?        I<   16:37   0:00 [scsi_tmf_3]
-root       146  0.0  0.0      0     0 ?        I<   16:37   0:00 [vfio-irqfd-clea]
-root       149  0.0  0.0      0     0 ?        I<   16:37   0:00 [ipv6_addrconf]
-root       158  0.0  0.0      0     0 ?        I<   16:37   0:00 [kstrp]
-root       161  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/u17:0]
-root       176  0.0  0.0      0     0 ?        I<   16:37   0:00 [charger_manager]
-root       182  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/4:1H-kb]
-root       244  0.0  0.0      0     0 ?        I<   16:37   0:08 [kworker/6:1H-kb]
-root       340  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/3:1H-kb]
-root       342  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/5:1H-kb]
-root       343  0.0  0.0      0     0 ?        S    16:37   0:04 [jbd2/sda5-8]
-root       344  0.0  0.0      0     0 ?        I<   16:37   0:00 [ext4-rsv-conver]
-root       346  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/2:1H-kb]
-root       361  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/1:1H-kb]
-root       364  0.0  0.0      0     0 ?        I<   16:37   0:01 [kworker/7:1H-kb]
-root       370  0.0  0.0      0     0 ?        I<   16:37   0:00 [kworker/0:1H-kb]
-root       398  0.0  0.0  48376  1184 ?        Ss   16:37   0:00 /sbin/ureadahead -q
-root       410  0.0  0.2 118152 38948 ?        S<s  16:37   0:01 /lib/systemd/systemd-journald
-root       421  0.0  0.0  97712  1768 ?        Ss   16:37   0:00 /sbin/lvmetad -f
-root       425  0.0  0.0  47028  5168 ?        Ss   16:37   0:03 /lib/systemd/systemd-udevd
-root       433  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop0]
-root       442  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop1]
-root       443  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop2]
-root       444  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop3]
-root       445  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop4]
-root       471  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop5]
-root       474  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop6]
-root       477  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop8]
-root       485  0.0  0.0      0     0 ?        S<   16:37   0:00 [loop9]
-root       491  0.0  0.0      0     0 ?        S    16:37   0:00 [irq/31-mei_me]
-root       492  0.0  0.0      0     0 ?        I<   16:37   0:00 [led_workqueue]
-root       498  0.0  0.0      0     0 ?        I<   16:37   0:00 [cryptd]
-root       585  0.0  0.0      0     0 ?        S    16:37   0:00 [nv_queue]
-root       586  0.0  0.0      0     0 ?        S    16:37   0:00 [nv_queue]
-root       589  0.0  0.0      0     0 ?        S    16:37   0:00 [nvidia-modeset/]
-root       590  0.0  0.0      0     0 ?        S    16:37   0:00 [nvidia-modeset/]
-root       608  0.0  0.0      0     0 ?        S    16:37   0:00 [UVM global queu]
-root       609  0.0  0.0      0     0 ?        S    16:37   0:00 [UVM deferred re]
-root       610  0.0  0.0      0     0 ?        S    16:37   0:00 [UVM Tools Event]
-systemd+   711  0.0  0.0 144020  3428 ?        Ssl  16:37   0:00 /lib/systemd/systemd-timesyncd
-systemd+   714  0.0  0.0  71196  6556 ?        Ss   16:37   0:01 /lib/systemd/systemd-resolved
-root       815  0.0  0.1 196104 17220 ?        Ssl  16:37   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
-avahi      817  0.0  0.0  47420  3900 ?        Ss   16:37   0:01 avahi-daemon: running [c3po.local]
-root       819  0.0  0.0 310600  9172 ?        Ssl  16:37   0:00 /usr/bin/pantheon-parental-controls-daemon
-nvidia-+   825  0.0  0.0  19668  1904 ?        Ss   16:37   0:00 /usr/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose
-root       834  0.0  0.0 434328  9500 ?        Ssl  16:37   0:00 /usr/sbin/ModemManager --filter-policy=strict
-root       835  0.0  0.0 110492  3428 ?        Ssl  16:37   0:00 /usr/sbin/irqbalance --foreground
-syslog     837  0.0  0.0 263040  4708 ?        Ssl  16:37   0:00 /usr/sbin/rsyslogd -n
-root       839  0.0  0.0   4556   784 ?        Ss   16:37   0:00 /usr/sbin/acpid
-message+   841  0.0  0.0  51712  5952 ?        Ss   16:37   0:05 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-avahi      854  0.0  0.0  47080   340 ?        S    16:37   0:00 avahi-daemon: chroot helper
-root       892  0.0  0.0  45236  5204 ?        Ss   16:37   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
-root       895  0.0  0.1 599684 19552 ?        Ssl  16:37   0:04 /usr/sbin/NetworkManager --no-daemon
-root       906  0.0  0.0  70748  6088 ?        Ss   16:37   0:00 /lib/systemd/systemd-logind
-root       910  0.0  0.0 327072  8700 ?        Ssl  16:37   0:02 /usr/lib/accountsservice/accounts-daemon
-root       915  0.0  0.0 205516  9320 ?        Ssl  16:37   0:00 /usr/sbin/thermald --no-daemon --dbus-enable
-root       920  0.0  0.0 517816 13324 ?        Ssl  16:37   0:00 /usr/lib/udisks2/udisksd
-root       929  0.0  0.0 303664 10884 ?        Ssl  16:37   0:00 /usr/sbin/cups-browsed
-root       981  0.0  0.0 311208 11032 ?        Ssl  16:37   0:00 /usr/lib/policykit-1/polkitd --no-debug
-root      1216  0.0  0.0  13004   988 ?        Ss   16:37   0:00 /bin/plymouth --wait
-root      1238  0.0  0.2 2144356 42564 ?       Ssl  16:37   0:05 /usr/bin/containerd
-root      1277  0.0  0.0 308892  9036 ?        SLsl 16:37   0:00 /usr/sbin/lightdm
-root      1312  0.0  0.0  68564   544 ?        S    16:37   0:00 /usr/sbin/xrdp-sesman
-root      1321  0.0  0.0      0     0 ?        I    19:01   0:00 [kworker/u16:0-e]
-root      1362  0.0  0.0  72304  5568 ?        Ss   16:37   0:00 /usr/sbin/sshd -D
-xrdp      1373  0.0  0.0  52172   592 ?        S    16:37   0:00 /usr/sbin/xrdp
-root      1500  0.0  0.0  25988  6272 ?        S    16:37   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-enp3s0.pid -lf /var/lib/NetworkManager/dhclient-3003145d-ec63-3ed4-916d-341056eb3f77-enp3s0.lease -cf /var/lib/NetworkManager/dhclient-enp3s0.conf enp3s0
-root      1555  0.0  0.0      0     0 ?        S    16:38   0:00 [nvidia]
-kernoops  1629  0.0  0.0  56944   420 ?        Ss   16:38   0:00 /usr/sbin/kerneloops --test
-kernoops  1636  0.0  0.0  56944   420 ?        Ss   16:38   0:00 /usr/sbin/kerneloops
-root      2379  0.0  0.0 340928  8772 ?        Ssl  16:38   0:00 /usr/lib/upower/upowerd
-rtkit     2439  0.0  0.0 183512  2864 ?        SNsl 16:38   0:00 /usr/lib/rtkit/rtkit-daemon
-root      2465  0.0  0.0 250552  7228 ?        Sl   16:38   0:00 lightdm --session-child 13 20
-colord    2467  0.0  0.0 358120 15732 ?        Ssl  16:38   0:00 /usr/lib/colord/colord
-root      2519  0.0  0.0   4512   720 ?        S    16:38   0:00 bpfilter_umh
-root      2902  0.0  0.0      0     0 ?        I    19:16   0:00 [kworker/u16:3-e]
-batmacu+  3949  0.0  0.0   4636   788 ?        Ss   19:19   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/actuator-controller
-root      4015  0.0  0.0      0     0 ?        I    19:19   0:00 [kworker/4:1-mm_]
-root      4021  0.0  0.0      0     0 ?        I    19:19   0:00 [kworker/4:3-eve]
-batmacu+  4074  0.0  0.0   4636   824 ?        Ss   19:19   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-adaptor
-batmacu+  4104  0.0  0.0   4636   832 ?        Ss   19:19   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-cataloguer
-batmacu+  4135  0.0  0.0   4636   780 ?        Ss   19:19   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-discoverer
-batmacu+  4281  0.0  0.0   4636   888 ?        Ss   19:19   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-adaptor-sidekiq
-root      4790  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/6:5-mm_]
-root      4791  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/6:6-eve]
-root      4815  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/1:10-ev]
-root      4816  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/1:11-mm]
-root      5359  0.0  0.0      0     0 ?        S<   16:39   0:00 [loop10]
-root      5399  0.0  0.2 1678544 33412 ?       Ssl  16:39   0:04 /usr/lib/snapd/snapd
-root      5686  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/7:9-mm_]
-root      5687  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/7:10-ev]
-root      5762  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/5:3-mm_]
-root      5766  0.0  0.0      0     0 ?        I    19:20   0:00 [kworker/5:5-eve]
-batmacu+  6370  0.0  0.0  77308  8320 ?        Ss   16:40   0:01 /lib/systemd/systemd --user
-batmacu+  6371  0.0  0.0 261888  2992 ?        S    16:40   0:00 (sd-pam)
-batmacu+  6387  0.0  0.0 306876  7652 ?        Sl   16:40   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
-batmacu+  6390  0.0  0.0 596672 16240 ?        Ssl  16:40   0:00 /usr/lib/gnome-session/gnome-session-binary --session=pantheon
-batmacu+  6399  0.0  0.0  51108  5420 ?        Ss   16:40   0:02 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
-batmacu+  6401  0.0  0.0 310572  7288 ?        Ssl  16:40   0:00 /usr/lib/gvfs/gvfsd
-batmacu+  6406  0.0  0.0 432020  7960 ?        Sl   16:40   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
-batmacu+  6515  0.0  0.0  11312   316 ?        Ss   16:40   0:00 /usr/bin/ssh-agent /usr/bin/im-launch gnome-session --session=pantheon
-batmacu+  6529  0.0  0.0 367976  8640 ?        Ssl  16:40   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
-batmacu+  6534  0.0  0.0  50060  4240 ?        S    16:40   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
-batmacu+  6536  0.0  0.0 220784  6932 ?        Sl   16:40   0:01 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
-batmacu+  6543  0.0  0.0 367840 10116 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
-batmacu+  6545  0.0  0.1 537236 24072 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
-batmacu+  6547  0.0  0.1 721908 25620 ?        Sl   16:40   0:01 /usr/lib/gnome-settings-daemon/gsd-color
-batmacu+  6549  0.0  0.1 635640 24208 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-power
-batmacu+  6554  0.0  0.1 388356 22048 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
-batmacu+  6557  0.0  0.0 441860  5916 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
-batmacu+  6560  0.0  0.1 1770100 17756 ?       S<l  16:40   0:02 /usr/bin/pulseaudio --start --log-target=syslog
-batmacu+  6579  0.0  0.0 315148  8524 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
-batmacu+  6583  0.0  0.0 1007856 9488 ?        Sl   16:40   0:01 /usr/lib/gnome-settings-daemon/gsd-housekeeping
-batmacu+  6588  0.0  0.0 411356  9980 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
-batmacu+  6594  0.0  0.0 361604  9892 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
-batmacu+  6597  0.0  0.1 473200 23260 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
-batmacu+  6606  0.0  0.1 549132 23316 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
-batmacu+  6614  0.0  0.0 315152  8296 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
-batmacu+  6617  0.0  0.1 911172 25044 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
-batmacu+  6618  0.0  0.0 490228 12660 ?        Sl   16:40   0:01 /usr/lib/gnome-settings-daemon/gsd-sharing
-batmacu+  6631  0.0  0.1 500176 22312 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
-batmacu+  6658  0.0  0.0 527284 12516 ?        Sl   16:40   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
-batmacu+  6734  0.0  0.0 113740  4504 ?        S    16:40   0:00 /usr/lib/x86_64-linux-gnu/pulse/gconf-helper
-batmacu+  6736  0.0  0.0  98476  5692 ?        S    16:40   0:00 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
-batmacu+  6757  0.0  0.0 188216  5572 ?        Sl   16:40   0:01 /usr/lib/dconf/dconf-service
-batmacu+  6762  0.0  0.2 626036 35760 ?        Sl   16:40   0:08 plank
-batmacu+  6764  0.0  0.0 285368  7828 ?        Sl   16:40   0:00 /usr/lib/x86_64-linux-gnu/io.elementary.cerbere
-batmacu+  6778  0.0  0.1 483336 27352 ?        Ssl  16:40   0:06 /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
-batmacu+  6798  0.0  0.1 607424 21736 ?        Sl   16:40   0:00 gala-daemon
-batmacu+  6805  0.0  0.2 707676 38920 ?        Sl   16:40   0:02 nm-applet
-batmacu+  6807  0.0  0.1 464008 21664 ?        Sl   16:40   0:00 /usr/lib/x86_64-linux-gnu/policykit-1-pantheon/io.elementary.desktop.agent-polkit
-batmacu+  6808  0.0  0.1 533788 22344 ?        Sl   16:40   0:00 /usr/lib/x86_64-linux-gnu/geoclue2-1-pantheon/pantheon-agent-geoclue2
-batmacu+  6809  0.0  0.1 464452 22272 ?        Sl   16:40   0:00 light-locker
-batmacu+  6815  0.0  0.1 392896 21956 ?        Sl   16:40   0:00 /usr/lib/x86_64-linux-gnu/pantheon-parental-controls-client
-batmacu+  6830  0.0  0.2 964836 41856 ?        Sl   16:40   0:00 /usr/lib/x86_64-linux-gnu/io.elementary.calendar-daemon
-batmacu+  6876  0.0  0.1 1327348 26616 ?       Ssl  16:40   0:00 /usr/lib/evolution/evolution-source-registry
-batmacu+  6882  0.0  0.4 912968 67872 ?        Ssl  16:40   0:00 /usr/lib/evolution/evolution-calendar-factory
-batmacu+  6889  0.0  0.3 1087504 63288 ?       Sl   16:40   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx6882x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/6882/2
-batmacu+  6900  0.0  0.1 753496 24460 ?        Ssl  16:40   0:00 /usr/lib/evolution/evolution-addressbook-factory
-batmacu+  6909  0.0  0.1 1042496 27140 ?       Sl   16:40   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx6900x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/6900/2
-batmacu+  6942  0.0  0.0 464356 10444 ?        Ssl  16:41   0:00 /usr/bin/zeitgeist-daemon
-batmacu+  6950  0.0  0.1 331036 16496 ?        Ssl  16:41   0:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
-batmacu+  7028  0.0  0.0   4636   828 ?        Ss   19:21   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/inct
-batmacu+  7029  0.0  0.0  10176  2984 ?        S    19:21   0:00 docker-compose up
-root      7116  0.0  0.0 626000  2704 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8080 -container-ip 172.18.0.2 -container-port 8080
-root      7130  0.0  0.0 478536  2712 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5432 -container-ip 172.18.0.3 -container-port 5432
-root      7156  0.0  0.0   9360  4952 ?        Sl   19:22   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/7d96691a80952c6776eea59fc100c7589132f2b3ace9b9731fafb2829b264f0c -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
-root      7173  0.0  0.0   9360  4828 ?        Sl   19:22   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/d3d4ec9827810a76a59b1bff6b77b9884c335068ae7cee752ad42b8890d015e2 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
-zerotie+  7204  0.0  0.1 274556 23768 ?        Ss   19:22   0:00 postgres
-root      7206  0.0  0.0  10768  5824 ?        Sl   19:22   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/a3ca3a36c357494b15e8e94055259196e2483623a87c75468b997ff235d82f12 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
-root      7208  0.0  0.0   1524     4 ?        Ss   19:22   0:00 /bin/sh ./docker-entrypoint.sh
-batmacu+  7232  0.0  0.3 1995664 53064 ?       Sl   16:41   0:05 io.elementary.files
-batmacu+  7240  0.0  0.0 495212 13040 ?        Sl   16:41   0:00 /usr/bin/io.elementary.files-daemon
-batmacu+  7248  0.0  0.0 402756 10092 ?        Sl   16:41   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
-batmacu+  7254  0.0  0.0 338820 11004 ?        Ssl  16:41   0:03 /usr/lib/gvfs/gvfs-udisks2-volume-monitor
-batmacu+  7258  0.0  0.0 294388  4920 ?        Ssl  16:41   0:00 /usr/lib/gvfs/gvfs-mtp-volume-monitor
-batmacu+  7262  0.0  0.0 292556  5784 ?        Ssl  16:41   0:00 /usr/lib/gvfs/gvfs-goa-volume-monitor
-batmacu+  7266  0.0  0.1 332344 21344 ?        Ssl  16:41   0:00 /usr/lib/gvfs/gvfs-gphoto2-volume-monitor
-root      7275  0.0  0.0   9360  4968 ?        Sl   19:22   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/e625232b5d6f24d857c49a590b16185c93c356c0a101fffd8353738f0772bd09 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
-batmacu+  7315  0.0  0.0  51716  8872 pts/1    Ss   16:41   0:01 /bin/bash
-batmacu+  7390  0.0  0.3 470780 57296 ?        Sl   16:41   0:02 /opt/sublime_text/plugin_host 7377 --auto-shell-env
-batmacu+  7459  0.0  0.0 415624  9972 ?        Ssl  16:41   0:00 /usr/lib/gvfs/gvfs-afc-volume-monitor
-batmacu+  7473  0.0  0.0 222920  5656 ?        Ssl  16:41   0:00 /usr/lib/gvfs/gvfsd-metadata
-root      7519  0.0  0.2 597572 47328 ?        Sl   19:22   0:00 npm
-root      7556  0.0  0.0   1536     8 ?        S    19:22   0:00 sh -c node ./bin/kong-dashboard start
-root      7557  0.0  0.1 571496 26188 ?        Sl   19:22   0:00 node ./bin/kong-dashboard start
-root      7563  0.0  0.2 577868 33704 ?        Sl   19:22   0:00 /usr/bin/node /app/bin/server
-zerotie+  7715  0.0  0.0 274692  6732 ?        Ss   19:22   0:00 postgres: checkpointer process   
-zerotie+  7716  0.0  0.0 274556  5176 ?        Ss   19:22   0:00 postgres: writer process   
-zerotie+  7717  0.0  0.0 274556  3772 ?        Ss   19:22   0:00 postgres: wal writer process   
-zerotie+  7718  0.0  0.0 274996  6060 ?        Ss   19:22   0:00 postgres: autovacuum launcher process   
-zerotie+  7719  0.0  0.0 130088  4200 ?        Ss   19:22   0:00 postgres: stats collector process   
-root      7721  0.0  0.0 626000  2712 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8443 -container-ip 172.18.0.6 -container-port 8443
-root      7735  0.0  0.0 627664  3732 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8001 -container-ip 172.18.0.6 -container-port 8001
-root      7747  0.0  0.0 552268  2688 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8000 -container-ip 172.18.0.6 -container-port 8000
-root      7760  0.0  0.0 478536  2688 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 7946 -container-ip 172.18.0.6 -container-port 7946
-root      7772  0.0  0.0 552268  3644 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto udp -host-ip 0.0.0.0 -host-port 7946 -container-ip 172.18.0.6 -container-port 7946
-root      7785  0.0  0.0 552268  2708 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 15672 -container-ip 172.18.0.7 -container-port 15672
-root      7798  0.0  0.0 479944  3752 ?        Sl   19:22   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8883 -container-ip 172.18.0.7 -container-port 8883
-root      7805  0.0  0.0  10768  5396 ?        Sl   19:22   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/a7504e10b13473385b54dd33ec0d88c10698082e63b494a09557ffe6db73a318 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
-root      7858  0.0  0.0   9424  5600 ?        Sl   19:22   0:00 containerd-shim -namespace moby -workdir /var/lib/containerd/io.containerd.runtime.v1.linux/moby/047a75b119e080a29182402da46129323cdeefd4fcbe166182d5319526e43c77 -address /run/containerd/containerd.sock -containerd-binary /usr/bin/containerd -runtime-root /var/run/docker/runtime-runc
-root      7881  0.0  0.0  15120  3076 ?        Ss   19:22   0:00 bash -c kong migrations up && kong start
-root      7899  0.0  0.0  20048  2768 ?        Ss   19:22   0:00 bash -c rabbitmq-plugins enable rabbitmq_management && rabbitmq-plugins enable rabbitmq_mqtt && rabbitmq-server && rabbitmqctl add_user user pass && rabbitmqctl set_permissions -p / user .* .* .*
-batmacu+  7972  0.0  0.6 1615780 111792 ?      Sl   16:41   0:04 io.elementary.appcenter -s
-batmacu+  8008  0.0  0.0   4632   928 ?        S    16:42   0:00 sh -c /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
-batmacu+  8009  0.0  0.0 280208  7852 ?        Sl   16:42   0:00 /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
-root      8119  0.0  0.0  48780  9064 ?        S    19:22   0:00 perl /usr/local/openresty/bin/resty /usr/local/bin/kong start
-root      8188  0.0  0.0  50696 10032 ?        S    19:22   0:00 /usr/local/openresty/bin/../nginx/sbin/nginx -p /tmp/lOUKytjA19/ -c conf/nginx.conf
-root      8206  0.0  0.0  15120  3008 ?        S    19:22   0:00 sh -c /usr/local/openresty/nginx/sbin/nginx -p /usr/local/kong -c nginx.conf > /tmp/lua_cLryLx 2> /tmp/lua_PzujOz
-root      8207  0.0  0.0 214912 12396 ?        S    19:22   0:00 nginx: master process /usr/local/openresty/nginx/sbin/nginx -p /usr/local/kong -c nginx.conf
-99        8221  0.0  0.1 234132 28784 ?        S    19:22   0:00 nginx: worker process
-99        8222  0.0  0.1 234132 28792 ?        S    19:22   0:00 nginx: worker process
-99        8223  0.0  0.1 234132 28788 ?        S    19:22   0:00 nginx: worker process
-99        8224  0.0  0.1 235480 30268 ?        S    19:22   0:00 nginx: worker process
-99        8225  0.0  0.1 234132 28780 ?        S    19:22   0:00 nginx: worker process
-99        8227  0.0  0.1 234132 28764 ?        S    19:22   0:00 nginx: worker process
-99        8228  0.0  0.1 234132 28764 ?        S    19:22   0:00 nginx: worker process
-99        8229  0.0  0.1 234132 28784 ?        S    19:22   0:00 nginx: worker process
-root      8269  0.0  0.0  11484   108 ?        S    19:22   0:00 /usr/lib/erlang/erts-8.0.5/bin/epmd -daemon
-root      8491  0.0  0.0   4332  1608 ?        S    19:22   0:00 /bin/sh -e /usr/lib/rabbitmq/bin/rabbitmq-server
-root      8789  0.0  0.0   4212  1372 ?        Ss   19:22   0:00 erl_child_setup 1048576
-batmacu+  8825  0.0  0.0   4636   872 ?        Ss   19:22   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/data-collector
-root      8849  0.0  0.0  11448   992 ?        Ss   19:22   0:00 inet_gethost 4
-root      8850  0.0  0.0  13544  1648 ?        S    19:22   0:00 inet_gethost 4
-batmacu+  8911  0.0  0.5 1189072 88632 ?       Sl   19:22   0:00 puma: cluster worker 0: 8893 [data-collector]
-batmacu+  8922  0.0  0.5 1189072 88696 ?       Sl   19:22   0:00 puma: cluster worker 1: 8893 [data-collector]
-zerotie+  8995  0.0  0.0 275640 11956 ?        Ss   19:22   0:00 postgres: batmacumba resource_cataloguer_development [local] idle
-zerotie+  9089  0.0  0.0 276516 12948 ?        Ss   19:22   0:00 postgres: batmacumba resource_adaptor_development [local] idle
-root      9116  0.0  0.0      0     0 ?        I    19:22   0:00 [kworker/2:4-mm_]
-root      9128  0.0  0.0      0     0 ?        I    19:22   0:00 [kworker/3:16-ev]
-root      9129  0.0  0.0      0     0 ?        I    19:22   0:00 [kworker/3:17-mm]
-zerotie+  9207  0.0  0.0 275588 11220 ?        Ss   19:24   0:00 postgres: batmacumba batmacumba 172.18.0.6(33390) idle
-zerotie+  9301  0.0  0.0 275588 11212 ?        Ss   19:25   0:00 postgres: batmacumba batmacumba 172.18.0.6(48254) idle
-zerotie+  9383  0.0  0.0 275588 11216 ?        Ss   19:26   0:00 postgres: batmacumba batmacumba 172.18.0.6(59322) idle
-zerotie+  9469  0.0  0.0 275588 11212 ?        Ss   19:27   0:00 postgres: batmacumba batmacumba 172.18.0.6(40102) idle
-zerotie+  9562  0.0  0.0 275588 11216 ?        Ss   19:28   0:00 postgres: batmacumba batmacumba 172.18.0.6(43236) idle
-root      9668  0.0  0.0      0     0 ?        I    19:29   0:00 [kworker/u16:2-e]
-zerotie+  9709  0.0  0.0 275588 11220 ?        Ss   19:30   0:00 postgres: batmacumba batmacumba 172.18.0.6(49686) idle
-zerotie+  9710  0.0  0.0 275588 11212 ?        Ss   19:30   0:00 postgres: batmacumba batmacumba 172.18.0.6(49688) idle
-zerotie+  9711  0.0  0.0 275504 10336 ?        Ss   19:30   0:00 postgres: batmacumba batmacumba 172.18.0.6(49690) idle
-batmacu+  9746  0.0  0.0   4636   824 pts/1    S+   19:30   0:00 sh run_mqtt.sh
-batmacu+  9754  0.0  0.0  65708  4108 pts/1    R+   19:30   0:00 ps aux --sort=-pcpu
-root     10598  0.0  0.0 126192  8136 ?        Ss   16:42   0:00 /usr/sbin/cupsd -l
-lp       10613  0.0  0.0  86420  6076 ?        S    16:42   0:00 /usr/lib/cups/notifier/dbus dbus://
-root     15170  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/0:1-eve]
-root     15208  0.0  0.0      0     0 ?        I    16:56   0:00 [kworker/2:0-rcu]
-batmacu+ 22751  0.0  0.0  51832  8924 pts/2    Ss   17:16   0:00 /bin/bash
-root     30064  0.0  0.0      0     0 ?        I    18:12   0:00 [kworker/0:0-eve]
-root     32007  0.0  0.0      0     0 ?        I    18:34   0:00 [kworker/u16:1-e]
-batmacu+ 32069  0.0  0.0 402704  9624 ?        Sl   18:35   0:00 /usr/lib/gvfs/gvfsd-network --spawner :1.2 /org/gtk/gvfs/exec_spaw/3
-batmacu+ 32093  0.0  0.0 399808  7672 ?        Sl   18:35   0:00 /usr/lib/gvfs/gvfsd-dnssd --spawner :1.2 /org/gtk/gvfs/exec_spaw/6
+batmacu+ 19397  307  2.5 8093124 423716 pts/1  Sl+  02:19   0:15 /usr/lib/jvm/java-11-openjdk-amd64/bin/java -Djdk.home=/usr/lib/jvm/java-11-openjdk-amd64 -Djruby.home=/home/batmacumba/.rvm/rubies/jruby-9.2.9.0 -Djruby.script=jruby -Djruby.shell=/bin/sh -Djffi.boot.library.path=/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/arm-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/ppc64le-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/aarch64-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/sparcv9-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/ppc64-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/i386-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/mips64el-Linux:/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jni/x86_64-Linux -Xss2048k -Dsun.java.command=org.jruby.Main --module-path=/home/batmacumba/.rvm/rubies/jruby-9.2.9.0/lib/jruby.jar --add-opens java.base/java.io=org.jruby.dist --add-opens java.base/java.nio.channels=org.jruby.dist --add-opens java.base/sun.nio.ch=org.jruby.dist --add-opens java.management/sun.management=org.jruby.dist -cp  -Djava.security.egd=file:/dev/urandom org/jruby/Main mqtt.rb
+batmacu+   522 99.8 10.7 2914480 1754240 ?     Sl   01:31  48:08 puma 3.12.1 (tcp://0.0.0.0:3001) [data-collector]
+batmacu+   823 53.9  0.7 1839468 115584 ?      Sl   01:31  25:47 puma 3.12.1 (tcp://0.0.0.0:3002) [resource-adaptor]
+batmacu+ 10809 21.5  1.9 22162660 322216 ?     Sl   00:26  24:21 /snap/discord/128/usr/share/discord/Discord --type=renderer --no-sandbox --autoplay-policy=no-user-gesture-required --field-trial-handle=12692284033781526675,8867762254007443040,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --lang=en-US --enable-crash-reporter=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel --global-crash-keys=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel,_companyName=Discord Inc.,_productName=Discord,_version=0.0.15 --app-path=/snap/discord/128/usr/share/discord/resources/app.asar --no-sandbox --no-zygote --native-window-open --preload=/home/batmacumba/snap/discord/128/.config/discord/0.0.15/modules/discord_desktop_core/core.asar/app/mainScreenPreload.js --context-isolation --background-color=#202225 --enable-spellcheck --enable-websql --num-raster-threads=3 --enable-main-frame-before-activation --renderer-client-id=7 --no-v8-untrusted-code-mitigations --shared-files=v8_snapshot_data:100 --enable-node-leakage-in-renderers
+zerotie+ 29624 11.9  3.4 1469792 560416 ?      Ssl  01:30   5:52 mongod
+root     30572 10.7  0.5 4884292 84260 ?       Sl   01:30   5:15 /usr/lib/erlang/erts-8.0.5/bin/beam.smp -W w -A 96 -P 1048576 -t 5000000 -stbt db -K true -B i -- -root /usr/lib/erlang -progname erl -- -home /var/lib/rabbitmq -- -pa /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/ebin -noshell -noinput -s rabbit boot -sname rabbit@997622a95d55 -boot start_sasl -config /etc/rabbitmq/rabbitmq -kernel inet_default_connect_options [{nodelay,true}] -sasl errlog_type error -sasl sasl_error_logger tty -rabbit error_logger tty -rabbit sasl_error_logger tty -rabbit enabled_plugins_file "/etc/rabbitmq/enabled_plugins" -rabbit plugins_dir "/usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/plugins" -rabbit plugins_expand_dir "/var/lib/rabbitmq/mnesia/rabbit@997622a95d55-plugins-expand" -os_mon start_cpu_sup false -os_mon start_disksup false -os_mon start_memsup false -mnesia dir "/var/lib/rabbitmq/mnesia/rabbit@997622a95d55" -kernel inet_dist_listen_min 25672 -kernel inet_dist_listen_max 25672
+batmacu+  1405 10.5  0.4 913448 76624 ?        Ssl  00:18  12:48 PM2 v4.5.0: God Daemon (/home/batmacumba/.pm
+root     29544  8.0  0.0 774020  3820 ?        Sl   01:30   3:56 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 27017 -container-ip 172.18.0.2 -container-port 27017
+batmacu+   935  5.7  0.5 1352536 94152 ?       Sl   01:31   2:45 sidekiq 5.2.7 resource-adaptor [0 of 5 busy]
+batmacu+ 10764  4.6  0.7 606160 115456 ?       Sl   00:26   5:16 /snap/discord/128/usr/share/discord/Discord --type=gpu-process --field-trial-handle=12692284033781526675,8867762254007443040,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --no-sandbox --enable-crash-reporter=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel --global-crash-keys=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel,_companyName=Discord Inc.,_productName=Discord,_version=0.0.15 --gpu-preferences=MAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAQAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA= --shared-files
+batmacu+  3901  4.1  1.5 1563588 255128 ?      Sl   00:18   4:59 gala
+batmacu+  3383  3.3  0.1 2516272 20512 ?       S<l  00:18   4:05 /usr/bin/pulseaudio --start --log-target=syslog
+root     30127  2.3  0.0 775684  4352 ?        Sl   01:30   1:09 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5672 -container-ip 172.18.0.6 -container-port 5672
+root      1224  2.1  0.3 284404 54528 tty7     Ssl+ 00:18   2:36 /usr/lib/xorg/Xorg -core :0 -seat seat0 -auth /var/run/lightdm/root/:0 -nolisten tcp vt7 -novtswitch
+batmacu+   938  2.0  0.6 2063544 109144 ?      Sl   01:31   0:59 puma 3.12.1 (tcp://0.0.0.0:3000) [actuator-controller]
+root      1363  1.5  0.0      0     0 ?        S    00:18   1:50 [irq/130-nvidia]
+root       613  0.8  0.0      0     0 ?        S    00:18   1:00 [nvidia-modeset/]
+batmacu+ 10643  0.6  0.9 4962228 149204 ?      Sl   00:26   0:44 /snap/discord/128/usr/share/discord/Discord --no-sandbox
+zerotie+  1736  0.5  0.1 771232 16484 ?        Ssl  00:18   0:36 /usr/sbin/zerotier-one
+root      1365  0.4  0.0      0     0 ?        S    00:18   0:30 [nv_queue]
+mosquit+   893  0.2  0.5 125356 83416 ?        S    01:31   0:05 /usr/sbin/mosquitto -c /etc/mosquitto/mosquitto.conf
+root       391  0.1  1.0 310368 163284 ?       S<s  00:18   0:08 /lib/systemd/systemd-journald
+root      1735  0.1  0.6 1945232 100948 ?      Ssl  00:18   0:10 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+batmacu+ 29504  0.1  0.1 725092 28464 ?        Sl   01:30   0:03 docker-compose up
+zerotie+ 29770  0.1  0.0  55524  7884 ?        Ssl  01:30   0:03 redis-server *:6379
+batmacu+ 32713  0.1  0.6 1849544 106240 ?      Sl   01:30   0:05 puma 3.12.1 (tcp://0.0.0.0:3003) [resource-cataloguer]
+root         1  0.0  0.0 225904  9480 ?        Ss   00:18   0:05 /sbin/init splash
+root         2  0.0  0.0      0     0 ?        S    00:18   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        I<   00:18   0:00 [rcu_gp]
+root         4  0.0  0.0      0     0 ?        I<   00:18   0:00 [rcu_par_gp]
+root         6  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/0:0H-kb]
+root         9  0.0  0.0      0     0 ?        I<   00:18   0:00 [mm_percpu_wq]
+root        10  0.0  0.0      0     0 ?        S    00:18   0:00 [ksoftirqd/0]
+root        11  0.0  0.0      0     0 ?        I    00:18   0:04 [rcu_sched]
+root        12  0.0  0.0      0     0 ?        S    00:18   0:00 [migration/0]
+root        13  0.0  0.0      0     0 ?        S    00:18   0:00 [idle_inject/0]
+root        14  0.0  0.0      0     0 ?        S    00:18   0:00 [cpuhp/0]
+root        15  0.0  0.0      0     0 ?        S    00:18   0:00 [cpuhp/1]
+root        16  0.0  0.0      0     0 ?        S    00:18   0:00 [idle_inject/1]
+root        17  0.0  0.0      0     0 ?        S    00:18   0:00 [migration/1]
+root        18  0.0  0.0      0     0 ?        S    00:18   0:00 [ksoftirqd/1]
+root        20  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/1:0H-kb]
+root        21  0.0  0.0      0     0 ?        S    00:18   0:00 [cpuhp/2]
+root        22  0.0  0.0      0     0 ?        S    00:18   0:00 [idle_inject/2]
+root        23  0.0  0.0      0     0 ?        S    00:18   0:00 [migration/2]
+root        24  0.0  0.0      0     0 ?        S    00:18   0:00 [ksoftirqd/2]
+root        26  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/2:0H-kb]
+root        27  0.0  0.0      0     0 ?        S    00:18   0:00 [cpuhp/3]
+root        28  0.0  0.0      0     0 ?        S    00:18   0:00 [idle_inject/3]
+root        29  0.0  0.0      0     0 ?        S    00:18   0:00 [migration/3]
+root        30  0.0  0.0      0     0 ?        S    00:18   0:00 [ksoftirqd/3]
+root        32  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/3:0H-kb]
+root        33  0.0  0.0      0     0 ?        S    00:18   0:00 [cpuhp/4]
+root        34  0.0  0.0      0     0 ?        S    00:18   0:00 [idle_inject/4]
+root        35  0.0  0.0      0     0 ?        S    00:18   0:00 [migration/4]
+root        36  0.0  0.0      0     0 ?        S    00:18   0:00 [ksoftirqd/4]
+root        38  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/4:0H-kb]
+root        39  0.0  0.0      0     0 ?        S    00:18   0:00 [cpuhp/5]
+root        40  0.0  0.0      0     0 ?        S    00:18   0:00 [idle_inject/5]
+root        41  0.0  0.0      0     0 ?        S    00:18   0:00 [migration/5]
+root        42  0.0  0.0      0     0 ?        S    00:18   0:00 [ksoftirqd/5]
+root        44  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/5:0H-kb]
+root        45  0.0  0.0      0     0 ?        S    00:18   0:00 [kdevtmpfs]
+root        46  0.0  0.0      0     0 ?        I<   00:18   0:00 [netns]
+root        47  0.0  0.0      0     0 ?        S    00:18   0:00 [rcu_tasks_kthre]
+root        48  0.0  0.0      0     0 ?        S    00:18   0:00 [kauditd]
+root        50  0.0  0.0      0     0 ?        S    00:18   0:00 [khungtaskd]
+root        51  0.0  0.0      0     0 ?        S    00:18   0:00 [oom_reaper]
+root        52  0.0  0.0      0     0 ?        I<   00:18   0:00 [writeback]
+root        53  0.0  0.0      0     0 ?        S    00:18   0:00 [kcompactd0]
+root        54  0.0  0.0      0     0 ?        SN   00:18   0:00 [ksmd]
+root        55  0.0  0.0      0     0 ?        SN   00:18   0:00 [khugepaged]
+root       102  0.0  0.0      0     0 ?        I<   00:18   0:00 [kintegrityd]
+root       103  0.0  0.0      0     0 ?        I<   00:18   0:00 [kblockd]
+root       104  0.0  0.0      0     0 ?        I<   00:18   0:00 [blkcg_punt_bio]
+root       105  0.0  0.0      0     0 ?        I<   00:18   0:00 [tpm_dev_wq]
+root       106  0.0  0.0      0     0 ?        I<   00:18   0:00 [ata_sff]
+root       107  0.0  0.0      0     0 ?        I<   00:18   0:00 [md]
+root       108  0.0  0.0      0     0 ?        I<   00:18   0:00 [edac-poller]
+root       109  0.0  0.0      0     0 ?        I<   00:18   0:00 [devfreq_wq]
+root       110  0.0  0.0      0     0 ?        S    00:18   0:00 [watchdogd]
+root       116  0.0  0.0      0     0 ?        S    00:18   0:00 [kswapd0]
+root       117  0.0  0.0      0     0 ?        S    00:18   0:00 [ecryptfs-kthrea]
+root       119  0.0  0.0      0     0 ?        I<   00:18   0:00 [kthrotld]
+root       120  0.0  0.0      0     0 ?        S    00:18   0:00 [irq/123-aerdrv]
+root       121  0.0  0.0      0     0 ?        S    00:18   0:00 [irq/123-pcie-dp]
+root       122  0.0  0.0      0     0 ?        I<   00:18   0:00 [acpi_thermal_pm]
+root       123  0.0  0.0      0     0 ?        I<   00:18   0:00 [vfio-irqfd-clea]
+root       126  0.0  0.0      0     0 ?        I<   00:18   0:00 [ipv6_addrconf]
+root       135  0.0  0.0      0     0 ?        I<   00:18   0:00 [kstrp]
+root       138  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/u13:0]
+root       153  0.0  0.0      0     0 ?        I<   00:18   0:00 [charger_manager]
+root       212  0.0  0.0      0     0 ?        S    00:18   0:00 [scsi_eh_0]
+root       213  0.0  0.0      0     0 ?        I<   00:18   0:00 [scsi_tmf_0]
+root       214  0.0  0.0      0     0 ?        S    00:18   0:00 [scsi_eh_1]
+root       215  0.0  0.0      0     0 ?        I<   00:18   0:00 [scsi_tmf_1]
+root       216  0.0  0.0      0     0 ?        S    00:18   0:00 [scsi_eh_2]
+root       217  0.0  0.0      0     0 ?        I<   00:18   0:00 [scsi_tmf_2]
+root       218  0.0  0.0      0     0 ?        S    00:18   0:00 [scsi_eh_3]
+root       219  0.0  0.0      0     0 ?        I<   00:18   0:00 [scsi_tmf_3]
+root       220  0.0  0.0      0     0 ?        S    00:18   0:00 [scsi_eh_4]
+root       221  0.0  0.0      0     0 ?        I<   00:18   0:00 [scsi_tmf_4]
+root       222  0.0  0.0      0     0 ?        S    00:18   0:00 [scsi_eh_5]
+root       223  0.0  0.0      0     0 ?        I<   00:18   0:00 [scsi_tmf_5]
+root       228  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/0:1H-kb]
+root       229  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/4:1H-kb]
+root       232  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/3:1H-kb]
+root       306  0.0  0.0  15120  3092 ?        S    01:31   0:00 sh -c /usr/local/openresty/nginx/sbin/nginx -p /usr/local/kong -c nginx.conf > /tmp/lua_4edDPm 2> /tmp/lua_lFSTDt
+root       307  0.0  0.0 215040 12448 ?        S    01:31   0:00 nginx: master process /usr/local/openresty/nginx/sbin/nginx -p /usr/local/kong -c nginx.conf
+root       330  0.0  0.0      0     0 ?        S    00:18   0:02 [jbd2/sda5-8]
+root       331  0.0  0.0      0     0 ?        I<   00:18   0:00 [ext4-rsv-conver]
+root       333  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/5:1H-kb]
+99         342  0.0  0.1 235924 30692 ?        S    01:31   0:00 nginx: worker process
+99         343  0.0  0.1 237784 32508 ?        S    01:31   0:00 nginx: worker process
+99         344  0.0  0.1 237784 32388 ?        S    01:31   0:00 nginx: worker process
+99         345  0.0  0.2 237912 32732 ?        S    01:31   0:00 nginx: worker process
+99         346  0.0  0.1 236052 30712 ?        S    01:31   0:00 nginx: worker process
+99         347  0.0  0.1 235924 30640 ?        S    01:31   0:00 nginx: worker process
+root       348  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/1:1H-kb]
+root       351  0.0  0.0      0     0 ?        I<   00:18   0:00 [kworker/2:1H-kb]
+root       401  0.0  0.0      0     0 ?        I<   00:18   0:00 [rpciod]
+root       402  0.0  0.0      0     0 ?        I<   00:18   0:00 [xprtiod]
+root       417  0.0  0.0  97712  1720 ?        Ss   00:18   0:00 /sbin/lvmetad -f
+root       422  0.0  0.0  49020  7132 ?        Ss   00:18   0:05 /lib/systemd/systemd-udevd
+root       427  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop0]
+root       429  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop1]
+root       432  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop2]
+root       435  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop3]
+root       439  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop4]
+root       440  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop5]
+root       449  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop6]
+root       451  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop7]
+root       452  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop8]
+root       453  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop9]
+root       454  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop10]
+root       455  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop11]
+root       456  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop12]
+root       457  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop13]
+root       458  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop14]
+root       482  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop15]
+root       483  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop16]
+root       485  0.0  0.0      0     0 ?        S<   00:18   0:00 [loop17]
+root       486  0.0  0.0      0     0 ?        S    00:18   0:00 [irq/128-mei_me]
+root       539  0.0  0.0      0     0 ?        I<   00:18   0:00 [led_workqueue]
+root       546  0.0  0.0      0     0 ?        I<   00:18   0:00 [cryptd]
+batmacu+   574  0.0  0.5 1188820 88120 ?       Sl   01:31   0:00 puma: cluster worker 0: 522 [data-collector]
+batmacu+   587  0.0  0.5 1188820 88112 ?       Sl   01:31   0:00 puma: cluster worker 1: 522 [data-collector]
+root       609  0.0  0.0      0     0 ?        S    00:18   0:00 [nv_queue]
+root       610  0.0  0.0      0     0 ?        S    00:18   0:00 [nv_queue]
+root       614  0.0  0.0      0     0 ?        S    00:18   0:00 [nvidia-modeset/]
+root       680  0.0  0.0      0     0 ?        S    00:18   0:00 [UVM global queu]
+root       681  0.0  0.0      0     0 ?        S    00:18   0:00 [UVM deferred re]
+root       682  0.0  0.0      0     0 ?        S    00:18   0:00 [UVM Tools Event]
+batmacu+   822  0.0  0.0   4632   816 ?        Ss   01:31   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-adaptor
+systemd+   858  0.0  0.0 145964  3224 ?        Ssl  00:18   0:00 /lib/systemd/systemd-timesyncd
+root       865  0.0  0.0  47604  3544 ?        Ss   00:18   0:00 /sbin/rpcbind -f -w
+systemd+   866  0.0  0.0  70616  5904 ?        Ss   00:18   0:00 /lib/systemd/systemd-resolved
+batmacu+   897  0.0  0.0   4632   828 ?        Ss   01:31   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-adaptor-sidekiq
+batmacu+   937  0.0  0.0   4632   856 ?        Ss   01:31   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/actuator-controller
+root       963  0.0  0.0 205516  9568 ?        Ssl  00:18   0:01 /usr/sbin/thermald --no-daemon --dbus-enable
+root       964  0.0  0.0 292240  7300 ?        Ssl  00:18   0:00 /usr/bin/pantheon-parental-controls-daemon
+root       966  0.0  0.1 196108 17300 ?        Ssl  00:18   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root       967  0.0  0.0  56944  3260 ?        Ss   00:18   0:00 /usr/sbin/cron -f
+root       968  0.0  0.0 313300  6980 ?        Ssl  00:18   0:00 /usr/lib/accountsservice/accounts-daemon
+root       971  0.0  0.0 110484  3596 ?        Ssl  00:18   0:00 /usr/sbin/irqbalance --foreground
+root       972  0.0  0.0  70580  5972 ?        Ss   00:18   0:01 /lib/systemd/systemd-logind
+root       981  0.0  0.0   4556   784 ?        Ss   00:18   0:00 /usr/sbin/acpid
+avahi      982  0.0  0.0  47388  3820 ?        Ss   00:18   0:01 avahi-daemon: running [c3po.local]
+root       985  0.0  0.1 1534564 28344 ?       Ssl  00:18   0:04 /usr/lib/snapd/snapd
+message+   986  0.0  0.0  51604  6036 ?        Ss   00:18   0:06 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+nvidia-+   992  0.0  0.0  19680  1948 ?        Ss   00:18   0:00 /usr/bin/nvidia-persistenced --user nvidia-persistenced --no-persistence-mode --verbose
+avahi      993  0.0  0.0  47080   336 ?        S    00:18   0:00 avahi-daemon: chroot helper
+root      1001  0.0  0.0  45236  5328 ?        Ss   00:18   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+root      1002  0.0  0.0 503272 11644 ?        Ssl  00:18   0:01 /usr/lib/udisks2/udisksd
+root      1003  0.0  0.1 511500 17480 ?        Ssl  00:18   0:03 /usr/sbin/NetworkManager --no-daemon
+root      1004  0.0  0.0 360600  9488 ?        Ssl  00:18   0:00 /usr/sbin/ModemManager --filter-policy=strict
+syslog    1005  0.0  0.0 263040  4664 ?        Ssl  00:18   0:00 /usr/sbin/rsyslogd -n
+root      1026  0.0  0.0 293112  9112 ?        Ssl  00:18   0:00 /usr/lib/policykit-1/polkitd --no-debug
+vnstat    1147  0.0  0.0   8312  1100 ?        Ss   00:18   0:00 /usr/sbin/vnstatd -n
+root      1162  0.0  0.2 1552760 41896 ?       Ssl  00:18   0:04 /usr/bin/containerd
+root      1166  0.0  0.0  72304  5616 ?        Ss   00:18   0:00 /usr/sbin/sshd -D
+root      1172  0.0  0.0 364336  7000 ?        SLsl 00:18   0:00 /usr/sbin/lightdm
+root      1233  0.0  0.0  41804  1932 tty1     Ss+  00:18   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root      1258  0.0  0.0  68564   540 ?        S    00:18   0:00 /usr/sbin/xrdp-sesman
+xrdp      1309  0.0  0.0  52172   596 ?        S    00:18   0:00 /usr/sbin/xrdp
+root      1364  0.0  0.0      0     0 ?        S    00:18   0:00 [nvidia]
+root      1545  0.0  0.0 340972  8908 ?        Ssl  00:18   0:00 /usr/lib/upower/upowerd
+root      1630  0.0  0.0 250552  7144 ?        Sl   00:18   0:00 lightdm --session-child 13 20
+colord    1636  0.0  0.0 343568 14024 ?        Ssl  00:18   0:00 /usr/lib/colord/colord
+rtkit     1664  0.0  0.0 183512  2968 ?        SNsl 00:18   0:00 /usr/lib/rtkit/rtkit-daemon
+kernoops  1762  0.0  0.0  56944   420 ?        Ss   00:18   0:00 /usr/sbin/kerneloops --test
+kernoops  1765  0.0  0.0  56944   420 ?        Ss   00:18   0:00 /usr/sbin/kerneloops
+root      1844  0.0  0.0 1280328 11448 ?       Sl   00:18   0:02 /opt/teamviewer/tv_bin/teamviewerd -d
+root      2405  0.0  0.0   4512   744 ?        S    00:18   0:00 bpfilter_umh
+batmacu+  2512  0.0  0.0  77252  8248 ?        Ss   00:18   0:03 /lib/systemd/systemd --user
+batmacu+  2514  0.0  0.0 114104  2732 ?        S    00:18   0:00 (sd-pam)
+batmacu+  2630  0.0  0.0 306892  7716 ?        Sl   00:18   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+batmacu+  2668  0.0  0.0 864872 14664 ?        Ssl  00:18   0:00 /usr/lib/gnome-session/gnome-session-binary --session=pantheon
+batmacu+  2726  0.0  0.0  50812  5140 ?        Ss   00:18   0:00 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+batmacu+  2743  0.0  0.0 310488  7356 ?        Ssl  00:18   0:00 /usr/lib/gvfs/gvfsd
+batmacu+  2761  0.0  0.0 416116  5356 ?        Sl   00:18   0:00 /usr/lib/gvfs/gvfsd-fuse /run/user/1000/gvfs -f -o big_writes
+root      3198  0.0  0.0 110080  7252 ?        Ss   01:32   0:00 sshd: batmacumba [priv]
+batmacu+  3214  0.0  0.0 110080  3708 ?        S    01:32   0:00 sshd: batmacumba@pts/1
+batmacu+  3215  0.0  0.0  54576 10100 pts/1    Ss   01:32   0:00 -bash
+batmacu+  3255  0.0  0.0  11312   320 ?        Ss   00:18   0:00 /usr/bin/ssh-agent /usr/bin/im-launch gnome-session --session=pantheon
+batmacu+  3281  0.0  0.0 349304  6304 ?        Ssl  00:18   0:00 /usr/lib/at-spi2-core/at-spi-bus-launcher
+batmacu+  3290  0.0  0.0  50060  4412 ?        S    00:18   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 3
+batmacu+  3293  0.0  0.0 220784  6928 ?        Sl   00:18   0:00 /usr/lib/at-spi2-core/at-spi2-registryd --use-gnome-session
+batmacu+  3352  0.0  0.1 527232 22692 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-xsettings
+batmacu+  3357  0.0  0.1 711548 23852 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-color
+batmacu+  3360  0.0  0.0 367840 10320 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-print-notifications
+batmacu+  3362  0.0  0.1 551636 22820 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-power
+batmacu+  3369  0.0  0.0 441860  5944 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-rfkill
+batmacu+  3396  0.0  0.1 376100 20904 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-clipboard
+batmacu+  3402  0.0  0.0 997632  8164 ?        Sl   00:18   0:02 /usr/lib/gnome-settings-daemon/gsd-housekeeping
+batmacu+  3406  0.0  0.0 296684  5948 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-a11y-settings
+batmacu+  3407  0.0  0.0 353500  8120 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-sound
+batmacu+  3413  0.0  0.1 539012 22380 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-keyboard
+batmacu+  3425  0.0  0.0 470324  8048 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-smartcard
+batmacu+  3435  0.0  0.1 536852 21912 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-wacom
+batmacu+  3441  0.0  0.0 296680  5852 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-mouse
+batmacu+  3444  0.0  0.1 976884 23820 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-media-keys
+batmacu+  3461  0.0  0.1 493456 21140 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-datetime
+batmacu+  3462  0.0  0.0 471624 10356 ?        Sl   00:18   0:01 /usr/lib/gnome-settings-daemon/gsd-sharing
+batmacu+  3580  0.0  0.0 527284 12560 ?        Sl   00:18   0:00 /usr/lib/gnome-settings-daemon/gsd-printer
+batmacu+  3887  0.0  0.0 115860  4760 ?        S    00:18   0:00 /usr/lib/x86_64-linux-gnu/pulse/gconf-helper
+batmacu+  3890  0.0  0.0  98476  5748 ?        S    00:18   0:00 /usr/lib/x86_64-linux-gnu/gconf/gconfd-2
+batmacu+  4144  0.0  0.0 188148  5356 ?        Sl   00:18   0:00 /usr/lib/dconf/dconf-service
+batmacu+  4152  0.0  0.1 619332 31568 ?        Sl   00:18   0:01 plank
+batmacu+  4153  0.0  0.0 266760  5288 ?        Sl   00:18   0:00 /usr/lib/x86_64-linux-gnu/io.elementary.cerbere
+batmacu+  4154  0.0  0.4 2980856 80976 ?       Sl   00:18   0:05 wingpanel
+batmacu+  4191  0.0  0.1 469948 25092 ?        Ssl  00:18   0:00 /usr/lib/x86_64-linux-gnu/bamf/bamfdaemon
+batmacu+  4480  0.0  0.1 597264 20508 ?        Sl   00:18   0:00 gala-daemon
+root      4489  0.0  0.0      0     0 ?        I    01:37   0:00 [kworker/2:0-mm_]
+batmacu+  4496  0.0  0.2 1040272 46468 ?       Sl   00:18   0:00 /usr/lib/x86_64-linux-gnu/io.elementary.calendar-daemon
+batmacu+  4505  0.0  0.2 602068 37536 ?        Sl   00:18   0:00 node /usr/bin/lwsm restore
+root      4506  0.0  0.0      0     0 ?        I    01:37   0:00 [kworker/2:3-cgr]
+batmacu+  4507  0.0  0.2 702132 36776 ?        Sl   00:18   0:02 nm-applet
+batmacu+  4516  0.0  0.1 523620 20708 ?        Sl   00:18   0:00 /usr/lib/x86_64-linux-gnu/geoclue2-1-pantheon/pantheon-agent-geoclue2
+batmacu+  4517  0.0  0.1 454244 20764 ?        Sl   00:18   0:00 light-locker
+batmacu+  4526  0.0  0.1 380628 20408 ?        Sl   00:18   0:00 /usr/lib/x86_64-linux-gnu/pantheon-parental-controls-client
+batmacu+  4532  0.0  0.1 451748 20472 ?        Sl   00:18   0:00 /usr/lib/x86_64-linux-gnu/policykit-1-pantheon/io.elementary.desktop.agent-polkit
+batmacu+  4535  0.0  0.0 361096  5924 ?        Sl   00:18   0:00 com.github.sgpthomas.hourglass-daemon
+batmacu+  4641  0.0  0.1 1390808 26916 ?       SLsl 00:18   0:00 /usr/lib/evolution/evolution-source-registry
+batmacu+  4649  0.0  0.2 809396 33808 ?        Sl   00:18   0:00 /usr/lib/gnome-online-accounts/goa-daemon
+batmacu+  4656  0.0  0.0 321876  7592 ?        Sl   00:18   0:00 /usr/lib/gnome-online-accounts/goa-identity-service
+batmacu+  4662  0.0  0.4 911216 68076 ?        Ssl  00:18   0:00 /usr/lib/evolution/evolution-calendar-factory
+batmacu+  4671  0.0  0.4 1193496 73432 ?       Sl   00:18   0:00 /usr/lib/evolution/evolution-calendar-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.Calendarx4662x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/Calendar/4662/2
+batmacu+  4681  0.0  0.1 751224 24412 ?        Ssl  00:18   0:00 /usr/lib/evolution/evolution-addressbook-factory
+batmacu+  4685  0.0  0.0   4632   788 ?        S    00:18   0:00 sh -c /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+batmacu+  4686  0.0  0.0 273244  6236 ?        Sl   00:18   0:00 /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+batmacu+  4702  0.0  0.1 1035740 26636 ?       Sl   00:18   0:00 /usr/lib/evolution/evolution-addressbook-factory-subprocess --factory all --bus-name org.gnome.evolution.dataserver.Subprocess.Backend.AddressBookx4681x2 --own-path /org/gnome/evolution/dataserver/Subprocess/Backend/AddressBook/4681/2
+root      4975  0.0  0.0  26120  6476 ?        S    00:18   0:00 /sbin/dhclient -d -q -sf /usr/lib/NetworkManager/nm-dhcp-helper -pf /run/dhclient-enp4s0.pid -lf /var/lib/NetworkManager/dhclient-df1d327e-f802-3ab6-9ea4-fbfb72092ec9-enp4s0.lease -cf /var/lib/NetworkManager/dhclient-enp4s0.conf enp4s0
+batmacu+  6642  0.0  0.4 1616752 79640 ?       Sl   00:19   0:02 io.elementary.appcenter -s
+batmacu+  6676  0.0  0.0   4632   816 ?        S    00:19   0:00 sh -c /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+batmacu+  6677  0.0  0.0 273244  6148 ?        Sl   00:19   0:00 /usr/lib/x86_64-linux-gnu/libproxy/0.4.14/pxgsettings org.gnome.system.proxy org.gnome.system.proxy.http org.gnome.system.proxy.https org.gnome.system.proxy.ftp org.gnome.system.proxy.socks
+root      9411  0.0  0.0      0     0 ?        I    02:01   0:00 [kworker/1:1-cgr]
+root      9413  0.0  0.0      0     0 ?        I    02:01   0:00 [kworker/0:2]
+root      9902  0.0  0.0 127196  9156 ?        Ss   00:23   0:00 /usr/sbin/cupsd -l
+root      9904  0.0  0.0 305724 11640 ?        Ssl  00:23   0:00 /usr/sbin/cups-browsed
+lp        9945  0.0  0.0  86420  5832 ?        S    00:23   0:00 /usr/lib/cups/notifier/dbus dbus://
+lp        9948  0.0  0.0  86420  6076 ?        S    00:23   0:00 /usr/lib/cups/notifier/dbus dbus://
+batmacu+ 10602  0.0  0.0 452036  8660 ?        Ssl  00:26   0:00 /usr/bin/zeitgeist-daemon
+batmacu+ 10610  0.0  0.0 326736 16308 ?        Ssl  00:26   0:00 /usr/lib/zeitgeist/zeitgeist/zeitgeist-fts
+batmacu+ 10662  0.0  0.0 516256  5932 ?        Ssl  00:26   0:00 /usr/libexec/xdg-document-portal
+batmacu+ 10665  0.0  0.0 292292  5388 ?        Ssl  00:26   0:00 /usr/libexec/xdg-permission-store
+root     10670  0.0  0.0  12992  2040 ?        Ss   00:26   0:00 fusermount -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+batmacu+ 10738  0.0  0.2 389072 44000 ?        S    00:26   0:00 /snap/discord/128/usr/share/discord/Discord --type=zygote --no-zygote-sandbox --no-sandbox
+batmacu+ 10739  0.0  0.2 389072 43872 ?        S    00:26   0:00 /snap/discord/128/usr/share/discord/Discord --type=zygote --no-sandbox
+batmacu+ 10771  0.0  0.4 476128 66636 ?        Sl   00:26   0:01 /snap/discord/128/usr/share/discord/Discord --type=utility --field-trial-handle=12692284033781526675,8867762254007443040,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --lang=en-US --service-sandbox-type=network --no-sandbox --enable-crash-reporter=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel --global-crash-keys=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel,_companyName=Discord Inc.,_productName=Discord,_version=0.0.15 --shared-files=v8_snapshot_data:100
+batmacu+ 10835  0.0  0.3 724860 49884 ?        Sl   00:26   0:00 /snap/discord/128/usr/share/discord/Discord --type=utility --field-trial-handle=12692284033781526675,8867762254007443040,131072 --enable-features=WebComponentsV0Enabled --disable-features=SpareRendererForSitePerProcess --lang=en-US --service-sandbox-type=audio --no-sandbox --enable-crash-reporter=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel --global-crash-keys=3628362b-d65e-4451-ab09-6a85ebd56b7e,no_channel,_companyName=Discord Inc.,_productName=Discord,_version=0.0.15 --shared-files=v8_snapshot_data:100
+root     11555  0.0  0.0      0     0 ?        I    02:04   0:00 [kworker/4:0-mm_]
+root     14004  0.0  0.0      0     0 ?        I    02:05   0:00 [kworker/u12:3-e]
+root     18870  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/5:7-eve]
+root     18873  0.0  0.0      0     0 ?        I    00:53   0:00 [kworker/5:12-ev]
+zerotie+ 18948  0.0  0.0 275596 11500 ?        Ss   02:09   0:00 postgres: batmacumba batmacumba 172.18.0.7(40256) idle
+root     18996  0.0  0.0      0     0 ?        I    02:10   0:00 [kworker/u12:0-e]
+zerotie+ 19000  0.0  0.0 275596 11504 ?        Ss   02:11   0:00 postgres: batmacumba batmacumba 172.18.0.7(40296) idle
+zerotie+ 19130  0.0  0.0 275596 11508 ?        Ss   02:16   0:00 postgres: batmacumba batmacumba 172.18.0.7(40354) idle
+zerotie+ 19180  0.0  0.0 275596 11500 ?        Ss   02:18   0:00 postgres: batmacumba batmacumba 172.18.0.7(40360) idle
+zerotie+ 19181  0.0  0.0 275596 11500 ?        Ss   02:18   0:00 postgres: batmacumba batmacumba 172.18.0.7(40362) idle
+root     19200  0.0  0.0      0     0 ?        I    00:54   0:00 [kworker/3:0-mm_]
+zerotie+ 19351  0.0  0.0 275512 10376 ?        Ss   02:19   0:00 postgres: batmacumba batmacumba 172.18.0.7(40368) idle
+batmacu+ 19396  0.0  0.0   4632   868 pts/1    S+   02:19   0:00 sh run_mqtt.sh
+zerotie+ 19424  0.0  0.0 276180 13300 ?        Ss   02:19   0:00 postgres: batmacumba resource_cataloguer_development [local] idle
+zerotie+ 19438  0.0  0.0 276524 12680 ?        Ss   02:19   0:00 postgres: batmacumba resource_adaptor_development [local] idle
+zerotie+ 19443  0.0  0.0 276532 12712 ?        Ss   02:19   0:00 postgres: batmacumba resource_adaptor_development [local] idle
+batmacu+ 19447  0.0  0.0  67188  4288 pts/1    R+   02:19   0:00 ps aux --sort=-pcpu
+root     21427  0.0  0.0      0     0 ?        I    01:02   0:00 [kworker/1:3-eve]
+batmacu+ 25734  0.0  0.0 386752  7540 ?        Sl   01:18   0:00 /usr/lib/gvfs/gvfsd-trash --spawner :1.2 /org/gtk/gvfs/exec_spaw/0
+root     27683  0.0  0.0      0     0 ?        I    01:24   0:00 [kworker/u12:2-e]
+root     28258  0.0  0.0 110084  7336 ?        Ss   01:27   0:00 sshd: batmacumba [priv]
+batmacu+ 28286  0.0  0.0 110084  3440 ?        S    01:27   0:00 sshd: batmacumba@pts/0
+batmacu+ 28287  0.0  0.0  54740 10184 pts/0    Ss+  01:27   0:00 -bash
+root     28717  0.0  0.0      0     0 ?        I    01:27   0:00 [kworker/3:1-eve]
+root     29029  0.0  0.0      0     0 ?        I    01:28   0:00 [kworker/4:2-eve]
+root     29072  0.0  0.0      0     0 ?        I    01:28   0:00 [kworker/0:0-eve]
+batmacu+ 29479  0.0  0.0   4632   868 ?        Ss   01:30   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/inct
+batmacu+ 29480  0.0  0.0  10172  2936 ?        S    01:30   0:00 docker-compose up
+root     29565  0.0  0.0 626044  3712 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 5432 -container-ip 172.18.0.3 -container-port 5432
+root     29580  0.0  0.0  12324  5760 ?        Sl   01:30   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id ab6b7dc4cfbb506e7e1131c6080f737e2056b027d4b7ba87270cc839e176a3db -address /run/containerd/containerd.sock
+root     29613  0.0  0.0 773508  2872 ?        Sl   01:30   0:01 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 6379 -container-ip 172.18.0.4 -container-port 6379
+root     29662  0.0  0.0 478580  3776 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8080 -container-ip 172.18.0.5 -container-port 8080
+root     29683  0.0  0.0  12388  6320 ?        Sl   01:30   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id e7da9e5e501b7ca40d8ec9260715b2e919e0cf59c14673f5d18a936706a915c0 -address /run/containerd/containerd.sock
+root     29709  0.0  0.0  13732  5788 ?        Sl   01:30   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id de3d0fd31b51d3bfb8499800db196fd8f67514505d863d1f37be774cf4eaf05d -address /run/containerd/containerd.sock
+root     29741  0.0  0.0  13732  5848 ?        Sl   01:30   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 320959edbf37e509fa717717c7d4d05a2af1c550ac42cdc18e05b26da0185582 -address /run/containerd/containerd.sock
+zerotie+ 29769  0.0  0.1 274564 23268 ?        Ss   01:30   0:00 postgres
+root     29771  0.0  0.0   1524     4 ?        Ss   01:30   0:00 /bin/sh ./docker-entrypoint.sh
+root     30013  0.0  0.2 597312 47508 ?        Sl   01:30   0:00 npm
+root     30080  0.0  0.0   1536     8 ?        S    01:30   0:00 sh -c node ./bin/kong-dashboard start
+root     30081  0.0  0.1 571496 26336 ?        Sl   01:30   0:00 node ./bin/kong-dashboard start
+root     30097  0.0  0.2 578008 33992 ?        Sl   01:30   0:00 /usr/bin/node /app/bin/server
+root     30112  0.0  0.0 552312  2880 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 15672 -container-ip 172.18.0.6 -container-port 15672
+root     30149  0.0  0.0  13476  6920 ?        Sl   01:30   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id 997622a95d557cb5878a19551be2b6574190f9750e66ee4c854745f615687f7c -address /run/containerd/containerd.sock
+root     30178  0.0  0.0  20048  2724 ?        Ss   01:30   0:00 bash -c rabbitmq-plugins enable rabbitmq_management && rabbitmq-server && rabbitmqctl add_user user pass && rabbitmqctl set_permissions -p / user .* .* .*
+zerotie+ 30266  0.0  0.0 274700  6852 ?        Ss   01:30   0:00 postgres: checkpointer process   
+zerotie+ 30267  0.0  0.0 274564  5120 ?        Ss   01:30   0:00 postgres: writer process   
+zerotie+ 30268  0.0  0.0 274564  8288 ?        Ss   01:30   0:00 postgres: wal writer process   
+zerotie+ 30269  0.0  0.0 275004  6152 ?        Ss   01:30   0:00 postgres: autovacuum launcher process   
+zerotie+ 30270  0.0  0.0 130112  4120 ?        Ss   01:30   0:00 postgres: stats collector process   
+root     30428  0.0  0.0  11484   112 ?        S    01:30   0:00 /usr/lib/erlang/erts-8.0.5/bin/epmd -daemon
+root     30463  0.0  0.0   4332  1568 ?        S    01:30   0:00 /bin/sh -e /usr/lib/rabbitmq/bin/rabbitmq-server
+root     30704  0.0  0.0   4212  1264 ?        Ss   01:30   0:00 erl_child_setup 1048576
+root     30725  0.0  0.0  11448   976 ?        Ss   01:30   0:00 inet_gethost 4
+root     30726  0.0  0.0  13544  1500 ?        S    01:30   0:00 inet_gethost 4
+root     32493  0.0  0.0 627452  3728 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8443 -container-ip 172.18.0.7 -container-port 8443
+root     32509  0.0  0.0 773508  4068 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8001 -container-ip 172.18.0.7 -container-port 8001
+root     32528  0.0  0.0 627452  3724 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 8000 -container-ip 172.18.0.7 -container-port 8000
+root     32545  0.0  0.0 478580  3768 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 7946 -container-ip 172.18.0.7 -container-port 7946
+root     32557  0.0  0.0 626044  3780 ?        Sl   01:30   0:00 /usr/bin/docker-proxy -proto udp -host-ip 0.0.0.0 -host-port 7946 -container-ip 172.18.0.7 -container-port 7946
+root     32574  0.0  0.0  12324  6104 ?        Sl   01:30   0:00 /usr/bin/containerd-shim-runc-v2 -namespace moby -id ee7a9f4183db94186f3a171ab36328fab27b61b9b6142e4dcfef636c44461a3d -address /run/containerd/containerd.sock
+root     32597  0.0  0.0  15120  3024 ?        Ss   01:30   0:00 bash -c kong migrations up && kong start
+batmacu+ 32693  0.0  0.0   4632   812 ?        Ss   01:30   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/data-collector
+root     32699  0.0  0.0  48780  9192 ?        S    01:30   0:00 perl /usr/local/openresty/bin/resty /usr/local/bin/kong start
+root     32704  0.0  0.0  50696  9880 ?        S    01:30   0:00 /usr/local/openresty/bin/../nginx/sbin/nginx -p /tmp/2TtIUyXh_g/ -c conf/nginx.conf
+batmacu+ 32711  0.0  0.0   4632   776 ?        Ss   01:30   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-cataloguer
+batmacu+ 32745  0.0  0.0   4632   860 ?        Ss   01:31   0:00 sh /home/batmacumba/Developer/interscity-platform/scripts/resource-discoverer
+batmacu+ 32747  0.0  0.4 1222088 72204 ?       Sl   01:31   0:01 puma 3.12.1 (tcp://0.0.0.0:3004) [resource-discoverer]
