@@ -887,3 +887,10 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * **mostrar resultado e já analisar**
 * tudo que não der tempo pra fazer coloca como trabalhos futuros
 
+---
+
+### 06/07/2021
+
+* Falar sobre Giovanna Kobus - precisa das notas no começo de Agosto
+* Correção EP0?
+
