@@ -894,3 +894,58 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * Falar sobre Giovanna Kobus - precisa das notas no começo de Agosto
 * Correção EP0?
 
+---
+
+### 03/09/2021
+
+* Certificado de participação
+* Prazo da próxima fase: **Dezembro**
+* Pedir pra **Poliana** os arquivos
+  * Copiar pra USP o que Poliana montou na UNIFESP
+
+**TCC**
+
+* Texto (monografia texto grande) -- quantas páginas?
+* Trabalho mais complexo que um EP -- não trivial
+* Plano **A** ou Plano **B**?
+* Experimentos que mostram mudança de rota, tempo que leva pra mandar mensagem?
+
+---
+
+### 17/09/2021
+
+* Artigo vai ser revisado novamente
+* Tem que aparentar ter modificações do original
+  * Adicionar uma página
+* **Mandar captura de tela do sistema de submissão da revista**
+
+---
+
+### 01/10/2021
+
+* ~~Artigo extendido -- overleaf~~
+  * ~~Fazer o envio~~
+* Repositório Poliana
+* TCC: 
+  * Plano C 
+    * 2, 3 vezes o artigo extendido atual
+    * 30-45 páginas
+  * Plano B
+    * Incluir experimentos de segurança da UNIFESP
+  * Plano A
+    * Continuar com a idéia do protocolo LoRA
+  * Plano D
+    * Entregar o artigo com 10 páginas e esperar recuperação para ganhar mais tempo
+* **Acionar ARLINDO?**
+
+---
+
+### 22/10/2021
+
+* Case externo a mais para a UNIFESP
+* Criar uma estação de dados pro IME-USP
+* Objetivo proxima semana:
+  * **Colocar dados no TTN**
+* Se ficar de REC no TCC precisa entregar alguma coisa?
+  * **Escrever pra Nina**
+  * **Marcar reunião**

@@ -1,0 +1,1 @@
+Bruno Carneiro da Cunha é aluno da graduação no Bacharelado em Ciência da Computação no IME-USP, e faz iniciação científica com o Professor Daniel Batista, compondo a equipe do projeto *Mechanisms to Improve Security in IoT Platforms* com bolsa do CNPq, desde 2020.
