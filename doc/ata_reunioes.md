@@ -949,3 +949,23 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * Se ficar de REC no TCC precisa entregar alguma coisa?
   * **Escrever pra Nina**
   * **Marcar reunião**
+
+---
+
+### 12/11/2021
+
+* Teste legal:
+  * Colocar um GPS na plaquinha e sair de bicicleta
+  * Fazer um vídeo curto de 5 minutos mostrando o funcionamento do End Node e do GW
+  * **Manda um Email pro Daniel lembrando do 3o Gateway LoRaWAN**
+    * mandar mapa de campinas sem gateways
+    * mandar mapa de SP
+* Fechar na próxima semana o envio de cripto
+* Deixar no próximo ano pra fazer um sistema permanante no IME
+
+**TCC**
+
+* Mandar email pra Nina perguntando do encaminhamento pra REC
+* Pedir prazo pra Giovanna
+* Pode escrever pro professor
+* Escrever em inglês faz sentido pra pós
