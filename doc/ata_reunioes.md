@@ -969,3 +969,38 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * Pedir prazo pra Giovanna
 * Pode escrever pro professor
 * Escrever em inglês faz sentido pra pós
+
+---
+
+### 24/11/2021
+
+* IC
+  * Suporte RadioEnge
+  * GPS
+  * Localização da Bike
+* TCC
+  * Roteamento de pacotes de dados no AODV
+  * Cabeçalho adicional IPv6
+
+---
+
+### 21/01/2021
+
+1. Introdução 
+   1. Motivação 
+   2. Organização
+2.  Cap Conceitos Básicos 
+   * Um dos maiores capítulos 
+   * Ler o que já existe no Kurose e resumir com as próprias palavras
+3. Cap Implementação e Avaliação do Procolo AODV 
+   * Falar do RFC, justifica porque teve que implementar, falar do ambiente de experimentação, falar da biblioteca LoRa (quais APIs foram usadas) 
+   * Mostrar tabela de roteamento dos nós ao longo do funcionamento do protocolo
+     * Medir tempo que leva para as tabelas de roteamento se atualizarem
+     * Derruba o nó e mostrar o reparo 
+4. Seção de Experimentos
+5. Conclusão
+   * Se propos a desenvolver tal trabalho 
+   * **Decisões de projeto** 
+6. Cap Trabalhos Futuros 
+   * Segurança 
+   * Expandir experimentos
