@@ -972,18 +972,6 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 
 ---
 
-### 24/11/2021
-
-* IC
-  * Suporte RadioEnge
-  * GPS
-  * Localização da Bike
-* TCC
-  * Roteamento de pacotes de dados no AODV
-  * Cabeçalho adicional IPv6
-
----
-
 ### 21/01/2021
 
 1. Introdução 
@@ -1003,4 +991,45 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
    * **Decisões de projeto** 
 6. Cap Trabalhos Futuros 
    * Segurança 
+   
    * Expandir experimentos
+     =======
+
+### 04/02/2021
+
+- Relatório e possível apresentação
+
+- Mandar capítulo 1
+- Implementation of a LoRa Mesh Network ~~for Arduino~~
+- TCC Pode ser em inglês
+- LoRaNet: implementation of a LoRa Mesh?
+- Juntar o parágrafo overview -- itemize?
+- Ter um capítulo sobre a relação entre BCC e o trabalho final?
+
+---
+
+### 18/02/2021
+
+* POSCOMP 2o semestre - 2022
+* Chamada Abril/Maio
+  * Concorrência mais baixa
+
+* Vídeo IC
+  * Comparar
+  * Localização GPS Bicicleta
+    * Traçar rota e velocidade média
+    * WiFi / 4G / Rede LoRa
+      * Extrair informação de rede (latência)
+      =======
+
+---
+
+### 24/11/2021
+
+* IC
+  * Suporte RadioEnge
+  * GPS
+  * Localização da Bike
+* TCC
+  * Roteamento de pacotes de dados no AODV
+  * Cabeçalho adicional IPv6
