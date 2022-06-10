@@ -998,4 +998,74 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
     * WiFi / 4G / Rede LoRa
       * Extrair informação de rede (latência)
       =======
-* 
+
+---
+
+### 04/03/2022
+
+* Se a recepção WiFi não for boa não precisa testar
+* Relatório Final
+  * Descrevendo os experimentos
+  * Foto do gateway montado
+  * cap hardware, cap software, cap experimentos
+  * 8 de Abril
+* Comparação qualitativa entre 4G e LoRa
+* **perguntar de algo do professor!!!**
+
+---
+
+### 18/03/2022
+
+* Consumo de energia LoRa x GPRS
+* Envio relatório CNPq Junho
+* Empresa financiamento FAPESP PIPE
+* RNP - Home Office
+	* HP, Ericsson, Intel
+
+---
+
+### 29/03/2022
+
+* Trilha de Sistemas
+* Novo Coordenador do BCC: Hitoshi
+* Pode entregar até Junho o relatório e o vídeo
+* POSCOMP, WRNP, Jems
+* Fazer disciplina como Aluno Especial
+* Seleção Mestrado  
+* Artigo Revista Estendida 
+
+---
+
+### 13/05/2022
+
+* **Duas cartas de recomendação**
+  * Daniel Baptista
+  * Antonio Deusany
+  * Alfredo Goldman
+    * Lembrar Paralela e LabXP
+      * "investi bastante"
+    * Ajudei Tatiane respondendo questionário
+* Print captura do SOL
+
+---
+
+### 27/05/2022
+
+* Próximo Relatório: 22/06 **PREPARAR VIDEO**
+  * Linkar modificações da biblioteca RadioEnge
+  * Linkar modificações da InterSCity
+
+* Trilha: mandar formulário pro Secretaria do MAC -- Hitoshi
+
+---
+
+### 10/06/2022
+
+* **Colação de grau** - passar 
+* Colocar relatório final no Git
+* Link pro artigo do evento SBRC
+* Hashtag do projeto InterScity + USP + IME-USP + CNPq
+* **Publicar no Canal do CCSL**
+* Survey da área para qualificação
+* Ter TOEFL para fazer textos em inglês
+* Olhar projeto do Daniel 6G
