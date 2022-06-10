@@ -2,9 +2,10 @@
 /********************************** ABP ***************************************/
 /******************************************************************************/
 
-#include "LoRaWAN.h"
 #include <SoftwareSerial.h>
 #include <stdint.h>
+#include "LoRaWAN.h"
+#include "LoRaWANDataSecurity.h"
 
 SoftwareSerial* hSerialCommands = NULL;
 
@@ -13,31 +14,39 @@ char NWKSKEY[] = "47:9C:F4:F3:D0:88:D8:5D:BE:FD:74:19:D6:9A:EC:C0";
 char DADDR[] = "26:0D:F8:DD";
 char CHMASK[] = "ff00:0000:0000:0000:0002:0000";
 
-char str_counter[32];
+char plaintext[32];
 int counter = 0;
 
-void setup() 
+byte key[16] = {0xAE, 0x68, 0x52, 0xF8, 0x12, 0x10, 0x67, 0xCC,0x4B, 0xF7, 0xA5,            0x76, 0x55, 0x77, 0xF3, 0x9E};
+byte ciphertext[32];
+char *teste = "test\0";
+
+void 
+setup() 
 {
-    Serial.begin(9600); /* Initialize monitor serial */
+    Serial.begin(9600); 
     Serial.println("Initializing...");
     delay(1000);
 
-    /* Initialize SoftwareSerial */
+    // Initialize SoftwareSerial 
     hSerialCommands = SerialCommandsInit(7, 6, 9600);
     
-    SendAtCommand(AT_NJM, AtSet, "0"); // comando para alterar a autenticação para ABP
+    SendAtCommand(AT_NJM, AtSet, "0"); // altera a autenticação para ABP
     SendAtCommand(AT_APPSKEY, AtSet, APPSKEY); 
     SendAtCommand(AT_NWKSKEY, AtSet, NWKSKEY);
     SendAtCommand(AT_DEVADDR, AtSet, DADDR); 
     SendAtCommand(AT_CHMASK, AtSet, CHMASK);
 }
 
-void loop() 
+void 
+loop() 
 {
     /* Sends a string containing a counter every 15s */
-    sprintf(str_counter, "Counter: %d\r\n\0", counter++);
-    Serial.println(str_counter);
-    SendString(str_counter, 2);
+    sprintf(plaintext, "%d", counter++);
+    Serial.println(plaintext);
+    /* Call function for building payload encrypted by AES-CTR */
+    buildEncryptedPayload (plaintext, ciphertext, key, sizeof(plaintext));
+    SendString(teste, 2);
     delay(15000);
   
 }
@@ -52,8 +61,8 @@ void loop()
 
 // SoftwareSerial* hSerialCommands = NULL;
 
-// char APPKEY[] = "10:9F:47:AB:58:28:32:71:80:9A:14:DF:35:CE:BB:75";
-// char APPEUI[] = "d9:8c:fb:ab:a0:3a:7a:00";
+// char APPKEY[] = "9F:8F:E1:FE:28:B1:A8:1A:FB:3A:4B:75:1C:02:FD:6C";
+// char APPEUI[] = "00:00:00:00:00:00:00:00";
 // char CHMASK[] = "ff00:0000:0000:0000:0002:0000";
 // char str_counter[32];
 // int counter = 0;
@@ -70,14 +79,10 @@ void loop()
 //   InitializeOTAA(APPKEY, APPEUI);
 //   SendAtCommand(AT_CHMASK, AtSet, CHMASK);
 //   Serial.println("Sending JOIN.");
-//   if(JoinNetwork(0) == RAD_OK)
-//   {
+//   if(JoinNetwork(0) == RAD_OK) 
 //     Serial.println("EndDevice has joined sucessfully.");
-//   }
 //   else
-//   {
 //     Serial.println("Error joining the network.");
-//   }
 // }
 
 // void loop() {
@@ -93,7 +98,7 @@ void loop()
 /******************************************************************************/
 
 
-// /* Includes ---------------------- */
+/* Includes ---------------------- */
 // #include <SoftwareSerial.h>
 // #include <stdint.h>
 
@@ -122,51 +127,53 @@ void loop()
 
 
 // void setup() {
-//   // put your setup code here, to run once:
-//   pinMode(LED_BUILTIN, OUTPUT);
-//   Serial.begin(9600); /* Initialize monitor serial */
-//   Serial.println("Initializing...");
-//   delay(500);
-//   SWSerial.begin(9600);
-//   delay(500);
-//   //timer
-//   // ConfiguraÃ§Ã£o do timer1 
-//   TCCR1A = 0;                        //confira timer para operaÃ§Ã£o normal pinos OC1A e OC1B desconectados
-//   TCCR1B = 0;                        //limpa registrador
-//   TCCR1B |= (1<<CS10)|(1 << CS12);   // configura prescaler para 1024: CS12 = 1 e CS10 = 1
-//   TCNT1 = 0xC2F7;                    // incia timer com valor para que estouro ocorra em 1 segundo
+//     // put your setup code here, to run once:
+//     pinMode(LED_BUILTIN, OUTPUT);
+//     Serial.begin(9600); /* Initialize monitor serial */
+//     Serial.println("Initializing...");
+//     delay(500);
+//     SWSerial.begin(9600);
+//     delay(500);
+//     //timer
+//     // ConfiguraÃ§Ã£o do timer1 
+//     TCCR1A = 0;                        //confira timer para operaÃ§Ã£o normal pinos OC1A e OC1B desconectados
+//     TCCR1B = 0;                        //limpa registrador
+//     TCCR1B |= (1<<CS10)|(1 << CS12);   // configura prescaler para 1024: CS12 = 1 e CS10 = 1
+//     TCNT1 = 0xC2F7;                    // incia timer com valor para que estouro ocorra em 1 segundo
 //                                      // 65536-(16MHz/1024/1Hz) = 49911 = 0xC2F7
-//   TIMSK1 |= (1 << TOIE1);           // habilita a interrupÃ§Ã£o do TIMER1
+//     TIMSK1 |= (1 << TOIE1);           // habilita a interrupÃ§Ã£o do TIMER1
 
 
-//   //configuraÃ§Ã£o do EndDevice
-// //STRING 01 = ativaÃ§Ã£o OTAA
-// SWSerial.println("AT+DEUI=?");
-// delay(15);
-// //STRING 02 = liga mensagem automÃ¡tica de keepalive a cada 1 minuto
-// SWSerial.println("AT+KEEPALIVE=1:215:1:60000");
-// delay(15);
-// //STRING 03 = join automatico
-// SWSerial.println("AT+AJOIN=1");
-// delay(15);
-// //STRING 04 = nÃ£o salva o Contador de pacotes
-// SWSerial.println("AT+SFCNT=0");
-// delay(15);
-// //STRING 05 = MÃ¡scara de canais
-// SWSerial.println("AT+CHMASK=ff00:0000:0000:0000:0002:0000");
-// delay(15);
-// //STRING 06 = cÃ³digo da sua aplicaÃ§Ã£o (esta Ã© realmente a sua aplicaÃ§Ã£o)
-// SWSerial.println("AT+APPEUI=70:B3:D5:7E:D0:03:35:DD");
-// delay(15);
-// //STRING 07 = chave de autenticaÃ§Ã£o appkey (verifique se estÃ¡ correta ... EndDevice rd50c)
-// SWSerial.println("AT+APPKEY=B3:61:61:52:2D:72:04:34:91:86:FD:AB:3D:5A:8A:AD");
-// delay(15);
-// //STRING 08 = Configure o GPIO 0 (pino 6) para entrada analÃ³gica.
-// SWSerial.println("AT+GPIOC=0:5:0");
-// delay(15);
-// //STRING 09 = reset
-// SWSerial.println("ATZ");
-// delay(15);
+//     //configuraÃ§Ã£o do EndDevice
+//     //STRING 01 = ativaÃ§Ã£o OTAA
+//     // SWSerial.println("AT+DEUI=?");
+//     // delay(15);
+//     SWSerial.println("AT+VER=?");
+//     delay(15);
+//     //STRING 02 = liga mensagem automÃ¡tica de keepalive a cada 1 minuto
+//     SWSerial.println("AT+KEEPALIVE=1:215:1:60000");
+//     delay(15);
+//     //STRING 03 = join automatico
+//     SWSerial.println("AT+AJOIN=1");
+//     delay(15);
+//     //STRING 04 = nÃ£o salva o Contador de pacotes
+//     SWSerial.println("AT+SFCNT=0");
+//     delay(15);
+//     //STRING 05 = MÃ¡scara de canais
+//     SWSerial.println("AT+CHMASK=ff00:0000:0000:0000:0002:0000");
+//     delay(15);
+//     //STRING 06 = cÃ³digo da sua aplicaÃ§Ã£o (esta Ã© realmente a sua aplicaÃ§Ã£o)
+//     SWSerial.println("AT+APPEUI=00:00:00:00:00:00:00:00");
+//     delay(15);
+//     //STRING 07 = chave de autenticaÃ§Ã£o appkey (verifique se estÃ¡ correta ... EndDevice rd50c)
+//     SWSerial.println("AT+APPKEY=9F:8F:E1:FE:28:B1:A8:1A:FB:3A:4B:75:1C:02:FD:6C");
+//     delay(15);
+//     //STRING 08 = Configure o GPIO 0 (pino 6) para entrada analÃ³gica.
+//     SWSerial.println("AT+GPIOC=0:5:0");
+//     delay(15);
+//     //STRING 09 = reset
+//     SWSerial.println("ATZ");
+//     delay(15);
 
 
   
@@ -184,9 +191,9 @@ void loop()
 //   if(tempo%10 == 0 && flag_timer == true)
 //   {
 //     counter++;
-//     Serial.println(counter);
-//     //sprintf(str_counter, "AT+TXCFM=57:1:1:FAB100:%d", counter++);
-//     //SWSerial.print(str_counter);
+//     // Serial.println(counter);
+//     // sprintf(str_counter, "AT+TXCFM=57:1:1:FAB100:%d", counter++);
+//     // SWSerial.print(str_counter);
 //     flag_timer = false;
 //   }
 
