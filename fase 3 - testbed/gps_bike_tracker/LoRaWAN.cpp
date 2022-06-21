@@ -267,25 +267,41 @@ Status_Typedef SendString(char* string, uint8_t port)
   {
     return RAD_ERROR;
   }
-
   /* Assemble the payload */
   sprintf(g_payload, "%d:%s\0", port, string);
-
+  Serial.println(g_payload);
   SendAtCommand(AT_SEND, AtSet, g_payload);
 }
 
+
+// Status_Typedef SendBinary(void *payload, uint16_t size, uint8_t port)
+// {
+//   if (size > BUFFER_SIZE) return RAD_ERROR;
+//   if (payload == NULL) return RAD_ERROR;
+ 
+//   /* Assemble the payload */
+//   uint8_t index = 0;
+//   sprintf(g_payload, "%d:", port);
+//   index += 2; // strlen("N:")
+//   memcpy(g_payload[index], payload, size);
+//   index += size;
+//   g_payload[index] = '\0';
+//   Serial.println(g_payload);
+
+//   SendAtCommand(AT_SEND, AtSet, g_payload);
+// }
 
 Status_Typedef SendRaw(char* payload)
 {
   static const char at_string[] = "ATZ";
   uint8_t index = 0; //index += sizeof(array);
-  memset(array, 0, BUFFER_SIZE);
+   memset(array, 0, BUFFER_SIZE);
   //strcpy((char*)&array[index], payload);
  // memcpy(array, at_string, 3);
  /* Appends the payload */
  
-  strcpy((char*)&array[index], payload);
-  index += strlen(payload);
+    strcpy((char*)&array[index], payload);
+    index += strlen(payload);
   
   hSerialCommand->write(array, index);
   delay(500);
@@ -299,7 +315,7 @@ Status_Typedef SendAtCommand(AT_Commands_e command, CommandType_e command_type, 
   static const char at_set_string[] = "=";
   uint8_t index = 3;
 
-  if((payload == NULL) && (command_type == AtSet))
+  if ((payload == NULL) && (command_type == AtSet))
   {
     return RAD_ERROR;
   }
@@ -337,7 +353,6 @@ Status_Typedef SendAtCommand(AT_Commands_e command, CommandType_e command_type, 
 
   array[index++] = '\r';
   array[index++] = '\n';
-
   /* Sends the message */
   hSerialCommand->write(array, index);
   delay(500);
