@@ -269,7 +269,7 @@ Status_Typedef SendString(char* string, uint8_t port)
   }
   /* Assemble the payload */
   sprintf(g_payload, "%d:%s\0", port, string);
-  Serial.println(g_payload);
+  // Serial.println(g_payload);
   SendAtCommand(AT_SEND, AtSet, g_payload);
 }
 
