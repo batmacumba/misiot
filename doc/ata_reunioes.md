@@ -1103,3 +1103,16 @@ https://www.thethingsnetwork.org/community/berlin/post/ttn-api-request-for-gatew
 * **Publicar no Canal do CCSL**
 * Survey da área para qualificação
 * Ter TOEFL para fazer textos em inglês
+
+---
+
+### 24/06/2022
+
+* **Inscrição mestrado**
+  * Item H: redes de computadores
+  * avisar
+* **Vídeo**
+  * Latência, Perda de Pacote, Energia (medir quanto tempo leva)
+  * Motivar o desenvolvedor a apresentar opção LoRaWAN
+  * Vão desligar GPRS
+  * Destacar dificuldades ABP/OTAA/TTN
