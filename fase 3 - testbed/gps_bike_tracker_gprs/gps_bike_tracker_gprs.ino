@@ -2,28 +2,30 @@
 #include <SoftwareSerial.h>
 #include "SIM800L.h"
 
-#define POSITION_UPDATE_INTERVAL                      5000
-#define TIMESTAMP_LEN                                 25
+#define POSITION_UPDATE_INTERVAL    5000
+#define TIMESTAMP_LEN               25
 
-#define GPS_BAUD_RATE                                 9600
-#define GPS_TX_PIN                                    3
-#define GPS_RX_PIN                                    8  
+#define GPS_BAUD_RATE               9600
+#define GPS_TX_PIN                  3
+#define GPS_RX_PIN                  8  
 
-#define SIM_BAUD_RATE                                 9600
-#define SIM_TX_PIN                                    11
-#define SIM_RX_PIN                                    10
-#define SIM_RST_PIN                                   6                                  
+#define SIM_BAUD_RATE               9600
+#define SIM_TX_PIN                  11
+#define SIM_RX_PIN                  10
+#define SIM_RST_PIN                 6        
 
-const char APN[] = "Internet.be";
-const char URL[] = "https://postman-echo.com/post";
+#define UUID                        5fb850ee-76db-4eb9-b20c-7c983e8ff73a                          
+
+const char APN[] = "timbrasil.br";
+const char URL[] = "http://201.43.62.129:3002/resources/5fb850ee-76db-4eb9-b20c-7c983e8ff73a/data";
 const char CONTENT_TYPE[] = "application/json";
-const char PAYLOAD[] = "{\"name\": \"morpheus\", \"job\": \"leader\"}";
 
 TinyGPSPlus gps;
 SIM800L* sim800l;
 SoftwareSerial gpsSerial(GPS_RX_PIN, GPS_TX_PIN);
 SoftwareSerial *simSerial = new SoftwareSerial(SIM_RX_PIN, SIM_TX_PIN);
 unsigned long positionLastSentAt = 0;
+unsigned int numberOfSends = 0;        
 
 void setupModule() {
     // Wait until the module is ready to accept AT commands
@@ -45,6 +47,7 @@ void setupModule() {
   Serial.println(F(")"));
   delay(1000);
 
+  // setPinCode(const char *pin);
   // Wait for operator network registration (national or roaming network)
   NetworkRegistration network = sim800l -> getRegistrationStatus();
   while(network != REGISTERED_HOME && network != REGISTERED_ROAMING) {
@@ -55,10 +58,31 @@ void setupModule() {
   delay(1000);
 
   // Setup APN for GPRS configuration
-  bool success = sim800l -> setupGPRS(APN);
+  bool success = sim800l -> setupGPRS(APN, "tim", "tim");
   while(!success) {
    success = sim800l -> setupGPRS(APN);
     delay(5000);  }  Serial.println(F("GPRS config OK"));
+
+  // Establish GPRS connectivity (5 trials)
+  bool connected = false;
+  for (uint8_t i = 0; i < 5 && !connected; i++) {
+      connected = sim800l -> connectGPRS();
+      if (!connected) delay(1000);
+  }
+
+  // Check if connected, if not reset the module and setup the config again
+  if (connected) {
+      Serial.print(F("GPRS connected with IP "));
+      Serial.println(sim800l -> getIP());
+  }
+  else {
+      Serial.println(F("GPRS not connected !"));
+      Serial.println(F("Reset the module."));
+      sim800l -> reset();
+      setupModule();
+      return;
+  }
+
 }
 
 void 
@@ -67,9 +91,9 @@ setup()
     Serial.begin(9600);
     gpsSerial.begin(GPS_BAUD_RATE);
     simSerial -> begin(SIM_BAUD_RATE);
-    // sim800l = new SIM800L((Stream *)simSerial, SIM800_RST_PIN, 200, 512);
-    sim800l = new SIM800L((Stream *)simSerial, SIM_RST_PIN, 200, 512, (Stream *)&Serial);
-    // setupModule();
+    sim800l = new SIM800L((Stream *)simSerial, SIM_RST_PIN, 200, 512);
+    // sim800l = new SIM800L((Stream *)simSerial, SIM_RST_PIN, 200, 512, (Stream *)&Serial);
+    setupModule();
 }
 
 void 
@@ -87,27 +111,25 @@ loop()
         }
     }
 
-
-
     // if (millis() > 20000 && gps.charsProcessed() < 10) {
     //     Serial.println("No GPS detected: check wiring.");
     //     while(true);
     // }
 
     // Comunicação direta com o módulo GPRS
-    // while (simSerial.available())
-    //     Serial.write(simSerial.read());
+    // while (simSerial -> available())
+    //     Serial.write(simSerial -> read());
     // while (Serial.available())
-    //     simSerial.write(Serial.read());
+    //     simSerial -> write(Serial.read());
 }
 
 void
 sendPositionUpdate()
 {
     char message[256];
-    // // 2017-06-14T17:52:25.428Z
-    char timestamp[40];
-    snprintf(timestamp, TIMESTAMP_LEN, "%d-%02d-%02dT%02d:%02d:%02d.%03dZ\0", gps.date.year(),
+    // 2017-06-14T17:52:25.428Z
+    char timestamp[25];
+    snprintf(timestamp, TIMESTAMP_LEN, "%d-%02d-%02dT%02d:%02d:%02d.%03dZ", gps.date.year(),
              gps.date.month(), gps.date.day(), gps.time.hour(), gps.time.minute(),
              gps.time.second(), gps.time.centisecond());
 
@@ -115,60 +137,64 @@ sendPositionUpdate()
     String(gps.location.lat(), 6).toCharArray(latitude, 10);
     char longitude[10];
     String(gps.location.lng(), 6).toCharArray(longitude, 10);
+    // FIX: hardcodei o gps porque as strings acima estavam vazias
     snprintf(message, 256, "{ \"data\": {\
 \"monitoring\": [\
 {\
-\"latitude\": %s,\
- \"longitude\": %s,\
- \"timestamp\": %s\
+\"latitude\": -23.57141,\
+ \"longitude\": -46.73420,\
+ \"numberOfSends\": %d,\
+ \"timestamp\": \"%s\"\
 }\
 ]\
 }\
-}", latitude, longitude, timestamp);
-    Serial.println(message);
+}", numberOfSends++, timestamp);
 
+    Serial.println(message);
     // OUVIR A SEGUNDA PORTA SERIAL PRA COMUNICAÇÃO HTTP
     simSerial -> listen();
 
-    // // Establish GPRS connectivity (5 trials)
-    // bool connected = false;
-    // for (uint8_t i = 0; i < 5 && !connected; i++) {
-    //     connected = sim800l -> connectGPRS();
-    //     if (!connected) delay(1000);
-    // }
+    if (sim800l -> isConnectedGPRS() == false) {
+        // Establish GPRS connectivity (5 trials)
+        bool connected = false;
+        for (uint8_t i = 0; i < 5 && !connected; i++) {
+            connected = sim800l -> connectGPRS();
+            if (!connected) delay(200);
+        }
 
-    // // Check if connected, if not reset the module and setup the config again
-    // if (connected) {
-    //     Serial.print(F("GPRS connected with IP "));
-    //     Serial.println(sim800l -> getIP());
-    // }
-    // else {
-    //     Serial.println(F("GPRS not connected !"));
-    //     Serial.println(F("Reset the module."));
-    //     sim800l -> reset();
-    //     setupModule();
-    //     return;
-    // }
+        // Check if connected, if not reset the module and setup the config again
+        if (connected) {
+            Serial.print(F("GPRS connected with IP "));
+            Serial.println(sim800l -> getIP());
+        }
+        else {
+            Serial.println(F("GPRS not connected !"));
+            Serial.println(F("Reset the module."));
+            sim800l -> reset();
+            setupModule();
+            return;
+        }
+    }
 
-    // Serial.println(F("Start HTTP POST..."));
+    Serial.println(F("Start HTTP POST..."));
 
-    // // Do HTTP POST communication with 10s for the timeout (read and write)
-    // uint16_t rc = sim800l -> doPost(URL, CONTENT_TYPE, PAYLOAD, 10000, 10000);
-    // if (rc == 200) {
-    //     // Success, output the data received on the serial
-    //     Serial.print(F("HTTP POST successful ("));
-    //     Serial.print(sim800l -> getDataSizeReceived());
-    //     Serial.println(F(" bytes)"));
-    //     Serial.print(F("Received : "));
-    //     Serial.println(sim800l -> getDataReceived());
-    // } 
-    // else {
-    //     // Failed...
-    //     Serial.print(F("HTTP POST error "));
-    //     Serial.println(rc);
-    // }
+    // Do HTTP POST communication with 10s for the timeout (read and write)
+    uint16_t rc = sim800l -> doPost(URL, CONTENT_TYPE, message, 10000, 10000);
+    if (rc == 200) {
+        // Success, output the data received on the serial
+        Serial.print(F("HTTP POST successful ("));
+        Serial.print(sim800l -> getDataSizeReceived());
+        Serial.println(F(" bytes)"));
+        Serial.print(F("Received : "));
+        Serial.println(sim800l -> getDataReceived());
+    } 
+    else {
+        // Failed...
+        Serial.print(F("HTTP POST error "));
+        Serial.println(rc);
+    }
 
-    // delay(1000);
+    delay(300);
 
     // // Close GPRS connectivity (5 trials)
     // bool disconnected = sim800l -> disconnectGPRS();
@@ -184,11 +210,6 @@ sendPositionUpdate()
     // bool lowPowerMode = sim800l -> setPowerMode(MINIMUM);
     // if (lowPowerMode) Serial.println(F("Module in low power mode"));
     // else Serial.println(F("Failed to switch module to low power mode"));
-
-    // char message[sizeof(payload)];
-    // memcpy(message, &pl, sizeof(payload));
-    // SendString(message, 2);
-
 }
 
 void 

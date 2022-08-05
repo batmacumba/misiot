@@ -10,6 +10,7 @@ SoftwareSerial* hSerialCommands = NULL;
 
 // DevEUI 0012F80000000DB3
 // char devEUI[] = "AT+DEUI=70:B3:D5:7E:D0:05:25:55";
+char devEUI[] = "AT+DEUI=00:12:F8:00:00:00:0D:B3";
 char devAddr[] = "AT+DADDR=26:0D:5F:C4";
 char appsKey[] = "AT+APPSKEY=5A:6D:86:75:E2:9A:D6:58:DE:A2:56:15:8B:F3:8F:45"; 
 char nwsKey[] = "AT+NWKSKEY=4D:43:03:10:AE:AD:0B:A7:25:20:A5:D9:DE:7B:3A:F2"; 
@@ -21,11 +22,13 @@ static const int rxPin = 8, txPin = 3;
 static const uint32_t gpsBaud = 9600;
 TinyGPSPlus gps;
 SoftwareSerial neo6m(rxPin, txPin);
-unsigned long positionLastSentAt = 0;
+unsigned long positionLastSentAt = 0; 
+unsigned int numberOfSends = 0; 
 
 typedef struct {
     double latitude;
     double longitude;
+    unsigned int numberOfSends;
     char timestamp[TIMESTAMP_LEN];
 } payload;
 
@@ -99,12 +102,11 @@ sendPositionUpdate()
 
     pl.latitude = gps.location.lat();
     pl.longitude = gps.location.lng();
+    pl.numberOfSends = numberOfSends++;
 
     char message[sizeof(payload)];
     memcpy(message, &pl, sizeof(payload));
     SendString(message, 2);
-
-    // 2:<⸮⸮⸮⸮⸮:⸮2022-06-22T00:49:11.000Z
 }
 
 void 
