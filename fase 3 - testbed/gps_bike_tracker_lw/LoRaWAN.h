@@ -159,6 +159,7 @@ Status_Typedef SendString(char* string, uint8_t port);
 
 
 Status_Typedef SendRaw(char* payload);
+// Status_Typedef SendBinary(void *payload, uint16_t size);
 
 
 /**
