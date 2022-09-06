@@ -76,7 +76,7 @@ loop()
 {
     while (neo6m.available() > 0) {
         if (gps.encode(neo6m.read())) {
-            // displayInfo();
+            displayInfo();
             if (gps.location.isValid() && gps.time.isValid() && gps.date.isValid() &&
                 millis() - positionLastSentAt > POSITION_UPDATE_INTERVAL) {
                 sendPositionUpdate();
@@ -85,10 +85,10 @@ loop()
         }
     }
 
-    // if (millis() > 20000 && gps.charsProcessed() < 10) {
-    //     Serial.println("No GPS detected: check wiring.");
-    //     while(true);
-    // }
+    if (millis() > 20000 && gps.charsProcessed() < 10) {
+        Serial.println("No GPS detected: check wiring.");
+        while(true);
+    }
 }
 
 void
